@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mường Rằng | 26 phần sử thi Đẻ Đất Đẻ Nước</title>
+  
+  <!-- FontAwesome Icons for modern aesthetic -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="resources/style.css">
+
+  <!-- Model Viewer for GLB 3D models -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header>
+    <div class="container">
+      <!-- Logo with traditional pattern emblem -->
+      <a href="#trang-chu" class="logo-container">
+        <div class="logo-emblem">
+          <i class="fa-solid fa-khanda"></i>
+        </div>
+        <div class="logo-text-wrap">
+          <span class="logo-title">Mường Rằng</span>
+          <span class="logo-subtitle">26 phần sử thi Đẻ đất đẻ nước</span>
+        </div>
+      </a>
+      
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="#trang-chu" class="active">Trang chủ</a></li>
+          <li><a href="#kham-pha">Khám phá</a></li>
+          <li><a href="#su-thi">Sử thi</a></li>
+          <li><a href="#vr-tuong-tac">VR & 3D</a></li>
+          <li><a href="#about">Về dự án</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Mở menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="nav-actions">
+        <!-- Search Bar -->
+        <div class="header-search">
+          <input type="text" placeholder="Tìm phần sử thi, biểu tượng..." id="header-search-input">
+          <i class="fa-solid fa-magnifying-glass search-icon" id="search-trigger-btn"></i>
+        </div>
+        <!-- Audio Control -->
+        <div class="audio-controller" id="audio-control" title="Nhấn để nghe âm thanh núi rừng & nhạc cụ">
+          <i class="fa-solid fa-volume-xmark audio-icon"></i>
+          <div class="audio-waves">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       VIEW: TRANG CHỦ (HOME VIEW)
+       ========================================== -->
+  <main id="trang-chu" class="view-section active">
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 48px;">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <span class="hero-label scroll-fade-up">Dự Án Di Sản Số Hóa Mường Rằng</span>
+            <h1 class="hero-title scroll-fade-up">
+              MƯỜNG RẰNG
+            </h1>
+            <div class="hero-ornament scroll-fade-up"><span></span></div>
+            <p class="hero-desc scroll-fade-up">
+              Hành trình khám phá 26 phần sử thi Đẻ đất đẻ nước. Bước vào thế giới sử thi Mường, nơi đất trời, muôn loài, con người và bản Mường được sinh ra qua lời kể ngâm vang ngàn đời.
+            </p>
+            <div class="hero-btns scroll-fade-up">
+              <a href="#su-thi" class="btn btn-primary">Khám phá 26 phần</a>
+              <a href="#vr-tuong-tac" class="btn btn-secondary">Bắt đầu hành trình VR</a>
+            </div>
+          </div>
+          <div class="hero-visual scroll-scale">
+            <div class="hero-image-wrap">
+              <img class="hero-image-main" src="resources/muong_stilt_house_hero.png" alt="Nhà sàn Mường Rằng">
+              <div class="hero-deco-coin"></div>
+              <div class="hero-birds">🕊️ 🕊️</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIG IDEA & KEY MESSAGE -->
+    <section class="big-idea-section scroll-fade-up">
+      <div class="container">
+        <div class="idea-box">
+          <div class="idea-header">
+            <span class="intro-tag">Ý Tưởng Chủ Đạo</span>
+            <h2 class="idea-title">KẾT NỐI NGƯỜI TRẺ VỚI DÒNG CHẢY SỬ THI MƯỜNG</h2>
+            <h3 class="idea-message">"Chạm miền sử thi – Trạm kể Mường xưa"</h3>
+          </div>
+          <div class="idea-body">
+            <p>
+              <strong>Đẻ đất đẻ nước (Te tấc te đác)</strong> là bộ sử thi thần thoại đồ sộ của dân tộc Mường. Tác phẩm chính là “bách khoa toàn thư” truyền miệng khổng lồ phản ánh nhận thức mộc mạc, đời sống sinh hoạt và khát vọng chinh phục thiên nhiên của người Mường cổ trong công cuộc khai lập đất trời và kiến tạo bản mường ngăn nắp.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK NAVIGATION DOORS -->
+    <section class="quick-nav-section">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">Cửa Ngõ Trải Nghiệm</span>
+          <h2 class="intro-title">Hành Trình Khám Phá</h2>
+        </div>
+        <div class="grid-cards">
+          <div class="start-card scroll-fade-up">
+            <div class="card-num">01</div>
+            <h3>26 Phần Sử Thi</h3>
+            <p>Theo dõi toàn bộ hành trình từ lúc vũ trụ còn hỗn mang đến khi bản Mường hình thành ổn định.</p>
+            <a href="#su-thi" class="card-btn">Xem 26 phần <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="start-card scroll-fade-up" style="animation-delay: 0.1s;">
+            <div class="card-num">02</div>
+            <h3>Biểu Tượng Mo</h3>
+            <p>Đất, nước, cây si, cồng chiêng, nhà sàn và các hình tượng thần thoại đặc sắc của Mo Mường.</p>
+            <a href="#su-thi" class="card-btn">Khám phá biểu tượng <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="start-card scroll-fade-up" style="animation-delay: 0.2s;">
+            <div class="card-num">03</div>
+            <h3>Không Gian Bản Mường</h3>
+            <p>Bước vào đời sống, tìm hiểu kiến trúc nhà sàn, cồng chiêng, ẩm thực dân dã và các lễ hội mùa xuân.</p>
+            <a href="#kham-pha" class="card-btn">Xem không gian <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="start-card scroll-fade-up" style="animation-delay: 0.3s;">
+            <div class="card-num">04</div>
+            <h3>VR Tương Tác 3D</h3>
+            <p>Tự tay tương tác với các đồ dùng cúng tế, sinh hoạt trong nhà sàn truyền thống người Mường xưa.</p>
+            <a href="#vr-tuong-tac" class="card-btn">Vào VR <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6-STAGE EPIC OVERVIEW -->
+    <section class="home-timeline-section scroll-fade-up">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">Hành Trình Cội Nguồn</span>
+          <h2 class="intro-title">Dòng Chảy Sử Thi Qua 6 Chặng</h2>
+          <p>Mười sáu vạn câu thơ Mo được xâu chuỗi mạch lạc thành một hành trình vĩ đại xây dựng thế giới</p>
+        </div>
+        <div class="home-timeline-grid">
+          <div class="home-timeline-card">
+            <span class="stage-tag">Chặng 1</span>
+            <h4>Hình thành Đất, Nước, Con người</h4>
+            <p>Từ thuở ban sơ hỗn mang, đất nước được kiến tạo, cây si thần lớn lên đẻ ra vạn vật và con người.</p>
+          </div>
+          <div class="home-timeline-card">
+            <span class="stage-tag">Chặng 2</span>
+            <h4>Xây dựng cơ sở vật chất</h4>
+            <p>Con người biết làm nhà sàn che mưa nắng, tìm ra lửa ấm, thuần hóa lúa gạo, trâu bò và men rượu cần.</p>
+          </div>
+          <div class="home-timeline-card">
+            <span class="stage-tag">Chặng 3</span>
+            <h4>Lo ổn định gia đạo</h4>
+            <p>Lang Cun Cần lấy vợ, tìm kiếm bạn đời lập nên khuôn phép hôn nhân gia đình cho các dòng họ bản mường.</p>
+          </div>
+          <div class="home-timeline-card">
+            <span class="stage-tag">Chặng 4</span>
+            <h4>Kiến lập trật tự nước nhà</h4>
+            <p>Chế tác trống đồng, phân chia ruộng đất canh tác, tìm kiếm thủ lĩnh tối cao dựng lên nhà Chu.</p>
+          </div>
+          <div class="home-timeline-card">
+            <span class="stage-tag">Chặng 5</span>
+            <h4>Xung đột & Chiến công</h4>
+            <p>Vượt qua biến cố đốt nhà Chu, đoàn kết săn Moong Lồ (thú dữ), đánh cá điên, trừ ma ruộng bảo vệ mùa màng.</p>
+          </div>
+          <div class="home-timeline-card">
+            <span class="stage-tag">Chặng 6</span>
+            <h4>Hoàn chỉnh chế độ cai trị</h4>
+            <p>Lập ra nghi lễ phục trang, quy định luật tục cai trị gìn giữ bờ cõi bản Mường được bình yên no ấm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED CHAPTERS -->
+    <section class="featured-chapters-section">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">Lát Cắt Tiêu Biểu</span>
+          <h2 class="intro-title">Những Phần Sử Thi Nổi Bật</h2>
+          <p>Bốn chương Mo huyền thoại chứa đựng linh hồn mỹ học và quan niệm vũ trụ của người Mường</p>
+        </div>
+        <div class="grid-showcase">
+          <div class="showcase-card scroll-fade-up">
+            <div class="showcase-img-wrap">
+              <span class="showcase-badge">Chương 4</span>
+              <img src="resources/muong_cay_si.png" alt="Đẻ Cây Si">
+            </div>
+            <div class="showcase-body">
+              <h4>Đẻ Cây Si Thần</h4>
+              <p>Cây si khổng lồ nối liền mặt đất với bầu trời xanh thẳm, sinh ra muôn cành vạn lá và mầm mống vạn vật sinh linh.</p>
+              <a href="#su-thi" class="showcase-link" data-go-chapter="4">Khám phá chương này <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+          <div class="showcase-card scroll-fade-up" style="animation-delay: 0.1s;">
+            <div class="showcase-img-wrap">
+              <span class="showcase-badge">Chương 6</span>
+              <img src="resources/muong_hero_bg.png" alt="Đẻ Người">
+            </div>
+            <div class="showcase-body">
+              <h4>Đẻ Con Người</h4>
+              <p>Con người đầu tiên sinh ra từ quả trứng si thần, bước đi vững chãi mở đầu cho thế hệ dòng giống bản Mường.</p>
+              <a href="#su-thi" class="showcase-link" data-go-chapter="6">Đọc chương này <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+          <div class="showcase-card scroll-fade-up" style="animation-delay: 0.2s;">
+            <div class="showcase-img-wrap">
+              <span class="showcase-badge">Chương 16</span>
+              <img src="resources/muong_cong_chieng.png" alt="Đẻ Trống Đồng">
+            </div>
+            <div class="showcase-body">
+              <h4>Đẻ Trống Đồng</h4>
+              <p>Trống đồng ra đời vang vọng những nhịp đập linh thiêng, gắn kết đời sống nghi lễ thiêng liêng của đồng bào.</p>
+              <a href="#su-thi" class="showcase-link" data-go-chapter="16">Nghe & Khám phá <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+          <div class="showcase-card scroll-fade-up" style="animation-delay: 0.3s;">
+            <div class="showcase-img-wrap">
+              <span class="showcase-badge">Chương 22</span>
+              <img src="resources/muong_tro_choi.png" alt="Săn Moong Lồ">
+            </div>
+            <div class="showcase-body">
+              <h4>Săn Moong Lồ</h4>
+              <p>Cuộc săn mãnh thú hung tợn Moong Lồ thể hiện sức mạnh đại đoàn kết và chí khí quả cảm vô song.</p>
+              <a href="#su-thi" class="showcase-link" data-go-chapter="22">Xem chiến công <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VR HOUSE TEASER -->
+    <section class="vr-teaser-section">
+      <div class="container">
+        <div class="vr-teaser-box scroll-fade-up">
+          <div class="vr-teaser-content">
+            <span class="intro-tag" style="color:var(--accent-gold);">Trải Nghiệm Tương Tác</span>
+            <h2 class="vr-teaser-title">Bước Vào Không Gian Nhà Sàn 3D</h2>
+            <p class="vr-teaser-desc">
+              Chạm tay vào chiếc cồng chiêng cổ treo gian giữa, nhen nhóm lại ngọn lửa hồng ấm cúng góc bếp hay khám phá bình rượu cần ngọt lịm. Trải nghiệm trực quan kiến trúc nhà sàn Mường với công nghệ tương tác hotspots hiện đại.
+            </p>
+            <a href="#vr-tuong-tac" class="btn btn-primary" style="background:var(--accent-gold); color:var(--charcoal-black);">Vào xem nhà sàn VR</a>
+          </div>
+          <div class="vr-teaser-visual">
+            <img src="resources/muong_stilt_house_hero.png" alt="VR Teaser">
+            <span class="vr-hotspot-simulation" style="top:32%; left:68%;"></span>
+            <span class="vr-hotspot-simulation" style="top:55%; left:38%;"></span>
+            <span class="vr-hotspot-simulation" style="top:62%; left:22%;"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-wrap scroll-fade-up">
+          <h2>Sẵn Sàng Chạm Vào Miền Sử Thi?</h2>
+          <p>Lắng nghe tiếng cồng chiêng rừng thẳm ngân nga và trải nghiệm dòng chảy lịch sử huy hoàng.</p>
+          <div class="cta-btns">
+            <a href="#su-thi" class="btn btn-primary">Bắt đầu đọc sử thi</a>
+            <a href="#kham-pha" class="btn btn-secondary">Khám phá văn hóa</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       VIEW: KHÁM PHÁ (EXPLORE HUB VIEW)
+       ========================================== -->
+  <main id="kham-pha" class="view-section">
+    <section class="explore-hero">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">Di Sản Đất Mường</span>
+          <h2 class="intro-title" style="font-size: 3rem; color: var(--primary-red);">Khám Phá Văn Hóa Mường</h2>
+          <p style="max-width:700px; margin: 0 auto 30px;">
+            Bên cạnh sử thi Đẻ đất đẻ nước huyền thoại, hãy cùng ngược dòng thời gian chạm ngõ đời sống Mường xưa từ những nếp nhà sàn thanh bình đến hoa văn cạp váy dệt thổ cẩm tinh xảo.
+          </p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a href="#vr-tuong-tac" class="btn btn-primary">Khám phá ngay 3D</a>
+            <a href="#su-thi" class="btn btn-secondary">Xem sử thi cổ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 CULTURAL SEGMENTS -->
+    <section class="explore-segments-section">
+      <div class="container">
+        <div class="grid-cards" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="start-card scroll-fade-up" style="background:var(--paper-beige-dark);">
+            <div style="font-size: 2.5rem; color:var(--primary-red); margin-bottom: 15px;"><i class="fa-solid fa-house-chimney"></i></div>
+            <h3>Văn Hóa Mường</h3>
+            <p>Khám phá kiến trúc nhà sàn dựa lưng đồi, phong tục cồng chiêng cúng tế và không gian tín ngưỡng Mo linh thiêng.</p>
+            <a href="#van-hoa-muong" class="btn btn-secondary btn-sm" style="margin-top: 15px; display:inline-block; padding: 6px 16px;">Khám phá văn hóa</a>
+          </div>
+          <div class="start-card scroll-fade-up" style="background:var(--paper-beige-dark); animation-delay: 0.1s;">
+            <div style="font-size: 2.5rem; color:var(--primary-red); margin-bottom: 15px;"><i class="fa-solid fa-vest"></i></div>
+            <h3>Trang Phục Mường</h3>
+            <p>Trầm trồ trước những dải cạp váy thêu dệt thổ cẩm tinh xảo thêu biểu tượng phượng hoàng vũ trụ độc đáo.</p>
+            <a href="#trang-phuc-muong" class="btn btn-secondary btn-sm" style="margin-top: 15px; display:inline-block; padding: 6px 16px;">Xem trang phục</a>
+          </div>
+          <div class="start-card scroll-fade-up" style="background:var(--paper-beige-dark); animation-delay: 0.2s;">
+            <div style="font-size: 2.5rem; color:var(--primary-red); margin-bottom: 15px;"><i class="fa-solid fa-utensils"></i></div>
+            <h3>Ẩm Thực Mường</h3>
+            <p>Thưởng thức cơm nếp lam ống nứa, thịt lợn mán nướng hạt dổi rừng béo ngậy bày trên mẹt lá chuối dẻo thơm.</p>
+            <a href="#am-thuc-muong" class="btn btn-secondary btn-sm" style="margin-top: 15px; display:inline-block; padding: 6px 16px;">Khám phá ẩm thực</a>
+          </div>
+          <div class="start-card scroll-fade-up" style="background:var(--paper-beige-dark); animation-delay: 0.3s;">
+            <div style="font-size: 2.5rem; color:var(--primary-red); margin-bottom: 15px;"><i class="fa-solid fa-gamepad"></i></div>
+            <h3>Trò Chơi Dân Gian</h3>
+            <p>Hòa nhịp tiếng cười xuân rộn rã qua các trò chơi truyền thống như ném còn cầu may, đua tài đi cà kheo, kéo co.</p>
+            <a href="#tro-choi-muong" class="btn btn-secondary btn-sm" style="margin-top: 15px; display:inline-block; padding: 6px 16px;">Xem trò chơi</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS TO WATCH FIRST -->
+    <section class="explore-highlights" style="background: var(--paper-beige-dark); padding: 80px 0;">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">Gợi Ý Trải Nghiệm</span>
+          <h2 class="intro-title">Những Điểm Nổi Bật Nên Xem Trước</h2>
+        </div>
+        <div class="grid-showcase" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="showcase-card">
+            <div class="showcase-img-wrap" style="height:150px;">
+              <img src="resources/muong_stilt_house_hero.png" alt="Nhà sàn">
+            </div>
+            <div class="showcase-body" style="padding:15px;">
+              <h5 style="color:var(--primary-red); font-size:1.1rem; margin-bottom:5px;">Kiến trúc Nhà Sàn</h5>
+              <p style="font-size:0.8rem; margin-bottom:0;">Biểu tượng trung tâm đời sống vật chất và xã hội của dòng họ Mường xưa cổ.</p>
+            </div>
+          </div>
+          <div class="showcase-card">
+            <div class="showcase-img-wrap" style="height:150px;">
+              <img src="resources/muong_pattern.png" alt="Hoa văn">
+            </div>
+            <div class="showcase-body" style="padding:15px;">
+              <h5 style="color:var(--primary-red); font-size:1.1rem; margin-bottom:5px;">Hoa văn Thổ Cẩm</h5>
+              <p style="font-size:0.8rem; margin-bottom:0;">Sự kiên nhẫn thêu dệt và triết lý thẩm mỹ phác họa qua cạp váy phụ nữ.</p>
+            </div>
+          </div>
+          <div class="showcase-card">
+            <div class="showcase-img-wrap" style="height:150px;">
+              <img src="resources/muong_am_thuc.png" alt="Ẩm thực">
+            </div>
+            <div class="showcase-body" style="padding:15px;">
+              <h5 style="color:var(--primary-red); font-size:1.1rem; margin-bottom:5px;">Mâm Cơm Mẹt Lá</h5>
+              <p style="font-size:0.8rem; margin-bottom:0;">Cách ăn lá lót mộc mạc đậm chất núi rừng Tây Bắc hào sảng hiếu khách.</p>
+            </div>
+          </div>
+          <div class="showcase-card">
+            <div class="showcase-img-wrap" style="height:150px;">
+              <img src="resources/muong_tro_choi.png" alt="Trò chơi">
+            </div>
+            <div class="showcase-body" style="padding:15px;">
+              <h5 style="color:var(--primary-red); font-size:1.1rem; margin-bottom:5px;">Ném Còn Lễ Hội</h5>
+              <p style="font-size:0.8rem; margin-bottom:0;">Gửi gắm ước vọng phồn thực và khát khao mùa màng no đủ tới đất trời.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU WILL DISCOVER -->
+    <section class="explore-discovery" style="padding:80px 0;">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">Thu Nhận Ý Nghĩa</span>
+          <h2 class="intro-title">Bạn Sẽ Khám Phá Được Gì Tại Không Gian Này?</h2>
+        </div>
+        <div class="grid-cards" style="grid-template-columns: repeat(3, 1fr);">
+          <div style="text-align:center; padding: 20px;">
+            <div style="font-size:2.5rem; color:var(--accent-gold); margin-bottom:15px;"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h4>Đời Sống Tâm Hồn</h4>
+            <p style="font-size:0.9rem;">Thấu hiểu đời sống sinh hoạt, thói quen và sự kính ngưỡng sâu xa của người Mường đối với mẹ thiên nhiên núi rừng kì vĩ.</p>
+          </div>
+          <div style="text-align:center; padding: 20px;">
+            <div style="font-size:2.5rem; color:var(--accent-gold); margin-bottom:15px;"><i class="fa-solid fa-compass"></i></div>
+            <h4>Cảm Nhận Trực Quan</h4>
+            <p style="font-size:0.9rem;">Không chỉ đọc chữ, bạn được xem mô phỏng 3D hiện vật và lắng nghe âm thanh nhạc cụ rộn rã sinh động.</p>
+          </div>
+          <div style="text-align:center; padding: 20px;">
+            <div style="font-size:2.5rem; color:var(--accent-gold); margin-bottom:15px;"><i class="fa-solid fa-anchor"></i></div>
+            <h4>Liên Kết Sử Thi</h4>
+            <p style="font-size:0.9rem;">Mỗi hoa văn thêu, nếp nhà sàn hay quả còn dệt đều tương ứng với câu chuyện lập mường trong sử thi cổ.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BACK & CTA -->
+    <section class="cta-section" style="padding: 60px 0; background: var(--paper-beige-dark);">
+      <div class="container" style="text-align:center;">
+        <a href="#trang-chu" class="btn btn-secondary">Quay lại Trang chủ</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       VIEW: VĂN HÓA MƯỜNG CHI TIẾT
+       ========================================== -->
+  <main id="van-hoa-muong" class="view-section">
+    <section class="explore-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('resources/muong_hero_bg.png') no-repeat center center; background-size:cover; color:white; padding: 120px 0;">
+      <div class="container" style="text-align:center;">
+        <span class="intro-tag" style="border-color:var(--accent-gold); color:var(--accent-gold);">Di Sản Truyền Thừa</span>
+        <h2 style="font-family:var(--font-heading); font-size:3rem; margin-bottom:20px; color:var(--accent-gold);">Văn Hóa Mường Xưa</h2>
+        <p style="max-width:700px; margin: 0 auto; color:rgba(255,255,255,0.9);">
+          Văn hóa Mường là kết tinh của hàng ngàn năm sinh sống hòa hợp cùng núi non suối nguồn Tây Bắc, gìn giữ qua điệu Mo, tiếng cồng và kiến trúc gỗ mộc mạc.
+        </p>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section style="padding:80px 0;">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">Hạt Nhân Di Sản</span>
+          <h2 class="intro-title">Các Giá Trị Nổi Bật</h2>
+        </div>
+        <div class="grid-cards">
+          <div class="start-card" style="text-align:left; padding:30px;">
+            <div style="font-size:1.8rem; color:var(--primary-red); margin-bottom:10px;"><i class="fa-solid fa-house-user"></i></div>
+            <h4>Kiến trúc Nhà Sàn</h4>
+            <p style="font-size:0.9rem;">Dựa lưng sườn núi hiểm trở đón gió thung lũng lành. Nơi chứa đựng trật tự phong kiến và đạo lý gia tộc Mường nghiêm ngặt xưa.</p>
+          </div>
+          <div class="start-card" style="text-align:left; padding:30px;">
+            <div style="font-size:1.8rem; color:var(--primary-red); margin-bottom:10px;"><i class="fa-solid fa-drum"></i></div>
+            <h4>Nhạc khí Cồng Chiêng</h4>
+            <p style="font-size:0.9rem;">Vật báu thiêng liêng đại diện cho âm lượng cộng đồng, tiếng cồng vang động xua đuổi tà khí đón tài lộc sung túc.</p>
+          </div>
+          <div class="start-card" style="text-align:left; padding:30px;">
+            <div style="font-size:1.8rem; color:var(--primary-red); margin-bottom:10px;"><i class="fa-solid fa-masks-theater"></i></div>
+            <h4>Lễ hội Mùa Xuân</h4>
+            <p style="font-size:0.9rem;">Các hội lễ Khai Hạ (xuống đồng), hội xắc bùa cầu chúc vạn gia an khang, thóc lúa chất đầy bồ, gia súc sinh sôi.</p>
+          </div>
+          <div class="start-card" style="text-align:left; padding:30px;">
+            <div style="font-size:1.8rem; color:var(--primary-red); margin-bottom:10px;"><i class="fa-solid fa-users-viewfinder"></i></div>
+            <h4>Tình Nghĩa Bản Mường</h4>
+            <p style="font-size:0.9rem;">Nếp sống tương thân tương ái, cấy lúa dựng nhà đổi công giúp đỡ lẫn nhau keo sơn không rời.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVING AND SPACE -->
+    <section style="background:var(--paper-beige-dark); padding:80px 0;">
+      <div class="container">
+        <div class="culture-row">
+          <div class="culture-text-col">
+            <span class="idea-badge">Tâm Điểm Gia Đình</span>
+            <h2>Đời Sống Góc Bếp & Không Gian Sinh Hoạt</h2>
+            <p>
+              Nhà sàn người Mường thường dựng bằng cột gỗ lớn vững chãi chịu lực tốt. Không gian sinh hoạt chia thành nhiều vách ngăn nề nếp. Bếp lửa đặt trang trọng ở gian chính, không lúc nào tắt khói.
+            </p>
+            <p>
+              Góc bếp lửa hồng là linh hồn sưởi ấm, chưng cất những món nướng thơm lừng và là nơi các bô lão kể lại sử thi truyền kỳ răn dạy cháu con giữ trọn lòng nhân nghĩa hiếu thảo.
+            </p>
+          </div>
+          <div class="culture-img-col">
+            <img src="resources/muong_stilt_house_hero.png" alt="Nhà sàn và bếp lửa">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BELIEFS AND RITUALS -->
+    <section style="padding:80px 0;">
+      <div class="container">
+        <div class="culture-row" style="grid-template-columns: 1.2fr 1fr;">
+          <div class="culture-img-col">
+            <img src="resources/muong_cay_si.png" alt="Tín ngưỡng Mo Mường">
+          </div>
+          <div class="culture-text-col" style="padding-left:40px;">
+            <span class="idea-badge">Tâm Linh Huy Hoàng</span>
+            <h2>Tín Ngưỡng Linh Thiêng & Nghi Lễ Mo Mường</h2>
+            <p>
+              Đồng bào Mường thờ cúng tổ tiên chu đáo, tôn kính thần sông sông suối, thần núi thẳm và thần rừng rậm. Nghi lễ Mo Mường chính là di sản phi vật thể quốc gia, do thầy Mo dẫn lễ truyền linh hồn người khuất về cội nguồn tiên tổ.
+            </p>
+            <p>
+              Lời Mo ngân vang trầm ấm hòa theo nhịp gõ nhạc cụ đưa con người hòa nhập với nguồn cội khởi thiên, nuôi dưỡng phẩm hạnh trung hiếu trong sáng suốt bao đời nay.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESERVATION TIMELINE -->
+    <section style="background:var(--paper-beige-dark); padding:80px 0;">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">Lưu Truyền Đời Đời</span>
+          <h2 class="intro-title">Bản Sắc Được Lưu Truyền Qua Thế Hệ</h2>
+        </div>
+        <div class="home-timeline-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="home-timeline-card">
+            <span class="stage-tag">Mốc 1</span>
+            <h4>Ký Ức Cộng Đồng</h4>
+            <p>Lưu truyền bằng hình thức ngâm truyền miệng Mo Mường giữa các thế hệ bô lão và con cháu bên bếp lửa sàn.</p>
+          </div>
+          <div class="home-timeline-card">
+            <span class="stage-tag">Mốc 2</span>
+            <h4>Truyền Dạy Thực Hành</h4>
+            <p>Tổ chức phục dựng lễ hội dân gian, dạy các nhạc cụ gõ cồng chiêng cổ, trồng dâu nuôi tằm dệt thổ cẩm truyền thống.</p>
+          </div>
+          <div class="home-timeline-card">
+            <span class="stage-tag">Mốc 3</span>
+            <h4>Gìn Giữ Mai Sau</h4>
+            <p>Số hóa tư liệu hình ảnh, ghi âm giọng đọc bản cổ, đưa công nghệ 3D/VR vào giới thiệu quảng bá văn hóa tới bè bạn quốc tế.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE & ACTIONS -->
+    <section style="padding:60px 0; text-align:center;">
+      <div class="container">
+        <blockquote style="font-family:var(--font-heading); font-size:1.8rem; color:var(--primary-red); max-width:800px; margin: 0 auto 40px; font-style:italic; line-height:1.6;">
+          "Giữ văn hóa là giữ hồn cốt của dân tộc. Khi cộng đồng còn gắn kết, bản sắc sẽ còn mãi."
+        </blockquote>
+        <div class="cta-btns">
+          <a href="#kham-pha" class="btn btn-secondary">← Quay lại Khám phá</a>
+          <a href="#trang-phuc-muong" class="btn btn-primary">Tìm hiểu trang phục →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       VIEW: TRANG PHỤC MƯỜNG CHI TIẾT
+       ========================================== -->
+  <main id="trang-phuc-muong" class="view-section">
+    <section class="explore-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('resources/muong_pattern.png') repeat; background-size: 200px; color:white; padding: 120px 0;">
+      <div class="container" style="text-align:center;">
+        <span class="intro-tag" style="border-color:var(--accent-gold); color:var(--accent-gold);">Thẩm Mỹ Thổ Cẩm</span>
+        <h2 style="font-family:var(--font-heading); font-size:3rem; margin-bottom:20px; color:var(--accent-gold);">Trang Phục Truyền Thống Mường</h2>
+        <p style="max-width:700px; margin: 0 auto; color:rgba(255,255,255,0.9);">
+          Nghệ thuật dệt hoa văn tỉ mỉ rực rỡ, phác họa triết lý vũ trụ Mường tinh tế trên từng thớ chỉ cạp váy truyền thống.
+        </p>
+      </div>
+    </section>
+
+    <!-- SEGMENTS -->
+    <section style="padding:80px 0;">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">Nét Độc Đáo</span>
+          <h2 class="intro-title">Các Nét Nổi Bật Của Trang Phục</h2>
+        </div>
+        <div class="grid-cards">
+          <div class="start-card" style="padding:25px; text-align:left;">
+            <h4>Áo Cánh (Pắn)</h4>
+            <p style="font-size:0.9rem;">Áo cánh ngắn xẻ ngực, ôm khéo léo thân hình mảnh mai của phụ nữ Mường. Màu sắc nhẹ nhàng trang nhã thanh khiết.</p>
+          </div>
+          <div class="start-card" style="padding:25px; text-align:left;">
+            <h4>Váy Ống Đen Dài</h4>
+            <p style="font-size:0.9rem;">Thân váy đen bóng nhuộm chàm sâu thẳm, ôm khít gót chân bước đi nhẹ nhàng thanh tao thướt tha uyển chuyển.</p>
+          </div>
+          <div class="start-card" style="padding:25px; text-align:left;">
+            <h4>Cạp Váy Thổ Cẩm</h4>
+            <p style="font-size:0.9rem;">Kiệt tác thủ công dệt chỉ rực rỡ mang họa tiết phượng hoàng, rùa thần vũ trụ bọc quanh thắt lưng trang nghiêm.</p>
+          </div>
+          <div class="start-card" style="padding:25px; text-align:left;">
+            <h4>Phụ Kiện Bạc Ta</h4>
+            <p style="font-size:0.9rem;">Bộ xà tích bạc lách cách vui tai, vòng cổ kiềng bạc sáng trưng tôn lên vẻ quý phái sang trọng tôn nghiêm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NỮ & NAM COMPARISON -->
+    <section style="background:var(--paper-beige-dark); padding:80px 0;">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">So Sánh Bố Cục</span>
+          <h2 class="intro-title">Trang Phục Nữ & Nam</h2>
+        </div>
+        <div class="culture-row" style="grid-template-columns: 1fr 1fr; gap:40px;">
+          <div class="start-card" style="padding:30px; text-align:left; background:white;">
+            <h3 style="color:var(--primary-red); border-bottom:2px solid var(--primary-red); padding-bottom:10px; margin-bottom:15px;">Trang Phục Nữ</h3>
+            <p>Gồm khăn trùm đầu màu trắng thanh nhã, áo cánh pắn ngắn bộc lộ nét eo thon thả, váy ống đen kết hợp cạp váy thổ cẩm thêu tay sặc sỡ và xà tích bạc đeo ngang thắt lưng đùi.</p>
+            <p style="font-style:italic; font-size:0.85rem; color:var(--primary-red-light);">Điểm nhấn nghệ thuật nằm hoàn toàn ở dải hoa văn cạp váy dệt thủ công độc bản.</p>
+          </div>
+          <div class="start-card" style="padding:30px; text-align:left; background:white;">
+            <h3 style="color:var(--primary-red); border-bottom:2px solid var(--primary-red); padding-bottom:10px; margin-bottom:15px;">Trang Phục Nam</h3>
+            <p>Gồm áo cánh màu chàm xẻ ngực cộc tay mộc mạc, quần ống rộng nhuộm nâu chàm dễ leo đồi lội suối làm rẫy, đi kèm khăn chàm thắt đầu gọn gàng khoẻ khoắn.</p>
+            <p style="font-style:italic; font-size:0.85rem; color:var(--primary-red-light);">Thể hiện sự khỏe khoắn, giản dị và gần gũi với đời sống lao động núi rừng.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLOR SIGNIFICANCE -->
+    <section style="padding:80px 0;">
+      <div class="container">
+        <div class="culture-row">
+          <div class="culture-text-col">
+            <span class="idea-badge">Sắc Màu Triết Lý</span>
+            <h2>Ý Nghĩa Màu Sắc Trên Trang Phục</h2>
+            <p>
+              Ba gam màu chủ đạo được dệt vẽ tỉ mỉ:
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8; margin-bottom: 20px;">
+              <li><strong>Màu trắng của khăn trùm:</strong> Tượng trưng cho sự tinh khiết, đức hạnh hiếu thảo và mây trời cao thanh khiết.</li>
+              <li><strong>Màu đen chàm của thân váy:</strong> Đại diện cho đất đai trù phú dạt dào, sự bền bỉ siêng năng âm thầm chịu thương chịu khó.</li>
+              <li><strong>Màu đỏ, vàng của cạp váy:</strong> Biểu tượng cho lửa ấm xua đông lạnh, ánh sáng mặt trời rạng rỡ đâm chồi sức sống ngập tràn.</li>
+            </ul>
+          </div>
+          <div class="culture-img-col">
+            <img src="resources/muong_pattern.png" alt="Sợi nhuộm tự nhiên">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE & ACTIONS -->
+    <section style="padding:60px 0; text-align:center;">
+      <div class="container">
+        <blockquote style="font-family:var(--font-heading); font-size:1.8rem; color:var(--primary-red); max-width:800px; margin: 0 auto 40px; font-style:italic; line-height:1.6;">
+          "Mỗi hoa văn thêu trên váy áo là một chữ viết không lời về tình yêu quê hương đất nước và niềm tự hào kín đáo của người Mường."
+        </blockquote>
+        <div class="cta-btns">
+          <a href="#kham-pha" class="btn btn-secondary">← Quay lại Khám phá</a>
+          <a href="#am-thuc-muong" class="btn btn-primary">Khám phá ẩm thực →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       VIEW: ẨM THỰC MƯỜNG CHI TIẾT
+       ========================================== -->
+  <main id="am-thuc-muong" class="view-section">
+    <section class="explore-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('resources/muong_am_thuc.png') no-repeat center center; background-size:cover; color:white; padding: 120px 0;">
+      <div class="container" style="text-align:center;">
+        <span class="intro-tag" style="border-color:var(--accent-gold); color:var(--accent-gold);">Ẩm Thực Mộc Mạc</span>
+        <h2 style="font-family:var(--font-heading); font-size:3rem; margin-bottom:20px; color:var(--accent-gold);">Ẩm Thực Mẹt Lá Chuối</h2>
+        <p style="max-width:700px; margin: 0 auto; color:rgba(255,255,255,0.9);">
+          Hương vị mộc mạc từ củ măng nứa rừng suối, thớ thịt lợn mán bùi ngậy quyện mùi lá móc mật ngọt ngào.
+        </p>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE PLATTER SECTION -->
+    <section style="padding:80px 0;">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">Mâm Cỗ Tương Tác</span>
+          <h2 class="intro-title">Mẹt Ẩm Thực Mường Tương Tác</h2>
+          <p>Nhấp vào các con số (hotspots) trên mẹt ẩm thực để xoay mâm cỗ khám phá công thức chế biến của từng món ngon đặc sản núi rừng.</p>
+        </div>
+
+        <div class="platter-box">
+          <div class="platter-visual-wrapper">
+            <div class="platter-visual">
+              <div id="interactive-platter-img" class="cuisine-wheel">
+                <!-- Sector 1: Cơm Lam (Right side, centered at 0deg) -->
+                <div class="wheel-sector sector-com-lam" data-food="com-lam" style="background-image: url('resources/muong_com_lam.png');"></div>
+                <!-- Sector 2: Thịt Lợn Bản (Bottom side, centered at 90deg) -->
+                <div class="wheel-sector sector-lon-ban" data-food="lon-ban" style="background-image: url('resources/muong_lon_ban.png');"></div>
+                <!-- Sector 3: Rau Rừng (Left side, centered at 180deg) -->
+                <div class="wheel-sector sector-rau-rung" data-food="rau-rung" style="background-image: url('resources/muong_rau_rung.png');"></div>
+                <!-- Sector 4: Mâm Cỗ (Top side, centered at 270deg) -->
+                <div class="wheel-sector sector-mam-co" data-food="mam-co" style="background-image: url('resources/muong_mam_co.png');"></div>
+                
+                <!-- White diagonal separators -->
+                <div class="wheel-divider wheel-divider-1"></div>
+                <div class="wheel-divider wheel-divider-2"></div>
+                
+                <!-- Center donut cutout -->
+                <div class="wheel-center"></div>
+              </div>
+              
+              <!-- Icon-based Hotspots -->
+              <button class="platter-hotspot platter-hotspot-1 active" data-food="com-lam" title="Cơm Lam"><i class="fa-solid fa-wheat-awn"></i></button>
+              <button class="platter-hotspot platter-hotspot-2" data-food="lon-ban" title="Thịt lợn bản"><i class="fa-solid fa-fire"></i></button>
+              <button class="platter-hotspot platter-hotspot-3" data-food="rau-rung" title="Rau rừng"><i class="fa-solid fa-leaf"></i></button>
+              <button class="platter-hotspot platter-hotspot-4" data-food="mam-co" title="Mâm cỗ Mường"><i class="fa-solid fa-drum"></i></button>
+            </div>
+          </div>
+
+          <div class="platter-content">
+            <!-- Food detail cards -->
+            <div id="com-lam" class="food-detail-card active">
+              <span class="idea-badge">Ống Tre Dẻo Thơm</span>
+              <h3 class="food-detail-title">Cơm Lam Nếp Nương</h3>
+              <p class="food-detail-desc">
+                Gạo nếp nương hạt căng mọng, dẻo thơm nhồi chặt ống tre/nứa tẻ non chứa nước suối nguồn ngọt lạnh rồi đem nướng chín đều trên bếp củi đỏ hồng. Khi ăn bóc lớp cật giòn, để lại màng lụa mỏng tre bao bọc thơm lừng mùi rừng suối.
+              </p>
+              <div class="food-ingredients">
+                <h5>Gia vị đi kèm:</h5>
+                <ul>
+                  <li>Gạo nếp nương</li>
+                  <li>Ống nứa tươi ngọt</li>
+                  <li>Nước nguồn tự nhiên</li>
+                  <li>Muối vừng thơm bùi</li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="lon-ban" class="food-detail-card">
+              <span class="idea-badge">Thịt Rừng Giòn Ngọt</span>
+              <h3 class="food-detail-title">Thịt Lợn Bản Nướng Hạt Dổi</h3>
+              <p class="food-detail-desc">
+                Thịt lợn thả hoang sườn đồi săn thớ bì giòn sần sật. Thịt tẩm ướp cùng mắc khén, hạt dổi rừng đâm nhỏ thơm nồng nàn lạ vị, nướng chín cạnh vàng xém óng ả trên than đỏ rực lửa.
+              </p>
+              <div class="food-ingredients">
+                <h5>Hương liệu tẩm ướp:</h5>
+                <ul>
+                  <li>Hạt dổi rừng đâm thơm</li>
+                  <li>Mắc khén nồng nàn</li>
+                  <li>Lá móc mật xanh tươi</li>
+                  <li>Muối đá hạt to</li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="rau-rung" class="food-detail-card">
+              <span class="idea-badge">Thanh Mát Tự Nhiên</span>
+              <h3 class="food-detail-title">Rau Rừng Đồ Chấm Chẩm Chéo</h3>
+              <p class="food-detail-desc">
+                Các loại lá non lành tính bứt hái ven suối sâu rợp mát: lá đốm, rau sắng, đọt mướp đắng rừng, xếp lên chõ đồ xôi gỗ đồ chín tới giữ nguyên vị nhặm đắng chát dịu mát chấm muối chẩm chéo cay xè lưỡi kích thích vị giác.
+              </p>
+              <div class="food-ingredients">
+                <h5>Danh mục rau rừng:</h5>
+                <ul>
+                  <li>Lá đốm rừng xanh</li>
+                  <li>Rau sắng mát ruột</li>
+                  <li>Lá lòng mang thon</li>
+                  <li>Muối ớt chẩm chéo cay</li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="mam-co" class="food-detail-card">
+              <span class="idea-badge">Cỗ Lá Chuối Quây Quần</span>
+              <h3 class="food-detail-title">Mâm Cỗ Lá Mẹ Tròn</h3>
+              <p class="food-detail-desc">
+                Mâm cỗ biểu trưng sum họp bày vẽ tinh tế trên chiếc mẹt tròn lót lá chuối rừng hơ lửa xanh mướt dẻo quánh. Đủ đầy thịt lợn hấp giòn thái đều hoa văn xếp khoanh tròn đẹp mắt, dạ dày khía răng cưa ngon lành quyến rũ.
+              </p>
+              <div class="food-ingredients">
+                <h5>Món cỗ Mường cúng:</h5>
+                <ul>
+                  <li>Thịt mán hấp gừng</li>
+                  <li>Lòng dồi thơm phức</li>
+                  <li>Cơm lam xắt miếng</li>
+                  <li>Rượu cần nồng ấm</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INGREDIENTS AND COMMUNITATIVE MEAL -->
+    <section style="background:var(--paper-beige-dark); padding:80px 0;">
+      <div class="container">
+        <div class="culture-row">
+          <div class="culture-text-col">
+            <span class="idea-badge">Hương Vị Suối Nguồn</span>
+            <h2>Nguyên Liệu Từ Núi Rừng & Bữa Cơm Cộng Đồng</h2>
+            <p>
+              Bữa cơm của người Mường mang triết lý ăn lót lá mộc mạc, dựa hoàn toàn vào đồ rừng thu hái suối đồi theo mùa. Củ măng đắng ngọt, rêu đá suối sâu đồ sả ớt ngon miệng độc đáo.
+            </p>
+            <p>
+              Bữa cơm là dịp gắn kết mật thiết cộng đồng bản mường giao hữu. Khách quý tới chơi sàn luôn được gia chủ dâng hũ rượu cần cắm cần trúc cong vút, quây quần mời ăn uống ca hát mo Mường thâu đêm suốt sáng.
+            </p>
+          </div>
+          <div class="culture-img-col">
+            <img src="resources/muong_am_thuc.png" alt="Bữa cơm cộng đồng">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOLIDAYS MEALS -->
+    <section style="padding:80px 0;">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">Dịp Lễ Nghĩa</span>
+          <h2 class="intro-title">Ẩm Thực Trong Nghi Lễ Dân Gian</h2>
+        </div>
+        <div class="grid-cards">
+          <div class="start-card" style="padding:25px; text-align:left;">
+            <h4>Lễ Cưới Hỏi</h4>
+            <p style="font-size:0.9rem;">Cặp bánh dày to tròn thêu chỉ đỏ, mâm cỗ mán lá chuối dâng tạ gia tiên bên đồi thông báo nhân duyên hai họ tốt lành.</p>
+          </div>
+          <div class="start-card" style="padding:25px; text-align:left;">
+            <h4>Lễ Hội Khai Hạ</h4>
+            <p style="font-size:0.9rem;">Chum rượu cần nồng cay, mẹt cỗ xôi bảy sắc biểu trưng mùa vàng bội thu dâng tạ thần sông suối cai quản.</p>
+          </div>
+          <div class="start-card" style="padding:25px; text-align:left;">
+            <h4>Ngày Tết Bản Mường</h4>
+            <p style="font-size:0.9rem;">Bánh ốc độc đáo làm từ nếp nương đen lá chàm nướng góc bếp lửa lách cách tỏa mùi dẻo ngậy đặc biệt.</p>
+          </div>
+          <div class="start-card" style="padding:25px; text-align:left;">
+            <h4>Lễ Đón Khách</h4>
+            <p style="font-size:0.9rem;">Cơm lam nóng bỏng bóc vỏ chấm muối vừng ngọt bùi biểu hiện lòng chân thành hiếu khách vô ngần.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MON NEAT TRY -->
+    <section style="background:var(--paper-beige-dark); padding:80px 0;">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">Gợi Ý Món Ăn</span>
+          <h2 class="intro-title">Bốn Món Ngon Nhất Định Phải Thử</h2>
+        </div>
+        <div class="grid-showcase">
+          <div class="showcase-card">
+            <div class="showcase-body">
+              <h4 style="color:var(--primary-red); border-bottom:1px solid var(--primary-red); padding-bottom:5px;">Cơm Lam Nếp Nương</h4>
+              <p style="font-size:0.9rem;">Thơm mùi nứa rừng bánh tẻ, chấm muối vừng ngọt bùi sảng khoái no bụng.</p>
+            </div>
+          </div>
+          <div class="showcase-card">
+            <div class="showcase-body">
+              <h4 style="color:var(--primary-red); border-bottom:1px solid var(--primary-red); padding-bottom:5px;">Gà Đồi Nướng Mắc Khén</h4>
+              <p style="font-size:0.9rem;">Thịt gà đồi dai chắc ngọt thớ thịt thơm rức mắc khén, cay nồng đầu lưỡi khó quên.</p>
+            </div>
+          </div>
+          <div class="showcase-card">
+            <div class="showcase-body">
+              <h4 style="color:var(--primary-red); border-bottom:1px solid var(--primary-red); padding-bottom:5px;">Canh Loong Măng Chua</h4>
+              <p style="font-size:0.9rem;">Thân chuối rừng tước xắt mỏng nấu canh chua cá suối non thanh thanh mát dạ ngày hè.</p>
+            </div>
+          </div>
+          <div class="showcase-card">
+            <div class="showcase-body">
+              <h4 style="color:var(--primary-red); border-bottom:1px solid var(--primary-red); padding-bottom:5px;">Bánh Sắn Khói Bếp</h4>
+              <p style="font-size:0.9rem;">Sắn củ mài nhuyễn bọc lá chuối vùi tro bếp nổ lép bép dẻo quánh dạt dào tình dân dã.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE & ACTIONS -->
+    <section style="padding:60px 0; text-align:center;">
+      <div class="container">
+        <blockquote style="font-family:var(--font-heading); font-size:1.8rem; color:var(--primary-red); max-width:800px; margin: 0 auto 40px; font-style:italic; line-height:1.6;">
+          "Ẩm thực Mường không phô trương cầu kì gia vị, mà chưng cất trọn vẹn vị nguyên bản thanh khiết ngọt ngào nhất của đất trời Tây Bắc."
+        </blockquote>
+        <div class="cta-btns">
+          <a href="#kham-pha" class="btn btn-secondary">← Quay lại Khám phá</a>
+          <a href="#tro-choi-muong" class="btn btn-primary">Tìm hiểu trò chơi →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       VIEW: TRÒ CHƠI DÂN GIAN CHI TIẾT
+       ========================================== -->
+  <main id="tro-choi-muong" class="view-section">
+    <section class="explore-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('resources/muong_tro_choi.png') no-repeat center center; background-size:cover; color:white; padding: 120px 0;">
+      <div class="container" style="text-align:center;">
+        <span class="intro-tag" style="border-color:var(--accent-gold); color:var(--accent-gold);">Tiếng Cười Ngày Xuân</span>
+        <h2 style="font-family:var(--font-heading); font-size:3rem; margin-bottom:20px; color:var(--accent-gold);">Trò Chơi Dân Gian Mường</h2>
+        <p style="max-width:700px; margin: 0 auto; color:rgba(255,255,255,0.9);">
+          Nơi nhịp cười rộn vang đồi nương ngày hội xuống đồng, thể hiện sức trẻ khéo léo dẻo dai kiên cường.
+        </p>
+      </div>
+    </section>
+
+    <!-- FOLK GAMES GRID -->
+    <section style="padding:80px 0;">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">Đua Tài Ngày Xuân</span>
+          <h2 class="intro-title">Những Trò Chơi Nổi Bật</h2>
+        </div>
+        <div class="games-grid">
+          <div class="game-card">
+            <div class="game-img">
+              <img src="resources/muong_tro_choi.png" alt="Ném Còn">
+            </div>
+            <div class="game-body">
+              <h3 class="game-title">Ném Còn Lễ Hội</h3>
+              <p class="game-desc">
+                Quả còn sặc sỡ nhồi bông, tua rua năm sắc vút bay từ tay nam nữ thanh niên vượt qua vòng tròn tâm tre treo cao tít tắp cầu tài lộc, tình duyên lứa đôi ngọt ngào thắt chặt gắn kết cả năm mới xuân sang.
+              </p>
+              <div class="game-rules">
+                <strong>Ý nghĩa:</strong> Ném lọt qua hồng tâm mang lại điềm may phúc khí dồi dào, mưa gió thuận hòa no đủ bản làng.
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <div class="game-img">
+              <img src="resources/muong_hero_bg.png" alt="Đi cà kheo">
+            </div>
+            <div class="game-body">
+              <h3 class="game-title">Đi Cà Kheo Đua Tốc Độ</h3>
+              <p class="game-desc">
+                Đi thăng bằng trên hai sào tre dài vững chắc rượt đuổi tốc độ gay cấn. Trò chơi đòi hỏi khả năng giữ cân bằng cơ thể tinh anh, bắt nguồn từ mẹo lội suối băng ghềnh dốc của thợ săn Mường cổ khi đi rừng hiểm trở xưa.
+              </p>
+              <div class="game-rules">
+                <strong>Kĩ năng:</strong> Rèn luyện cơ đùi dẻo dai khỏe khoắn, đức tính vững bước can trường trước giông bão gian khó.
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <div class="game-body" style="width:100%;">
+              <h3 class="game-title">Kéo Co Đồng Sức</h3>
+              <p class="game-desc">
+                Độ sức dẻo dai bền bỉ kéo sợi dây thừng tre dai đanh bện chặt giữa hai xóm làng cạnh đồi suối. Tiếng trống đồng và dàn cồng chiêng thúc giục dồn dập rộn vang thung lũng cổ vũ nhiệt liệt khơi dậy tinh thần đoàn kết dũng mãnh keo sơn thắt chặt.
+              </p>
+              <div class="game-rules">
+                <strong>Bài học:</strong> Khẳng định sức mạnh đoàn kết chính là nguồn cội bảo vệ bình yên cho bản Mường vững mạnh.
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <div class="game-body" style="width:100%;">
+              <h3 class="game-title">Đánh Mảng Tinh Nhuệ</h3>
+              <p class="game-desc">
+                Dùng chân gạt mảng gỗ tròn mỏng trượt bắn đi lướt nhanh chạm trúng mảng gỗ đối phương trên nền đất phẳng lộng gió. Trò chơi đòi hỏi nhãn quang tính toán góc xiên cực nhạy của mắt và lực chân tinh tế phối hợp nhuần nhuyễn ăn ý.
+              </p>
+              <div class="game-rules">
+                <strong>Rèn trí lực:</strong> Tính nhẫn nại, phán đoán đường trượt gió thông thái khôn ngoan của giới trẻ Mường.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAMES IN FESTIVALS -->
+    <section style="background:var(--paper-beige-dark); padding:80px 0;">
+      <div class="container">
+        <div class="culture-row">
+          <div class="culture-text-col">
+            <span class="idea-badge">Sinh Hoạt Ngày Xuân</span>
+            <h2>Trò Chơi Trong Lễ Hội & Niềm Vui Cộng Đồng</h2>
+            <p>
+              Ngày xuân nắng ấm lan tràn thung lũng, sau nghi thức Mo cúng Khai hạ xuống đồng nghiêm trang, phần hội trò chơi dân gian luôn náo nức khởi động lôi cuốn mọi lứa tuổi tham gia nhiệt tình.
+            </p>
+            <p>
+              Tiếng cồng gõ nhịp giòn giã xen lẫn tiếng hò reo vang vọng cả vạt đồi thông, thổi bay mệt nhọc lao động cấy cày quanh năm, nhen nhóm khát vọng xây đắp cuộc sống mới ấm no tràn trề hy vọng tương lai sáng tươi.
+            </p>
+          </div>
+          <div class="culture-img-col">
+            <img src="resources/muong_tro_choi.png" alt="Không khí hội hè">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES OF GAMES -->
+    <section style="padding:80px 0;">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">Giá Trị Nhân Văn</span>
+          <h2 class="intro-title">Giá Trị Của Trò Chơi Dân Gian</h2>
+        </div>
+        <div class="grid-cards" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="start-card" style="padding:20px; text-align:center;">
+            <div style="font-size:2rem; color:var(--primary-red); margin-bottom:10px;"><i class="fa-solid fa-people-group"></i></div>
+            <h5>Gắn Kết Cộng Đồng</h5>
+            <p style="font-size:0.85rem;">Xóa nhòa khoảng cách thế hệ, thắt chặt tình cảm gia đình láng giềng bền lâu.</p>
+          </div>
+          <div class="start-card" style="padding:20px; text-align:center;">
+            <div style="font-size:2rem; color:var(--primary-red); margin-bottom:10px;"><i class="fa-solid fa-child-reaching"></i></div>
+            <h5>Rèn Luyện Cơ Thể</h5>
+            <p style="font-size:0.85rem;">Khỏe cơ, tinh anh mắt, giữ thăng bằng nhịp nhàng vững chãi linh hoạt.</p>
+          </div>
+          <div class="start-card" style="padding:20px; text-align:center;">
+            <div style="font-size:2rem; color:var(--primary-red); margin-bottom:10px;"><i class="fa-solid fa-brain"></i></div>
+            <h5>Trau Dồi Trí Lực</h5>
+            <p style="font-size:0.85rem;">Phán đoán, tập trung kiên nhẫn xử lí góc bắn khôn ngoan nhanh nhạy.</p>
+          </div>
+          <div class="start-card" style="padding:20px; text-align:center;">
+            <div style="font-size:2rem; color:var(--primary-red); margin-bottom:10px;"><i class="fa-solid fa-shield-halved"></i></div>
+            <h5>Gìn Giữ Truyền Thống</h5>
+            <p style="font-size:0.85rem;">Truyền tải nét tinh thần thể thao thượng võ của tổ tiên Mường tự cổ chí kim.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVITIES TO TRY -->
+    <section style="background:var(--paper-beige-dark); padding:80px 0;">
+      <div class="container">
+        <div class="section-intro">
+          <span class="intro-tag">Lựa Chọn Hoạt Động</span>
+          <h2 class="intro-title">Hoạt Động Nên Trải Nghiệm Ít Nhất Một Lần</h2>
+        </div>
+        <div class="grid-cards" style="grid-template-columns: repeat(4, 1fr);">
+          <div style="background:white; padding:25px; border-radius:var(--border-radius); text-align:left;">
+            <h5 style="color:var(--primary-red);">1. Ném Quả Còn Cầu May</h5>
+            <p style="font-size:0.85rem; margin-bottom:0;">Cầm quả còn xoay vòng nhẹ nhàng thả bay vút hướng lên hồng tâm ngọn tre xanh ngắt.</p>
+          </div>
+          <div style="background:white; padding:25px; border-radius:var(--border-radius); text-align:left;">
+            <h5 style="color:var(--primary-red);">2. Tập Đi Cà Kheo</h5>
+            <p style="font-size:0.85rem; margin-bottom:0;">Thử sức leo dẫm cà kheo tre ngắn chập chững bước đi thăng bằng sảng khoái phấn khích.</p>
+          </div>
+          <div style="background:white; padding:25px; border-radius:var(--border-radius); text-align:left;">
+            <h5 style="color:var(--primary-red);">3. Ghi Lại Trải Nghiệm</h5>
+            <p style="font-size:0.85rem; margin-bottom:0;">Chụp những bức hình cười rạng rỡ mặc áo váy pắn nhảy sạp giã gạo rộn rã.</p>
+          </div>
+          <div style="background:white; padding:25px; border-radius:var(--border-radius); text-align:left;">
+            <h5 style="color:var(--primary-red);">4. Học Luật Chơi Cổ</h5>
+            <p style="font-size:0.85rem; margin-bottom:0;">Lắng nghe thầy giáo bản kể lại nguồn cội ra đời thiêng liêng của ném còn sử thi xưa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE & ACTIONS -->
+    <section style="padding:60px 0; text-align:center;">
+      <div class="container">
+        <blockquote style="font-family:var(--font-heading); font-size:1.8rem; color:var(--primary-red); max-width:800px; margin: 0 auto 40px; font-style:italic; line-height:1.6;">
+          "Trò chơi dân gian níu giữ tiếng cười trẻ thơ bản địa giòn giã tươi mới, nối sợi dây tình cảm đầm ấm sâu kín khó phai của nếp nhà xưa."
+        </blockquote>
+        <div class="cta-btns">
+          <a href="#kham-pha" class="btn btn-secondary">← Quay lại Khám phá</a>
+          <a href="#vr-tuong-tac" class="btn btn-primary">Trải nghiệm nhà sàn 3D →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       VIEW: SỬ THI (EPIC TIMELINE VIEW)
+       ========================================== -->
+  <main id="su-thi" class="view-section">
+    <div class="container">
+      <div class="section-intro">
+        <span class="intro-tag">Di Sản Ngàn Năm</span>
+        <h2 class="intro-title">26 Chương Sử Thi Đẻ Đất Đẻ Nước</h2>
+        <p>Hành trình khám phá trường ca đồ sộ chia thành 6 chặng thiêng liêng đắp bồi đời sống tinh thần của đất Mường</p>
+      </div>
+
+      <!-- Search results alert info -->
+      <div id="search-alert-box" style="display:none; background:rgba(107,31,26,0.1); border-left:4px solid var(--primary-red); padding:12px 24px; margin-bottom:20px; border-radius:4px;">
+        <span id="search-alert-text" style="font-size:0.95rem; font-weight:500;">Tìm thấy N phần sử thi tương ứng.</span>
+        <button id="clear-search-btn" style="float:right; background:transparent; border:none; color:var(--primary-red); cursor:pointer; font-weight:bold;">Xóa tìm kiếm</button>
+      </div>
+
+      <!-- Timeline filters -->
+      <div class="timeline-filters" id="timeline-filters-list">
+        <!-- Will be dynamically populated in app.js -->
+      </div>
+
+      <!-- Horizontal Flowing Timeline -->
+      <div class="timeline-track-wrap">
+        <div class="timeline-track" id="timeline-track">
+          <!-- Will be dynamically populated in app.js -->
+        </div>
+      </div>
+
+      <!-- Tales Directory Layout -->
+      <div class="tales-directory">
+        <!-- List side column -->
+        <div class="tales-list-col" id="tales-list">
+          <!-- Will be dynamically populated in app.js -->
+        </div>
+        
+        <!-- Viewer side column -->
+        <div class="tale-viewer-col" id="tale-viewer">
+          <!-- Active story details rendered here -->
+        </div>
+      </div>
+
+      <div class="audio-guide scroll-fade-up" style="margin-top: 40px;">
+        <button class="btn-play-recite" id="btn-recite" title="Nghe ngâm Mo sử thi">▶ Nghe ngâm thơ</button>
+        <div>
+          <h5 id="recitation-title-label">Nghe Giọng Ngâm Trầm Hùng</h5>
+          <p id="recitation-desc-label">Sử dụng công nghệ AI chuyển giọng để lắng nghe nhịp thơ Mo trầm ấm cổ xưa kể câu chuyện khai thiên lập địa.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================
+       VIEW: VR TƯƠNG TÁC & 3D MODEL EXHIBITION
+       ========================================== -->
+  <main id="vr-tuong-tac" class="view-section">
+    <div class="container">
+      <div class="section-intro">
+        <span class="intro-tag">Trải Nghiệm Đa Chiều</span>
+        <h2 class="intro-title">Mô Phỏng Trực Quan 3D & VR</h2>
+        <p>Chọn giữa việc khám phá nhà sàn cổ qua các điểm chạm tương tác hotspots hoặc xoay ngắm mô hình 3D cổ vật.</p>
+      </div>
+
+      <!-- Tab Switcher VR/3D -->
+      <div class="subnav-explore" style="margin-bottom:30px; max-width:500px;">
+        <button class="subnav-btn active" id="btn-tab-vr">Nhà Sàn VR Tương Tác</button>
+        <button class="subnav-btn" id="btn-tab-3d">Trưng Bày Mô Hình 3D</button>
+      </div>
+
+      <!-- TAB 1: VR HOUSE Hotspots -->
+      <div id="pane-tab-vr" class="explore-pane active">
+        <div class="vr-interaction-container">
+          <!-- Interactive Canvas Stage -->
+          <div class="vr-stage-wrapper">
+            <canvas class="vr-canvas-layer" id="vr-canvas"></canvas>
+            
+            <!-- Interactive Hotspots Overlay SVG -->
+            <svg class="vr-interactive-svg" viewBox="0 0 800 500">
+              <!-- Column Column (Cột cái) Hotspot -->
+              <g class="hotspot-trigger" id="cot-tru" data-target="cot-tru">
+                <circle cx="200" cy="240" r="12" class="hotspot-pulse"></circle>
+                <circle cx="200" cy="240" r="4" class="hotspot-pulse-inner"></circle>
+              </g>
+              <!-- Bếp lửa Hotspot -->
+              <g class="hotspot-trigger" id="bep-lua" data-target="bep-lua">
+                <circle cx="400" cy="300" r="12" class="hotspot-pulse"></circle>
+                <circle cx="400" cy="300" r="4" class="hotspot-pulse-inner"></circle>
+              </g>
+              <!-- Cồng chiêng Hotspot -->
+              <g class="hotspot-trigger" id="cong-chieng" data-target="cong-chieng">
+                <circle cx="580" cy="180" r="12" class="hotspot-pulse"></circle>
+                <circle cx="580" cy="180" r="4" class="hotspot-pulse-inner"></circle>
+              </g>
+              <!-- Rượu cần Hotspot -->
+              <g class="hotspot-trigger" id="ruou-can" data-target="ruou-can">
+                <circle cx="320" cy="330" r="12" class="hotspot-pulse"></circle>
+                <circle cx="320" cy="330" r="4" class="hotspot-pulse-inner"></circle>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Details display sidebar -->
+          <div class="vr-info-sidebar">
+            <div id="vr-sidebar-placeholder" class="vr-sidebar-placeholder">
+              <i class="fa-solid fa-hand-pointer"></i>
+              <h4>Bắt đầu tương tác</h4>
+              <p>Nhấp chuột vào bất kỳ điểm phát sáng nào trên mô hình để nghe thuyết minh chi tiết về hiện vật văn hóa Mường.</p>
+            </div>
+            <div id="vr-sidebar-content" style="display:none;">
+              <img id="vr-sidebar-img" class="vr-detail-img" src="" alt="Detail">
+              <h3 id="vr-sidebar-title">Vật dụng</h3>
+              <p id="vr-sidebar-desc">Chi tiết</p>
+              <button class="btn btn-primary vr-audio-btn" id="btn-vr-tts"><i class="fa-solid fa-volume-high"></i> Nghe thuyết minh</button>
+            </div>
+
+            <div class="vr-controls-tips">
+              <h6>💡 Mẹo Trải Nghiệm</h6>
+              <p>Bật âm thanh ở góc phải Header để cảm nhận rõ hơn nhịp vang của cồng chiêng hay tiếng lửa nổ lép bép lúc nhấp vào các hiện vật.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: 3D MODEL EXHIBITION Inspector -->
+      <div id="pane-tab-3d" class="explore-pane">
+        <div class="vr-interaction-container">
+          <!-- 3D Viewer rotatable container -->
+          <div class="vr-stage-wrapper" style="cursor: grab; overflow:hidden;" id="model-3d-stage">
+            <div class="model-3d-visualizer" id="model-3d-visualizer" style="width: 250px; height: 250px; position:relative; transform-style: preserve-3d; transition: transform 0.1s ease; transform: rotateY(0deg) rotateX(0deg);">
+              <!-- Rendered dynamically via JS or simulated 3D elements -->
+              <div id="visualizer-object-container" style="width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+                <!-- Simulated 3D stilt house / gong / pattern wireframe -->
+              </div>
+            </div>
+            <div style="position:absolute; bottom: 15px; text-align:center; width:100%; font-family:var(--font-accent); font-size:0.75rem; color:var(--accent-gold); pointer-events:none; z-index: 10;">
+              <i class="fa-solid fa-rotate"></i> Nhấn giữ & Kéo chuột sang hai bên để xoay mô hình 3D
+            </div>
+          </div>
+
+          <!-- Model select menu & info sidebar -->
+          <div class="vr-info-sidebar">
+            <div style="margin-bottom:20px;">
+              <h5 style="font-family:var(--font-accent); color:var(--accent-gold); margin-bottom:10px;">CHỌN CỔ VẬT</h5>
+              <div class="timeline-filters" style="display:flex; flex-direction:column; gap:8px;">
+                <button class="filter-btn active" style="width:100%; text-align:left;" id="btn-model-house" data-model="house">🏠 Nhà sàn Mường</button>
+                <button class="filter-btn" style="width:100%; text-align:left;" id="btn-model-gong" data-model="gong">🔔 Cồng chiêng Cổ</button>
+                <button class="filter-btn" style="width:100%; text-align:left;" id="btn-model-pattern" data-model="pattern">🌀 Thổ cẩm Cạp váy</button>
+              </div>
+            </div>
+            <div>
+              <h3 style="color:var(--primary-red);" id="model-3d-title">Nhà Sàn Mường</h3>
+              <p style="font-size:0.9rem; line-height:1.6;" id="model-3d-desc">
+                Mô hình kiến trúc nhà sàn gỗ truyền thống 3 gian 2 chái, thiết kế hai dốc đứng chống đọng nước mưa. Điểm đặc sắc là mặt bằng sinh hoạt được cấu trúc chặt chẽ từ bậc cầu thang gỗ bên hông đến khu bếp đắp đất đặt trung tâm.
+              </p>
+            </div>
+            <div class="vr-controls-tips" style="margin-top:15px; background: rgba(107,31,26,0.05); border-color: rgba(107,31,26,0.15);">
+              <h6>💡 Xoay Tự Do</h6>
+              <p>Mô hình số hóa được tối ưu hóa cho phép xoay 360 độ góc nhìn để quan sát toàn diện cấu tạo khớp mộng liên kết của thợ mộc xưa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================
+       VIEW: VỀ CHÚNG TÔI (ABOUT VIEW)
+       ========================================== -->
+  <main id="about" class="view-section">
+    <div class="container">
+      <div class="section-intro">
+        <span class="intro-tag">Hành Trình Di Sản</span>
+        <h2 class="intro-title">Về Dự Án Mường Rằng</h2>
+        <p>Được kiến tạo bởi những người trẻ đam mê văn hóa truyền thống Tây Bắc với mong muốn thắp sáng ngọn lửa sử thi dân tộc</p>
+      </div>
+
+      <div class="culture-row scroll-fade-up">
+        <div class="culture-text-col">
+          <span class="idea-badge">Mục Tiêu Dự Án</span>
+          <h2>Bảo Tồn & Phát Triển Trải Nghiệm Số</h2>
+          <p>
+            Dự án "Mường Rằng" là một nỗ lực số hóa di sản văn hóa, ứng dụng công nghệ lập trình tương tác 3D/VR để đưa 26 chương sử thi "Đẻ đất đẻ nước" đồ sộ thoát khỏi những trang văn bản hàn lâm khô khan, biến thành trải nghiệm sống động chân thực cho độc giả trẻ.
+          </p>
+          <p>
+            Chúng tôi tin rằng, văn hóa truyền thống không phải là cổ vật đặt trong tủ kính khóa chặt, mà là ngọn lửa ấm cần tiếp tục được nhen nhóm và thổi bùng rực rỡ bởi sức sáng tạo vô biên của thế hệ hôm nay.
+          </p>
+        </div>
+        <div class="culture-img-col">
+          <img src="resources/muong_cay_si.png" alt="Cây Si thần linh thiêng">
+        </div>
+      </div>
+
+      <!-- TEAM DETAILS -->
+      <section style="margin-top:60px;">
+        <h3 style="font-family:var(--font-heading); text-align:center; font-size:2rem; color:var(--primary-red); margin-bottom:40px;">Đội Ngũ Sáng Lập</h3>
+        <div class="grid-cards" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="start-card" style="padding: 25px; text-align:center; background: var(--paper-beige-dark);">
+            <h5 style="margin-bottom:5px;">Nguyễn Minh Đức</h5>
+            <span style="font-size:0.8rem; color:var(--primary-red-light); font-weight:600; text-transform:uppercase;">Trưởng nhóm dự án & Nội dung</span>
+            <p style="font-size:0.85rem; margin-top:10px; margin-bottom:0;">Nghiên cứu văn hóa Mường cổ, biên soạn và xâu chuỗi 26 chương Mo chính xác.</p>
+          </div>
+          <div class="start-card" style="padding: 25px; text-align:center; background: var(--paper-beige-dark);">
+            <h5 style="margin-bottom:5px;">Trần Hoàng Nam</h5>
+            <span style="font-size:0.8rem; color:var(--primary-red-light); font-weight:600; text-transform:uppercase;">Lập trình viên Web 3D/VR</span>
+            <p style="font-size:0.85rem; margin-top:10px; margin-bottom:0;">Xây dựng logic mô phỏng Canvas 3D, hệ thống audio Web API và tương tác hotspots.</p>
+          </div>
+          <div class="start-card" style="padding: 25px; text-align:center; background: var(--paper-beige-dark);">
+            <h5 style="margin-bottom:5px;">Lê Mai Chi</h5>
+            <span style="font-size:0.8rem; color:var(--primary-red-light); font-weight:600; text-transform:uppercase;">Thiết kế mỹ thuật & Visuals</span>
+            <p style="font-size:0.85rem; margin-top:10px; margin-bottom:0;">Phác thảo ý tưởng giao diện di sản ngả be giấy dó, họa tiết cồng chiêng đỏ trầm.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <h3 class="footer-logo-title">MƯỜNG RẰNG</h3>
+          <p class="footer-logo-desc">
+            Không gian số hóa di sản sử thi Đẻ đất đẻ nước và văn hóa truyền thống đặc sắc của người Mường Việt Nam.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Khám Phá</h4>
+          <ul>
+            <li><a href="#van-hoa-muong">Nhà Sàn Truyền Thống</a></li>
+            <li><a href="#trang-phuc-muong">Nghệ Thuật Cạp Váy</a></li>
+            <li><a href="#am-thuc-muong">Ẩm Thực Mẹt Lá</a></li>
+            <li><a href="#tro-choi-muong">Trò Chơi Ngày Xuân</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>26 Sử Thi</h4>
+          <ul>
+            <li><a href="#su-thi">Khai Thiên Lập Địa</a></li>
+            <li><a href="#su-thi">Kiến Thiết Đời Sống</a></li>
+            <li><a href="#su-thi">Tổ Chức Xã Hội</a></li>
+            <li><a href="#su-thi">Đấu Tranh Sinh Tồn</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kết Nối Di Sản</h4>
+          <ul>
+            <li><a href="#vr-tuong-tac">Trải Nghiệm Nhà Sàn 3D</a></li>
+            <li><a href="#about">Đội Ngũ Sáng Lập</a></li>
+            <li><a href="#about">Tư Liệu Nguồn Sử Thi</a></li>
+            <li><a href="#about">Chính Sách Bảo Tồn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dự Án Mường Rằng. Tất cả bản quyền được bảo lưu.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Điều khoản sử dụng</a>
+          <a href="#">Chính sách bảo mật</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="resources/app.js"></script>
+</body>
+</html>
