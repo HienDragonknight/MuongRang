@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initVRInteraction();
   initModel3DInteraction();
   initSearchLogic();
+  initTransparentImages();
 });
 
 /* ==========================================================================
@@ -641,7 +642,7 @@ function showTaleDetails(taleId) {
       <div class="narrative-content">
         <div id="text-kinh" class="bilingual-text active">
           <p><strong>Dịch thơ Việt:</strong></p>
-          <p style="white-space: pre-line; font-style: italic; font-family: var(--font-heading); font-size: 1.25rem; color: var(--primary-red); border-left: 2px SOLID var(--accent-gold); padding-left: 16px; margin-bottom: 24px; line-height:1.7;">
+          <p style="white-space: pre-line; font-style: italic; font-family: var(--font-body); font-size: 1.25rem; color: var(--primary-red); border-left: 2px SOLID var(--accent-gold); padding-left: 16px; margin-bottom: 24px; line-height:1.7;">
             ${tale.kinh}
           </p>
           <p><strong>Ý nghĩa cốt truyện:</strong></p>
@@ -649,7 +650,7 @@ function showTaleDetails(taleId) {
         </div>
         <div id="text-muong" class="bilingual-text">
           <p><strong>Phiên âm Mường cổ:</strong></p>
-          <p style="white-space: pre-line; font-style: italic; font-family: var(--font-heading); font-size: 1.25rem; color: var(--primary-red); border-left: 2px SOLID var(--accent-gold); padding-left: 16px; line-height:1.7;">
+          <p style="white-space: pre-line; font-style: italic; font-family: var(--font-body); font-size: 1.25rem; color: var(--primary-red); border-left: 2px SOLID var(--accent-gold); padding-left: 16px; line-height:1.7;">
             ${tale.muong}
           </p>
         </div>
@@ -1122,4 +1123,47 @@ function initSearchLogic() {
   if (clearSearchBtn) {
     clearSearchBtn.addEventListener('click', clearSearch);
   }
+}
+
+function initTransparentImages() {
+  document.querySelectorAll('img').forEach(img => {
+    const src = img.getAttribute('src');
+    if (src && (src.includes('muong_stilt_house_hero.png') || src.includes('muong_stilt_house_kitchen.png') || src.includes('muong_mo_ritual.png'))) {
+      const removeBackground = () => {
+        try {
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          canvas.width = img.naturalWidth;
+          canvas.height = img.naturalHeight;
+          ctx.drawImage(img, 0, 0);
+          
+          const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+          const data = imgData.data;
+          
+          // Remove white/near-white pixels
+          for (let i = 0; i < data.length; i += 4) {
+            const r = data[i];
+            const g = data[i+1];
+            const b = data[i+2];
+            
+            // If the pixel is very close to white, make it transparent
+            if (r > 240 && g > 240 && b > 240) {
+              data[i+3] = 0;
+            }
+          }
+          
+          ctx.putImageData(imgData, 0, 0);
+          img.src = canvas.toDataURL();
+        } catch (e) {
+          console.warn("Could not remove background due to CORS/security restriction:", e);
+        }
+      };
+      
+      if (img.complete) {
+        removeBackground();
+      } else {
+        img.onload = removeBackground;
+      }
+    }
+  });
 }
