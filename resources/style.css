@@ -2989,3 +2989,9 @@ footer {
   .logo-img   { height: 44px !important; width: 44px !important; }
   .intro-title { font-size: 2rem !important; }
 }
+
+
+/* Custom costume image zoom effect */
+.costume-img-zoom:hover {
+  transform: scale(1.04);
+}
