@@ -449,9 +449,17 @@ header .container {
 /* === HERO SECTION - Light Beige Two-Column Layout === */
 .hero-section {
   position: relative;
-  background-image: linear-gradient(rgba(247, 240, 227, 0.85), rgba(247, 240, 227, 0.85)), url('muong_northwest_bg.png');
+  background-image:
+    linear-gradient(
+      105deg,
+      rgba(15, 8, 4, 0.72) 0%,
+      rgba(20, 10, 5, 0.55) 45%,
+      rgba(10, 5, 2, 0.40) 100%
+    ),
+    url('muong_hero_bg_new.png');
   background-size: cover;
-  background-position: center;
+  background-position: center 30%;
+  background-attachment: fixed;
   min-height: calc(100vh - 72px);
   display: flex;
   align-items: center;
@@ -509,11 +517,15 @@ header .container {
   font-family: var(--font-accent);
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--accent-gold);
+  color: #f0c86a;
   margin-bottom: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
   display: inline-block;
+  background: rgba(0,0,0,0.25);
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(240, 200, 106, 0.4);
 }
 
 /* Main hero title - large bold red */
@@ -522,9 +534,11 @@ header .container {
   font-size: 4.2rem;
   font-weight: 800;
   line-height: 1.15;
-  color: var(--primary-red);
+  color: #ffffff;
   margin-bottom: 18px;
-  text-shadow: 0 2px 4px rgba(124, 31, 26, 0.05);
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.6),
+    0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
 /* Decorative wave ornament separator */
@@ -561,16 +575,18 @@ header .container {
 .hero-desc {
   font-size: 1.05rem;
   font-weight: 300;
-  color: var(--text-dark);
+  color: rgba(255, 248, 235, 0.92);
   line-height: 1.75;
   margin-bottom: 30px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 
 .hero-desc-2 {
   font-size: 0.92rem;
-  color: var(--text-muted);
+  color: rgba(240, 228, 210, 0.80);
   line-height: 1.65;
   margin-bottom: 32px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
 /* Hero CTA Buttons row */
