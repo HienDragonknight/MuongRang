@@ -578,7 +578,6 @@ header .container {
   color: rgba(255, 248, 235, 0.92);
   line-height: 1.75;
   margin-bottom: 30px;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 
 .hero-desc-2 {
@@ -586,7 +585,6 @@ header .container {
   color: rgba(240, 228, 210, 0.80);
   line-height: 1.65;
   margin-bottom: 32px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
 /* Hero CTA Buttons row */
@@ -616,13 +614,23 @@ header .container {
 }
 
 .hero-image-main {
-  width: 90%;
-  max-height: 520px;
-  object-fit: contain;
+  width: 80%;
+  max-width: 480px;
+  height: auto;
+  aspect-ratio: 1.1 / 1;
+  object-fit: cover;
+  border-radius: 24px;
+  opacity: 0.8;
+  filter: blur(1px) drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35));
+  transition: opacity 0.4s ease, filter 0.4s ease;
   display: block;
-  filter: drop-shadow(0 20px 40px rgba(74, 53, 32, 0.2));
   animation: heroFloat 8s ease-in-out infinite alternate;
   z-index: 2;
+}
+
+.hero-image-main:hover {
+  opacity: 0.98;
+  filter: blur(0) drop-shadow(0 20px 40px rgba(0, 0, 0, 0.45));
 }
 
 @keyframes heroFloat {
@@ -2384,6 +2392,8 @@ header .container {
 .logo-img {
   height: 56px !important;
   width: 56px !important;
+  object-fit: cover !important;
+  border-radius: 12px !important;
   filter: drop-shadow(0 2px 8px rgba(123,45,38,0.20));
   transition: transform 0.4s ease !important;
 }
@@ -2632,7 +2642,7 @@ header .container {
    ═══════════════════════════════════════════════════════════ */
 
 .btn {
-  padding: 13px 30px !important;
+  padding: 13px 32px !important;
   border-radius: 40px !important;
   font-size: 0.91rem !important;
   font-weight: 600 !important;
@@ -2640,6 +2650,7 @@ header .container {
   transition: var(--transition-premium) !important;
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 /* Shimmer sweep on hover */
