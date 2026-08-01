@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sử Thi Tân Diện | 26 phần sử thi Đẻ Đất Đẻ Nước – Mường Rằng</title>
+  <title>Sử Thi Tân Diện | 26 phần sử thi Đẻ Đất Đẻ Nước</title>
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="resources/LOGO BACK ĐỎ.PNG">
@@ -17,6 +17,9 @@
 
   <!-- Model Viewer for GLB 3D models -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  <!-- Pannellum 360 Viewer CSS & JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
 </head>
 <body>
 
@@ -30,7 +33,7 @@
         <img src="resources/LOGO BACK ĐỎ.PNG" alt="Logo Sử Thi Tân Diện" class="logo-img">
         <div class="logo-text-wrap">
           <span class="logo-title">Sử Thi Tân Diện</span>
-          <span class="logo-subtitle">Đẻ Đất Đẻ Nước · Mường Rằng</span>
+          <span class="logo-subtitle">Đẻ Đất Đẻ Nước</span>
         </div>
       </a>
       
@@ -76,7 +79,7 @@
       <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 48px;">
         <div class="hero-inner">
           <div class="hero-content">
-            <span class="hero-label scroll-fade-up">Dự Án Di Sản Số Hóa Mường Rằng</span>
+            <span class="hero-label scroll-fade-up">Dự Án Di Sản Số Hóa Văn Hóa Mường</span>
             <h1 class="hero-title scroll-fade-up">
               SỬ THI<br>TÂN DIỆN
             </h1>
@@ -91,7 +94,7 @@
           </div>
           <div class="hero-visual scroll-scale">
             <div class="hero-image-wrap">
-              <img class="hero-image-main" src="resources/muong_stilt_house_hero.png" alt="Nhà sàn Mường Rằng">
+              <img class="hero-image-main" src="resources/muong_stilt_house_hero.png" alt="Nhà sàn Mường">
               <div class="hero-deco-coin"></div>
               <div class="hero-birds">🕊️ 🕊️</div>
             </div>
@@ -1154,54 +1157,88 @@
       </div>
 
       <!-- TAB 1: VR HOUSE Hotspots -->
+            <!-- TAB 1: VR HOUSE VR360 PANNELLUM -->
       <div id="pane-tab-vr" class="explore-pane active">
-        <div class="vr-interaction-container">
-          <!-- Interactive Canvas Stage -->
-          <div class="vr-stage-wrapper">
-            <canvas class="vr-canvas-layer" id="vr-canvas"></canvas>
-            
-            <!-- Interactive Hotspots Overlay SVG -->
-            <svg class="vr-interactive-svg" viewBox="0 0 800 500">
-              <!-- Column Column (Cột cái) Hotspot -->
-              <g class="hotspot-trigger" id="cot-tru" data-target="cot-tru">
-                <circle cx="200" cy="240" r="12" class="hotspot-pulse"></circle>
-                <circle cx="200" cy="240" r="4" class="hotspot-pulse-inner"></circle>
-              </g>
-              <!-- Bếp lửa Hotspot -->
-              <g class="hotspot-trigger" id="bep-lua" data-target="bep-lua">
-                <circle cx="400" cy="300" r="12" class="hotspot-pulse"></circle>
-                <circle cx="400" cy="300" r="4" class="hotspot-pulse-inner"></circle>
-              </g>
-              <!-- Cồng chiêng Hotspot -->
-              <g class="hotspot-trigger" id="cong-chieng" data-target="cong-chieng">
-                <circle cx="580" cy="180" r="12" class="hotspot-pulse"></circle>
-                <circle cx="580" cy="180" r="4" class="hotspot-pulse-inner"></circle>
-              </g>
-              <!-- Rượu cần Hotspot -->
-              <g class="hotspot-trigger" id="ruou-can" data-target="ruou-can">
-                <circle cx="320" cy="330" r="12" class="hotspot-pulse"></circle>
-                <circle cx="320" cy="330" r="4" class="hotspot-pulse-inner"></circle>
-              </g>
-            </svg>
+        <div class="vr360-full-container">
+          <div class="vr360-stage-wrapper" id="vr360-stage-wrapper">
+            <!-- Loading Screen -->
+            <div id="loader" class="vr360-loader">
+              <div class="spinner"></div>
+              <p style="color: var(--accent-gold, #D4AF37); font-size: 0.9rem; margin-top: 12px;">Đang tải hình ảnh 360°...</p>
+            </div>
+
+            <!-- Pannellum Container -->
+            <div id="panorama" class="panorama-box"></div>
+
+            <!-- Interface Overlay -->
+            <div class="ui-overlay">
+              <!-- Top Header -->
+              <div class="header-bar">
+                <div class="header-info">
+                  <span class="badge-vr">VR 360</span>
+                  <div class="header-title">
+                    <h1>Không Gian Nhà Sàn 360°</h1>
+                    <p>Trải nghiệm thực tế ảo tương tác trực quan</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Toolbar Controls -->
+              <div class="bottom-controls">
+                <button class="btn-control" id="btn-zoom-in" title="Phóng to">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i>
+                </button>
+                <button class="btn-control" id="btn-zoom-out" title="Thu nhỏ">
+                  <i class="fa-solid fa-magnifying-glass-minus"></i>
+                </button>
+                <div class="divider"></div>
+                <button class="btn-control active" id="btn-rotate" title="Tự động xoay">
+                  <i class="fa-solid fa-rotate"></i>
+                </button>
+                <button class="btn-control" id="btn-reset" title="Đặt lại góc nhìn">
+                  <i class="fa-solid fa-arrows-to-dot"></i>
+                </button>
+                <div class="divider"></div>
+                <button class="btn-control" id="btn-fullscreen" title="Toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </button>
+                <button class="btn-control" id="btn-help" title="Hướng dẫn sử dụng">
+                  <i class="fa-solid fa-circle-question"></i>
+                </button>
+              </div>
+            </div>
           </div>
 
-          <!-- Details display sidebar -->
-          <div class="vr-info-sidebar">
-            <div id="vr-sidebar-placeholder" class="vr-sidebar-placeholder">
-              <i class="fa-solid fa-hand-pointer"></i>
-              <h4>Bắt đầu tương tác</h4>
-              <p>Nhấp chuột vào bất kỳ điểm phát sáng nào trên mô hình để nghe thuyết minh chi tiết về hiện vật văn hóa Mường.</p>
-            </div>
-            <div id="vr-sidebar-content" style="display:none;">
-              <img id="vr-sidebar-img" class="vr-detail-img" src="" alt="Detail">
-              <h3 id="vr-sidebar-title">Vật dụng</h3>
-              <p id="vr-sidebar-desc">Chi tiết</p>
-              <button class="btn btn-primary vr-audio-btn" id="btn-vr-tts"><i class="fa-solid fa-volume-high"></i> Nghe thuyết minh</button>
-            </div>
-
-            <div class="vr-controls-tips">
-              <h6>💡 Mẹo Trải Nghiệm</h6>
-              <p>Bật âm thanh ở góc phải Header để cảm nhận rõ hơn nhịp vang của cồng chiêng hay tiếng lửa nổ lép bép lúc nhấp vào các hiện vật.</p>
+          <!-- Help Modal -->
+          <div class="modal-overlay" id="help-modal">
+            <div class="modal-card">
+              <div class="modal-header">
+                <h3>Hướng Dẫn Tương Tác</h3>
+                <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+              </div>
+              <div class="help-list">
+                <div class="help-item">
+                  <div class="help-icon"><i class="fa-solid fa-hand-pointer"></i></div>
+                  <div class="help-text">
+                    <h4>Xoay góc nhìn</h4>
+                    <p>Kéo giữ chuột hoặc vuốt màn hình để quan sát xung quanh 360°.</p>
+                  </div>
+                </div>
+                <div class="help-item">
+                  <div class="help-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                  <div class="help-text">
+                    <h4>Phóng to / Thu nhỏ</h4>
+                    <p>Sử dụng con cuộn chuột hoặc 2 ngón tay để thu phóng góc nhìn.</p>
+                  </div>
+                </div>
+                <div class="help-item">
+                  <div class="help-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+                  <div class="help-text">
+                    <h4>Tự động xoay</h4>
+                    <p>Nhấn nút Tự động xoay bên dưới thanh công cụ để bật/tắt góc xoay tự động.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1212,7 +1249,7 @@
         <div class="vr-interaction-container">
           <!-- 3D Viewer rotatable container -->
           <div class="vr-stage-wrapper" style="cursor: grab; overflow:hidden;" id="model-3d-stage">
-            <div class="model-3d-visualizer" id="model-3d-visualizer" style="width: 250px; height: 250px; position:relative; transform-style: preserve-3d; transition: transform 0.1s ease; transform: rotateY(0deg) rotateX(0deg);">
+            <div class="model-3d-visualizer" id="model-3d-visualizer" style="width: 100%; height: 100%; min-height: 550px; position:relative; transform-style: preserve-3d; transition: transform 0.1s ease; display:flex; align-items:center; justify-content:center;">
               <!-- Rendered dynamically via JS or simulated 3D elements -->
               <div id="visualizer-object-container" style="width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
                 <!-- Simulated 3D stilt house / gong / pattern wireframe -->
@@ -1230,7 +1267,7 @@
               <div class="timeline-filters" style="display:flex; flex-direction:column; gap:8px;">
                 <button class="filter-btn active" style="width:100%; text-align:left;" id="btn-model-house" data-model="house">🏠 Nhà sàn Mường</button>
                 <button class="filter-btn" style="width:100%; text-align:left;" id="btn-model-gong" data-model="gong">🔔 Cồng chiêng Cổ</button>
-                <button class="filter-btn" style="width:100%; text-align:left;" id="btn-model-pattern" data-model="pattern">🌀 Thổ cẩm Cạp váy</button>
+                
               </div>
             </div>
             <div>
@@ -1256,7 +1293,7 @@
     <div class="container">
       <div class="section-intro">
         <span class="intro-tag">Hành Trình Di Sản</span>
-        <h2 class="intro-title">Về Dự Án Mường Rằng</h2>
+        <h2 class="intro-title">Về Dự Án Sử Thi Tân Diện</h2>
         <p>Được kiến tạo bởi những người trẻ đam mê văn hóa truyền thống Tây Bắc với mong muốn thắp sáng ngọn lửa sử thi dân tộc</p>
       </div>
 
@@ -1265,7 +1302,7 @@
           <span class="idea-badge">Mục Tiêu Dự Án</span>
           <h2>Bảo Tồn & Phát Triển Trải Nghiệm Số</h2>
           <p>
-            Dự án "Mường Rằng" là một nỗ lực số hóa di sản văn hóa, ứng dụng công nghệ lập trình tương tác 3D/VR để đưa 26 chương sử thi "Đẻ đất đẻ nước" đồ sộ thoát khỏi những trang văn bản hàn lâm khô khan, biến thành trải nghiệm sống động chân thực cho độc giả trẻ.
+            Dự án "Sử Thi Tân Diện" là một nỗ lực số hóa di sản văn hóa, ứng dụng công nghệ lập trình tương tác 3D/VR để đưa 26 chương sử thi "Đẻ đất đẻ nước" đồ sộ thoát khỏi những trang văn bản hàn lâm khô khan, biến thành trải nghiệm sống động chân thực cho độc giả trẻ.
           </p>
           <p>
             Chúng tôi tin rằng, văn hóa truyền thống không phải là cổ vật đặt trong tủ kính khóa chặt, mà là ngọn lửa ấm cần tiếp tục được nhen nhóm và thổi bùng rực rỡ bởi sức sáng tạo vô biên của thế hệ hôm nay.
@@ -1307,7 +1344,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-col">
-          <h3 class="footer-logo-title">MƯỜNG RẰNG</h3>
+          <h3 class="footer-logo-title">SỬ THI TÂN DIỆN</h3>
           <p class="footer-logo-desc">
             Không gian số hóa di sản sử thi Đẻ đất đẻ nước và văn hóa truyền thống đặc sắc của người Mường Việt Nam.
           </p>
@@ -1349,7 +1386,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Dự Án Mường Rằng. Tất cả bản quyền được bảo lưu.</p>
+        <p>&copy; 2026 Dự Án Sử Thi Tân Diện. Tất cả bản quyền được bảo lưu.</p>
         <div class="footer-bottom-links">
           <a href="#">Điều khoản sử dụng</a>
           <a href="#">Chính sách bảo mật</a>

@@ -456,7 +456,7 @@ header .container {
       rgba(20, 10, 5, 0.55) 45%,
       rgba(10, 5, 2, 0.40) 100%
     ),
-    url('muong_hero_bg_new.png');
+    url('muong_hero_bg.png');
   background-size: cover;
   background-position: center 30%;
   background-attachment: fixed;
@@ -686,7 +686,7 @@ header .container {
 .pattern-divider {
   width: 100%;
   height: 35px;
-  background: url('resources/muong_pattern.png') repeat-x center center;
+  background: url('muong_pattern.png') repeat-x center center;
   background-size: contain;
   opacity: 0.15;
   margin: 50px 0;
@@ -941,7 +941,7 @@ header .container {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('resources/muong_pattern.png') repeat;
+  background: url('muong_pattern.png') repeat;
   background-size: 200px;
   opacity: 0.03;
   pointer-events: none;
@@ -2051,7 +2051,7 @@ footer {
   position: absolute;
   width: 150px;
   height: 150px;
-  background: url('resources/muong_pattern.png') no-repeat center center;
+  background: url('muong_pattern.png') no-repeat center center;
   background-size: contain;
   opacity: 0.04;
   pointer-events: none;
@@ -2496,7 +2496,7 @@ header .container {
     radial-gradient(ellipse at 30% 60%, rgba(123,45,38,0.06) 0%, transparent 55%),
     radial-gradient(ellipse at 75% 30%, rgba(200,155,60,0.08) 0%, transparent 50%),
     linear-gradient(165deg, #F8F3EA 0%, #F2EAD5 45%, #EDE5D0 100%),
-    url('../resources/muong_northwest_bg.png') !important;
+    url('muong_northwest_bg.png') !important;
   background-size: auto, auto, auto, cover !important;
   background-position: center center !important;
   min-height: calc(100vh - 76px) !important;
@@ -2921,7 +2921,7 @@ footer {
   position: absolute;
   inset: -20% -15%;
   background:
-    url('../resources/muong_pattern.png') no-repeat center center;
+    url('muong_pattern.png') no-repeat center center;
   background-size: 55%;
   opacity: 0.03;
   pointer-events: none;
@@ -2994,4 +2994,800 @@ footer {
 /* Custom costume image zoom effect */
 .costume-img-zoom:hover {
   transform: scale(1.04);
+}
+
+
+/* --- VR 360 FULLSCREEN INTERACTIVE VIEWER --- */
+
+.vr360-full-container {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.vr360-stage-wrapper {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  max-height: 78vh;
+  background: radial-gradient(circle at center, #2e1a12 0%, #170d08 100%);
+  border-radius: var(--border-radius, 16px);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  border: 2px solid rgba(212, 175, 55, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+
+.vr360-header-overlay {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.vr360-badge {
+  pointer-events: auto;
+  background: rgba(107, 31, 26, 0.9);
+  backdrop-filter: blur(10px);
+  color: var(--accent-gold, #D4AF37);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-family: var(--font-accent, serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vr360-quick-actions {
+  pointer-events: auto;
+}
+
+.vr360-action-btn {
+  background: rgba(46, 26, 18, 0.85);
+  backdrop-filter: blur(8px);
+  color: #f4efe6;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vr360-action-btn:hover {
+  background: var(--primary-red, #6B1F1A);
+  color: var(--accent-gold, #D4AF37);
+  border-color: var(--accent-gold, #D4AF37);
+  box-shadow: 0 4px 12px rgba(107, 31, 26, 0.4);
+}
+
+.vr360-viewer-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.vr360-viewer-box:active {
+  cursor: grabbing;
+}
+
+.vr360-canvas-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.vr360-canvas-container canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.vr360-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.vr360-controls-bar {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.vr360-hint {
+  pointer-events: auto;
+  background: rgba(23, 13, 8, 0.85);
+  backdrop-filter: blur(8px);
+  color: rgba(244, 239, 230, 0.9);
+  font-size: 0.8rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vr360-btn-group {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vr360-ctrl-btn {
+  background: rgba(46, 26, 18, 0.9);
+  backdrop-filter: blur(8px);
+  color: var(--accent-gold, #D4AF37);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vr360-ctrl-btn:hover {
+  background: var(--primary-red, #6B1F1A);
+  color: #ffffff;
+  border-color: var(--accent-gold, #D4AF37);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.vr360-ctrl-btn.primary {
+  background: var(--primary-red, #6B1F1A);
+  color: var(--accent-gold, #D4AF37);
+  font-weight: 700;
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.vr360-ctrl-btn.primary:hover {
+  background: #8B2620;
+  color: #FFFFFF;
+}
+
+/* VR360 Modal */
+.vr360-embed-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.vr360-modal-content {
+  background: var(--paper-beige, #F9F6EE);
+  border: 2px solid var(--accent-gold, #D4AF37);
+  border-radius: var(--border-radius, 16px);
+  width: 100%;
+  max-width: 550px;
+  padding: 25px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.vr360-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(107, 31, 26, 0.15);
+  padding-bottom: 10px;
+}
+
+.vr360-modal-header h4 {
+  margin: 0;
+  color: var(--primary-red, #6B1F1A);
+  font-family: var(--font-accent, serif);
+  font-size: 1.15rem;
+}
+
+.vr360-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--primary-red, #6B1F1A);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.vr360-modal-body p {
+  font-size: 0.9rem;
+  color: #4a382a;
+  margin-bottom: 12px;
+}
+
+.vr360-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid rgba(107, 31, 26, 0.3);
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.vr360-input:focus {
+  border-color: var(--primary-red, #6B1F1A);
+  box-shadow: 0 0 0 2px rgba(107, 31, 26, 0.2);
+}
+
+.vr360-modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+
+/* --- PANNELLUM VR 360 INTEGRATION STYLES --- */
+
+.panorama-box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.pnm-controls-container, .pnm-info-box, .pnm-load-box {
+  display: none !important;
+}
+
+.vr360-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #170d08;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 4px solid rgba(212, 175, 55, 0.2);
+  border-top-color: var(--accent-gold, #D4AF37);
+  border-radius: 50%;
+  animation: spin360 1s linear infinite;
+}
+
+@keyframes spin360 {
+  to { transform: rotate(360deg); }
+}
+
+.ui-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.ui-overlay * {
+  pointer-events: auto;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(107, 31, 26, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 12px 22px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  max-width: 520px;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.badge-vr {
+  background: linear-gradient(135deg, var(--primary-red, #6B1F1A), #8B2620);
+  border: 1px solid var(--accent-gold, #D4AF37);
+  color: var(--accent-gold, #D4AF37);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+}
+
+.header-title h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  font-family: var(--font-accent, serif);
+}
+
+.header-title p {
+  font-size: 0.8rem;
+  color: rgba(244, 239, 230, 0.85);
+  margin: 2px 0 0 0;
+}
+
+.bottom-controls {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(46, 26, 18, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 8px 18px;
+  border-radius: 40px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.btn-control {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--accent-gold, #D4AF37);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-control:hover {
+  background: var(--primary-red, #6B1F1A);
+  color: #ffffff;
+  border-color: var(--accent-gold, #D4AF37);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-control.active {
+  background: var(--primary-red, #6B1F1A);
+  color: var(--accent-gold, #D4AF37);
+  border-color: var(--accent-gold, #D4AF37);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.divider {
+  width: 1px;
+  height: 22px;
+  background: rgba(212, 175, 55, 0.25);
+  margin: 0 4px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 8, 4, 0.78);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background: var(--paper-beige, #F9F6EE);
+  border: 2px solid var(--accent-gold, #D4AF37);
+  border-radius: 20px;
+  padding: 28px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(107, 31, 26, 0.15);
+  padding-bottom: 12px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: var(--primary-red, #6B1F1A);
+  font-family: var(--font-accent, serif);
+  font-size: 1.2rem;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--primary-red, #6B1F1A);
+  cursor: pointer;
+}
+
+.help-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.help-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(107, 31, 26, 0.05);
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(107, 31, 26, 0.1);
+}
+
+.help-icon {
+  width: 38px;
+  height: 38px;
+  background: var(--primary-red, #6B1F1A);
+  color: var(--accent-gold, #D4AF37);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.help-text h4 {
+  margin: 0 0 4px 0;
+  font-size: 0.95rem;
+  color: var(--primary-red, #6B1F1A);
+  font-weight: 700;
+}
+
+.help-text p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #4a382a;
+  line-height: 1.4;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   16. COMPREHENSIVE MOBILE & TABLET RESPONSIVE SYSTEM
+   ═══════════════════════════════════════════════════════════ */
+
+/* --- TABLETS (1024px and below) --- */
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .grid-cards, 
+  .grid-4, 
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  .tales-directory {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .tales-list-col {
+    max-height: 400px !important;
+    overflow-y: auto !important;
+  }
+
+  .vr-interaction-container {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+  }
+
+  .vr360-stage-wrapper {
+    height: 500px !important;
+    max-height: 65vh !important;
+  }
+
+  .model-3d-visualizer {
+    min-height: 450px !important;
+  }
+
+  .culture-row {
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+
+  .culture-text-col, 
+  .culture-img-col {
+    width: 100% !important;
+  }
+}
+
+/* --- MOBILE DEVICES (768px and below) --- */
+@media (max-width: 768px) {
+  header .container {
+    padding: 12px 16px !important;
+  }
+
+  .nav-links {
+    display: none; /* Controlled via mobile toggle script */
+  }
+
+  .header-search {
+    max-width: 160px !important;
+  }
+
+  .header-search input {
+    font-size: 0.8rem !important;
+    padding: 6px 10px 6px 30px !important;
+  }
+
+  .hero-section {
+    padding: 100px 0 60px !important;
+  }
+
+  .hero-title {
+    font-size: 2.4rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .hero-desc {
+    font-size: 0.95rem !important;
+  }
+
+  .hero-cta {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .hero-cta .btn {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .intro-title {
+    font-size: 1.75rem !important;
+  }
+
+  .subnav-explore {
+    max-width: 100% !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .subnav-btn {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .grid-cards, 
+  .grid-4, 
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* VR 360 Mobile Controls & Stage */
+  .vr360-stage-wrapper {
+    height: 420px !important;
+    border-radius: 12px !important;
+  }
+
+  .header-bar {
+    padding: 8px 14px !important;
+    max-width: 100% !important;
+    border-radius: 12px !important;
+  }
+
+  .header-title h1 {
+    font-size: 0.95rem !important;
+  }
+
+  .header-title p {
+    display: none !important; /* Hide secondary subtitle on small screens */
+  }
+
+  .badge-vr {
+    padding: 4px 10px !important;
+    font-size: 0.65rem !important;
+  }
+
+  .bottom-controls {
+    padding: 6px 12px !important;
+    gap: 6px !important;
+    border-radius: 30px !important;
+  }
+
+  .btn-control {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .divider {
+    height: 18px !important;
+    margin: 0 2px !important;
+  }
+
+  /* Audio guide bar */
+  .audio-guide {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 20px !important;
+    gap: 15px !important;
+  }
+
+  .btn-play-recite {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Timeline Horizontal Touch Drag */
+  .timeline-track-wrap {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 15px !important;
+  }
+
+  /* Tale Details Reader */
+  .tale-viewer-card {
+    padding: 20px !important;
+  }
+
+  .tale-viewer-title {
+    font-size: 1.4rem !important;
+  }
+
+  .tale-text-content {
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+    max-height: 400px !important;
+  }
+
+  /* Model 3D Stage */
+  .model-3d-visualizer {
+    min-height: 380px !important;
+  }
+}
+
+/* --- SMALL MOBILE SCREENS (480px and below) --- */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero-title {
+    font-size: 2.0rem !important;
+  }
+
+  .intro-title {
+    font-size: 1.5rem !important;
+  }
+
+  .logo-title {
+    font-size: 1.1rem !important;
+  }
+
+  .logo-subtitle {
+    display: none !important;
+  }
+
+  .vr360-stage-wrapper {
+    height: 350px !important;
+  }
+
+  .ui-overlay {
+    padding: 12px !important;
+  }
+
+  .bottom-controls {
+    max-width: 100% !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  .modal-card {
+    padding: 20px !important;
+    border-radius: 16px !important;
+  }
+
+  .modal-header h3 {
+    font-size: 1.05rem !important;
+  }
+
+  .help-item {
+    padding: 10px !important;
+  }
+
+  .help-icon {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .help-text h4 {
+    font-size: 0.85rem !important;
+  }
+
+  .help-text p {
+    font-size: 0.75rem !important;
+  }
 }
