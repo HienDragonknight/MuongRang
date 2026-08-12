@@ -294,6 +294,24 @@
             to { transform: rotate(360deg); }
         }
 
+        .loader-progress-bar {
+            width: 220px;
+            max-width: 80%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .loader-progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #6366f1, #818cf8);
+            border-radius: 4px;
+            transition: width 0.15s ease-out;
+        }
+
         @media (max-width: 640px) {
             .ui-overlay {
                 padding: 16px;
@@ -318,7 +336,10 @@
     <!-- Loading Screen -->
     <div id="loader">
         <div class="spinner"></div>
-        <p style="color: #94a3b8; font-size: 0.9rem;">Đang tải hình ảnh 360°...</p>
+        <p id="loader-text" style="color: #94a3b8; font-size: 0.9rem;">Đang tải hình ảnh 360°... 0%</p>
+        <div class="loader-progress-bar">
+            <div id="loader-progress-fill" class="loader-progress-fill"></div>
+        </div>
     </div>
 
     <!-- Pannellum Container -->
@@ -396,10 +417,12 @@
     </div>
 
     <script>
-        // Pannellum Configuration for nhasan360.jpg
+        const loader = document.getElementById('loader');
+
+        // Pannellum Configuration for photo360.jpg
         const viewer = pannellum.viewer('panorama', {
             "type": "equirectangular",
-            "panorama": "nhasan360.jpg",
+            "panorama": "photo360.jpg",
             "autoLoad": true,
             "autoRotate": -2, // Smooth auto-rotation
             "autoRotateInactivityDelay": 4000,
@@ -415,9 +438,18 @@
 
         // Hide Loader when Pannellum finishes loading
         viewer.on('load', function() {
-            const loader = document.getElementById('loader');
-            loader.style.opacity = '0';
-            loader.style.visibility = 'hidden';
+            if (loader) {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+            }
+        });
+
+        viewer.on('error', function(err) {
+            console.warn("Pannellum error:", err);
+            if (loader) {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+            }
         });
 
         // Controls Logic

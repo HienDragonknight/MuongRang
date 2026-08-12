@@ -10042,6 +10042,13 @@ function initVRInteraction() {
   const pnmContainer = document.getElementById('panorama');
   if (!pnmContainer) return;
 
+  const loader = document.getElementById('loader');
+
+  if (loader) {
+    loader.style.opacity = '1';
+    loader.style.visibility = 'visible';
+  }
+
   // Destroy previous viewer instance if re-initializing to avoid WebGL context collision
   if (pannellumViewerInstance) {
     try {
@@ -10056,7 +10063,7 @@ function initVRInteraction() {
     if (typeof pannellum !== 'undefined') {
       pannellumViewerInstance = pannellum.viewer('panorama', {
         "type": "equirectangular",
-        "panorama": "VR360/nhasan360.jpg",
+        "panorama": "VR360/photo360.jpg",
         "autoLoad": true,
         "autoRotate": -2,
         "showControls": false,
@@ -10070,7 +10077,6 @@ function initVRInteraction() {
       });
 
       pannellumViewerInstance.on('load', function() {
-        const loader = document.getElementById('loader');
         if (loader) {
           loader.style.opacity = '0';
           loader.style.visibility = 'hidden';
@@ -10079,7 +10085,6 @@ function initVRInteraction() {
 
       pannellumViewerInstance.on('error', function(err) {
         console.warn("Pannellum load error:", err);
-        const loader = document.getElementById('loader');
         if (loader) {
           loader.style.opacity = '0';
           loader.style.visibility = 'hidden';
@@ -10088,6 +10093,10 @@ function initVRInteraction() {
     }
   } catch (err) {
     console.warn("Pannellum initialization error:", err);
+    if (loader) {
+      loader.style.opacity = '0';
+      loader.style.visibility = 'hidden';
+    }
   }
 
   // Controls Logic
@@ -10333,11 +10342,21 @@ function renderActive3DModel(type) {
 
   const stage = document.getElementById('model-3d-stage');
 
+  let modelSrc = '';
+  let modelTitle = '';
+
   if (type === 'house') {
-    // Render real 3D GLB Stilt House model using <model-viewer>
+    modelSrc = "3d%20glb/nhasan.glb";
+    modelTitle = "Mô hình 3D Nhà Sàn Mường";
+  } else if (type === 'gong') {
+    modelSrc = "3d%20glb/round%20metal%20doorknob%203d%20model.glb";
+    modelTitle = "Mô hình 3D Cồng Chiêng Cổ";
+  }
+
+  if (modelSrc) {
     container.innerHTML = `
       <model-viewer 
-        src="3d%20glb/nhasan.glb" 
+        src="${modelSrc}" 
         camera-controls 
         auto-rotate 
         shadow-intensity="1.8" 
@@ -10345,24 +10364,7 @@ function renderActive3DModel(type) {
         bounds="tight"
         field-of-view="32deg"
         style="width: 100%; height: 100%; min-height: 520px; background: transparent;"
-        alt="Mô hình 3D Nhà Sàn Mường">
-      </model-viewer>
-    `;
-    if (stage) stage.style.cursor = 'default';
-    return;
-  }
-
-  if (type === 'gong') {
-    // Render the real 3D GLB Gong model using <model-viewer>
-    container.innerHTML = `
-      <model-viewer 
-        src="3d%20glb/round%20metal%20doorknob%203d%20model.glb" 
-        camera-controls 
-        auto-rotate 
-        shadow-intensity="1.5" 
-        exposure="1.2"
-        style="width: 100%; height: 100%; min-height: 520px; background: transparent;"
-        alt="Mô hình 3D Cồng Chiêng Cổ">
+        alt="${modelTitle}">
       </model-viewer>
     `;
     if (stage) stage.style.cursor = 'default';

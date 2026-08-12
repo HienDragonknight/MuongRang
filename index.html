@@ -1164,7 +1164,10 @@
             <!-- Loading Screen -->
             <div id="loader" class="vr360-loader">
               <div class="spinner"></div>
-              <p style="color: var(--accent-gold, #D4AF37); font-size: 0.9rem; margin-top: 12px;">Đang tải hình ảnh 360°...</p>
+              <p id="loader-text" style="color: var(--accent-gold, #D4AF37); font-size: 0.9rem; margin-top: 12px;">Đang tải hình ảnh 360°... 0%</p>
+              <div class="loader-progress-bar">
+                <div id="loader-progress-fill" class="loader-progress-fill"></div>
+              </div>
             </div>
 
             <!-- Pannellum Container -->
@@ -1255,8 +1258,8 @@
                 <!-- Simulated 3D stilt house / gong / pattern wireframe -->
               </div>
             </div>
-            <div style="position:absolute; bottom: 15px; text-align:center; width:100%; font-family:var(--font-accent); font-size:0.75rem; color:var(--accent-gold); pointer-events:none; z-index: 10;">
-              <i class="fa-solid fa-rotate"></i> Nhấn giữ & Kéo chuột sang hai bên để xoay mô hình 3D
+            <div style="position:absolute; bottom: 18px; left: 50%; transform: translateX(-50%); font-family:var(--font-accent); font-size:0.82rem; color:var(--accent-gold); pointer-events:none; z-index: 10; background: rgba(0, 0, 0, 0.65); padding: 8px 18px; border-radius: 20px; backdrop-filter: blur(6px); border: 1px solid rgba(212, 175, 55, 0.3); white-space: nowrap; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+              <i class="fa-solid fa-rotate" style="margin-right: 6px;"></i> Nhấn giữ & Kéo chuột sang hai bên để xoay mô hình 3D
             </div>
           </div>
 
