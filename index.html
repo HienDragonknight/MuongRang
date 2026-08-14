@@ -9,17 +9,23 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="resources/LOGO BACK ĐỎ.PNG">
 
+  <!-- Google Fonts: Be Vietnam Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
   <!-- FontAwesome Icons for modern aesthetic -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="resources/style.css?v=2">
+  <link rel="stylesheet" href="resources/style.css?v=4">
 
   <!-- Model Viewer for GLB 3D models -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
   <!-- Pannellum 360 Viewer CSS & JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  <link rel="preload" as="image" href="VR360/photo360.jpg">
 </head>
 <body>
 
@@ -119,42 +125,6 @@
             <p style="margin-top: 16px;">
               Đẻ đất đẻ nước không chỉ là câu chuyện của người Mường trong quá khứ, mà còn là ký ức văn hóa đang chờ được thế hệ hôm nay lật mở. Sử thi tân diện tạo nên những điểm chạm số hóa để người trẻ nghe, nhìn, tương tác và tiếp tục hành trình của sử thi trong đời sống đương đại.
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- QUICK NAVIGATION DOORS -->
-    <section class="quick-nav-section">
-      <div class="container">
-        <div class="section-intro">
-          <span class="intro-tag">Cửa Ngõ Trải Nghiệm</span>
-          <h2 class="intro-title">Hành Trình Khám Phá</h2>
-        </div>
-        <div class="grid-cards">
-          <div class="start-card scroll-fade-up">
-            <div class="card-num">01</div>
-            <h3>26 Phần Sử Thi</h3>
-            <p>Theo dõi toàn bộ hành trình từ lúc vũ trụ còn hỗn mang đến khi bản Mường hình thành ổn định.</p>
-            <a href="#su-thi" class="card-btn">Xem 26 phần <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-          <div class="start-card scroll-fade-up" style="animation-delay: 0.1s;">
-            <div class="card-num">02</div>
-            <h3>Biểu Tượng Mo</h3>
-            <p>Đất, nước, cây si, cồng chiêng, nhà sàn và các hình tượng thần thoại đặc sắc của Mo Mường.</p>
-            <a href="#su-thi" class="card-btn">Khám phá biểu tượng <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-          <div class="start-card scroll-fade-up" style="animation-delay: 0.2s;">
-            <div class="card-num">03</div>
-            <h3>Không Gian Bản Mường</h3>
-            <p>Bước vào đời sống, tìm hiểu kiến trúc nhà sàn, cồng chiêng, ẩm thực dân dã và các lễ hội mùa xuân.</p>
-            <a href="#kham-pha" class="card-btn">Xem không gian <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-          <div class="start-card scroll-fade-up" style="animation-delay: 0.3s;">
-            <div class="card-num">04</div>
-            <h3>VR Tương Tác 3D</h3>
-            <p>Tự tay tương tác với các đồ dùng cúng tế, sinh hoạt trong nhà sàn truyền thống người Mường xưa.</p>
-            <a href="#vr-tuong-tac" class="card-btn">Vào VR <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -305,7 +275,7 @@
         <div class="section-intro">
           <span class="intro-tag">Di Sản Đất Mường</span>
           <h2 class="intro-title" style="font-size: 3rem; color: var(--primary-red);">Khám Phá Văn Hóa Mường</h2>
-          <p style="max-width:700px; margin: 0 auto 30px;">
+          <p style="max-width:700px; margin: 0 auto 16px;">
             Khám phá văn hóa Mường qua những dấu ấn gần gũi nhất: nếp nhà sàn, trang phục truyền thống, nghệ dệt thổ cẩm và những giá trị đã được gìn giữ qua nhiều thế hệ.
           </p>
           <div class="hero-actions" style="justify-content:center;">
@@ -319,30 +289,49 @@
     <!-- 4 CULTURAL SEGMENTS -->
     <section class="explore-segments-section">
       <div class="container">
-        <div class="grid-cards" style="grid-template-columns: repeat(4, 1fr);">
-          <div class="start-card scroll-fade-up" style="background:var(--paper-beige-dark);">
-            <div style="font-size: 2.5rem; color:var(--primary-red); margin-bottom: 15px;"><i class="fa-solid fa-house-chimney"></i></div>
+        <div class="grid-cards segment-cards-grid" style="grid-template-columns: repeat(4, 1fr); gap: 20px;">
+          <div class="start-card scroll-fade-up" onclick="window.location.hash='van-hoa-muong'">
+            <div class="card-icon-circle">
+              <i class="fa-solid fa-house-chimney"></i>
+            </div>
             <h3>Văn Hóa Mường</h3>
             <p>Khám phá kiến trúc nhà sàn dựa lưng đồi, phong tục cồng chiêng cúng tế và không gian tín ngưỡng Mo linh thiêng.</p>
-            <a href="#van-hoa-muong" class="btn btn-secondary btn-sm" style="margin-top: 15px; display:inline-block; padding: 6px 16px;">Khám phá văn hóa</a>
+            <div class="card-btn-wrap">
+              <a href="#van-hoa-muong" class="btn btn-card">Khám phá văn hóa</a>
+            </div>
           </div>
-          <div class="start-card scroll-fade-up" style="background:var(--paper-beige-dark); animation-delay: 0.1s;">
-            <div style="font-size: 2.5rem; color:var(--primary-red); margin-bottom: 15px;"><i class="fa-solid fa-vest"></i></div>
+
+          <div class="start-card scroll-fade-up" style="animation-delay: 0.1s;" onclick="window.location.hash='trang-phuc-muong'">
+            <div class="card-icon-circle">
+              <i class="fa-solid fa-vest"></i>
+            </div>
             <h3>Trang Phục Mường</h3>
             <p>Trầm trồ trước những dải cạp váy thêu dệt thổ cẩm tinh xảo thêu biểu tượng phượng hoàng vũ trụ độc đáo.</p>
-            <a href="#trang-phuc-muong" class="btn btn-secondary btn-sm" style="margin-top: 15px; display:inline-block; padding: 6px 16px;">Xem trang phục</a>
+            <div class="card-btn-wrap">
+              <a href="#trang-phuc-muong" class="btn btn-card">Xem trang phục</a>
+            </div>
           </div>
-          <div class="start-card scroll-fade-up" style="background:var(--paper-beige-dark); animation-delay: 0.2s;">
-            <div style="font-size: 2.5rem; color:var(--primary-red); margin-bottom: 15px;"><i class="fa-solid fa-utensils"></i></div>
+
+          <div class="start-card scroll-fade-up" style="animation-delay: 0.2s;" onclick="window.location.hash='am-thuc-muong'">
+            <div class="card-icon-circle">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
             <h3>Ẩm Thực Mường</h3>
             <p>Thưởng thức cơm nếp lam ống nứa, thịt lợn mán nướng hạt dổi rừng béo ngậy bày trên mẹt lá chuối dẻo thơm.</p>
-            <a href="#am-thuc-muong" class="btn btn-secondary btn-sm" style="margin-top: 15px; display:inline-block; padding: 6px 16px;">Khám phá ẩm thực</a>
+            <div class="card-btn-wrap">
+              <a href="#am-thuc-muong" class="btn btn-card">Khám phá ẩm thực</a>
+            </div>
           </div>
-          <div class="start-card scroll-fade-up" style="background:var(--paper-beige-dark); animation-delay: 0.3s;">
-            <div style="font-size: 2.5rem; color:var(--primary-red); margin-bottom: 15px;"><i class="fa-solid fa-gamepad"></i></div>
+
+          <div class="start-card scroll-fade-up" style="animation-delay: 0.3s;" onclick="window.location.hash='tro-choi-muong'">
+            <div class="card-icon-circle">
+              <i class="fa-solid fa-gamepad"></i>
+            </div>
             <h3>Trò Chơi Dân Gian</h3>
             <p>Hòa nhịp tiếng cười xuân rộn rã qua các trò chơi truyền thống như ném còn cầu may, đua tài đi cà kheo, kéo co.</p>
-            <a href="#tro-choi-muong" class="btn btn-secondary btn-sm" style="margin-top: 15px; display:inline-block; padding: 6px 16px;">Xem trò chơi</a>
+            <div class="card-btn-wrap">
+              <a href="#tro-choi-muong" class="btn btn-card">Xem trò chơi</a>
+            </div>
           </div>
         </div>
       </div>
@@ -1292,51 +1281,327 @@
   <!-- ==========================================
        VIEW: VỀ CHÚNG TÔI (ABOUT VIEW)
        ========================================== -->
+  <!-- ==========================================
+       VIEW: VỀ DỰ ÁN (ABOUT VIEW)
+       ========================================== -->
   <main id="about" class="view-section">
-    <div class="container">
-      <div class="section-intro">
-        <span class="intro-tag">Hành Trình Di Sản</span>
-        <h2 class="intro-title">Về Dự Án Sử Thi Tân Diện</h2>
-        <p>Được kiến tạo bởi những người trẻ đam mê văn hóa truyền thống Tây Bắc với mong muốn thắp sáng ngọn lửa sử thi dân tộc</p>
-      </div>
-
-      <div class="culture-row scroll-fade-up">
-        <div class="culture-text-col">
-          <span class="idea-badge">Mục Tiêu Dự Án</span>
-          <h2>Bảo Tồn & Phát Triển Trải Nghiệm Số</h2>
-          <p>
-            Dự án "Sử Thi Tân Diện" là một nỗ lực số hóa di sản văn hóa, ứng dụng công nghệ lập trình tương tác 3D/VR để đưa 26 chương sử thi "Đẻ đất đẻ nước" đồ sộ thoát khỏi những trang văn bản hàn lâm khô khan, biến thành trải nghiệm sống động chân thực cho độc giả trẻ.
-          </p>
-          <p>
-            Chúng tôi tin rằng, văn hóa truyền thống không phải là cổ vật đặt trong tủ kính khóa chặt, mà là ngọn lửa ấm cần tiếp tục được nhen nhóm và thổi bùng rực rỡ bởi sức sáng tạo vô biên của thế hệ hôm nay.
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 80px;">
+      
+      <!-- 1. GIỚI THIỆU DỰ ÁN -->
+      <section class="about-hero-section scroll-fade-up">
+        <div class="section-intro" style="text-align: center; margin-bottom: 40px;">
+          <span class="intro-tag">Dự Án Truyền Thông Di Sản</span>
+          <h1 class="intro-title" style="font-size: 3rem; color: var(--primary-red); margin-top: 10px;">SỬ THI TÂN DIỆN</h1>
+          <p class="about-subtitle" style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--earth-brown); font-style: italic; margin-top: 8px;">
+            "Để sử thi được kể tiếp bằng ngôn ngữ của hôm nay"
           </p>
         </div>
-        <div class="culture-img-col">
-          <img src="resources/muong_cay_si.png" alt="Cây Si thần linh thiêng">
-        </div>
-      </div>
 
-      <!-- TEAM DETAILS -->
-      <section style="margin-top:60px;">
-        <h3 style="text-align:center; font-size:2rem; color:var(--primary-red); margin-bottom:40px;">Đội Ngũ Sáng Lập</h3>
-        <div class="grid-cards" style="grid-template-columns: repeat(3, 1fr);">
-          <div class="start-card" style="padding: 25px; text-align:center; background: var(--paper-beige-dark);">
-            <h5 style="margin-bottom:5px;">Nguyễn Minh Đức</h5>
-            <span style="font-size:0.8rem; color:var(--primary-red-light); font-weight:600; text-transform:uppercase;">Trưởng nhóm dự án & Nội dung</span>
-            <p style="font-size:0.85rem; margin-top:10px; margin-bottom:0;">Nghiên cứu văn hóa Mường cổ, biên soạn và xâu chuỗi 26 chương Mo chính xác.</p>
-          </div>
-          <div class="start-card" style="padding: 25px; text-align:center; background: var(--paper-beige-dark);">
-            <h5 style="margin-bottom:5px;">Trần Hoàng Nam</h5>
-            <span style="font-size:0.8rem; color:var(--primary-red-light); font-weight:600; text-transform:uppercase;">Lập trình viên Web 3D/VR</span>
-            <p style="font-size:0.85rem; margin-top:10px; margin-bottom:0;">Xây dựng logic mô phỏng Canvas 3D, hệ thống audio Web API và tương tác hotspots.</p>
-          </div>
-          <div class="start-card" style="padding: 25px; text-align:center; background: var(--paper-beige-dark);">
-            <h5 style="margin-bottom:5px;">Lê Mai Chi</h5>
-            <span style="font-size:0.8rem; color:var(--primary-red-light); font-weight:600; text-transform:uppercase;">Thiết kế mỹ thuật & Visuals</span>
-            <p style="font-size:0.85rem; margin-top:10px; margin-bottom:0;">Phác thảo ý tưởng giao diện di sản ngả be giấy dó, họa tiết cồng chiêng đỏ trầm.</p>
+        <div class="about-intro-box" style="background: var(--paper-beige-dark); border: 1px solid rgba(124, 31, 26, 0.15); border-radius: 20px; padding: 40px; box-shadow: 0 8px 30px rgba(0,0,0,0.05); margin-bottom: 60px;">
+          <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+            <!-- Hình bên trái (lớn hơn) -->
+            <div style="flex: 0 0 480px; max-width: 100%; text-align: center;">
+              <img src="suthitandien.jpg" alt="Sử Thi Tân Diện" style="width: 100%; max-width: 480px; border-radius: 16px; box-shadow: 0 12px 30px rgba(0,0,0,0.18); border: 2px solid var(--accent-gold); object-fit: cover;">
+            </div>
+            <!-- Chữ bên phải -->
+            <div style="flex: 1 1 480px; font-size: 1.05rem; line-height: 1.8; color: var(--text-dark);">
+              <p style="margin-bottom: 16px;">
+                <strong>Sử thi Tân Diện</strong> là dự án truyền thông nhằm gia tăng nhận biết của giới trẻ về những giá trị văn hóa của dân tộc Mường thông qua các chương sử thi <em>“Đẻ đất đẻ nước”</em>.
+              </p>
+              <p style="margin-bottom: 16px;">
+                Lấy sử thi làm chất liệu trung tâm, dự án đưa công chúng trẻ bước vào thế giới văn hóa Mường qua những câu chuyện về sự hình thành đất trời, con người và mường bản; từ đó khám phá đời sống tinh thần, phong tục, tín ngưỡng, tri thức dân gian và mối quan hệ giữa con người với thiên nhiên, cộng đồng.
+              </p>
+              <p style="margin-bottom: 24px;">
+                Tên gọi <strong>“Tân Diện”</strong> thể hiện tinh thần đưa sử thi xuất hiện trước công chúng trong một diện mạo tiếp cận mới. Không thay đổi hay làm sai lệch những giá trị nguyên bản, dự án sử dụng truyền thông số, hình ảnh minh họa, kể chuyện, công nghệ tương tác và trải nghiệm trực tiếp để những giá trị từng được lưu truyền qua nhiều thế hệ có thêm những điểm chạm phù hợp với người trẻ hôm nay.
+              </p>
+              <div class="about-slogan-badge" style="display: inline-block; background: linear-gradient(135deg, var(--primary-red) 0%, #94251e 100%); color: #f0c86a; padding: 12px 24px; border-radius: 30px; font-family: var(--font-accent); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.5px; box-shadow: 0 4px 15px rgba(124, 31, 26, 0.25);">
+                ✨ Di sản cũ – Điểm chạm mới – Câu chuyện được kể tiếp.
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      <!-- 2. MỤC ĐÍCH & MỤC TIÊU DỰ ÁN -->
+      <section class="about-goals-section scroll-fade-up" style="margin-bottom: 70px;">
+        <div class="section-intro" style="text-align: center; margin-bottom: 36px;">
+          <span class="intro-tag">Mục Đích & Mục Tiêu</span>
+          <h2 class="intro-title" style="font-size: 2.2rem; color: var(--primary-red);">Chúng Mình Muốn Làm Gì?</h2>
+          <p style="max-width: 850px; margin: 12px auto 0; font-size: 1.05rem; line-height: 1.7; color: rgba(34, 23, 16, 0.85);">
+            Sử thi Tân Diện mong muốn thu hẹp khoảng cách giữa sử thi “Đẻ đất đẻ nước” với thế hệ trẻ, chuyển dịch những nội dung văn hóa từ hình thức lưu giữ và tiếp cận mang tính nghiên cứu sang hệ thống truyền thông, trải nghiệm trực quan và tương tác phù hợp hơn với bối cảnh hiện đại. Thông qua đó, người trẻ nhận ra rằng “Đẻ đất đẻ nước” không chỉ là một tác phẩm văn học dân gian thuộc về quá khứ, mà còn là kho tàng lưu giữ thế giới quan, tri thức và bản sắc văn hóa của cộng đồng người Mường.
+          </p>
+        </div>
+
+        <div class="grid-goals" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+          <div class="goal-card" style="background: #ffffff; border: 1px solid rgba(124, 31, 26, 0.15); border-radius: 16px; padding: 28px 20px; text-align: center; box-shadow: 0 6px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(124, 31, 26, 0.08); color: var(--primary-red); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 16px;">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--primary-red); margin-bottom: 10px;">GIA TĂNG NHẬN BIẾT</h4>
+            <p style="font-size: 0.88rem; line-height: 1.6; color: rgba(34, 23, 16, 0.75);">
+              Giúp công chúng trẻ biết đến “Đẻ đất đẻ nước” và nhận diện được những giá trị văn hóa Mường được phản ánh qua sử thi.
+            </p>
+          </div>
+
+          <div class="goal-card" style="background: #ffffff; border: 1px solid rgba(124, 31, 26, 0.15); border-radius: 16px; padding: 28px 20px; text-align: center; box-shadow: 0 6px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(124, 31, 26, 0.08); color: var(--primary-red); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 16px;">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--primary-red); margin-bottom: 10px;">KHƠI GỢI QUAN TÂM</h4>
+            <p style="font-size: 0.88rem; line-height: 1.6; color: rgba(34, 23, 16, 0.75);">
+              Tạo những điểm chạm gần gũi để người trẻ cảm thấy di sản không xa cách, từ đó chủ động tìm hiểu sâu hơn về sử thi và văn hóa Mường.
+            </p>
+          </div>
+
+          <div class="goal-card" style="background: #ffffff; border: 1px solid rgba(124, 31, 26, 0.15); border-radius: 16px; padding: 28px 20px; text-align: center; box-shadow: 0 6px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(124, 31, 26, 0.08); color: var(--primary-red); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 16px;">
+              <i class="fa-solid fa-hands-holding-circle"></i>
+            </div>
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--primary-red); margin-bottom: 10px;">TẠO CƠ HỘI TRẢI NGHIỆM</h4>
+            <p style="font-size: 0.88rem; line-height: 1.6; color: rgba(34, 23, 16, 0.75);">
+              Đưa văn hóa từ nội dung được đọc và quan sát thành những trải nghiệm có thể tương tác thông qua triển lãm, công nghệ, hoạt động văn hóa và đối thoại.
+            </p>
+          </div>
+
+          <div class="goal-card" style="background: #ffffff; border: 1px solid rgba(124, 31, 26, 0.15); border-radius: 16px; padding: 28px 20px; text-align: center; box-shadow: 0 6px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(124, 31, 26, 0.08); color: var(--primary-red); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 16px;">
+              <i class="fa-solid fa-share-nodes"></i>
+            </div>
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--primary-red); margin-bottom: 10px;">KHUYẾN KHÍCH LAN TỎA</h4>
+            <p style="font-size: 0.88rem; line-height: 1.6; color: rgba(34, 23, 16, 0.75);">
+              Tạo điều kiện để người trẻ không chỉ tiếp nhận mà còn chia sẻ, sáng tạo và kể tiếp những câu chuyện văn hóa bằng ngôn ngữ của thế hệ mình.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. HÀNH TRÌNH SỬ THI TÂN DIỆN -->
+      <section class="about-journey-section scroll-fade-up" style="margin-bottom: 70px;">
+        <div class="section-intro" style="text-align: center; margin-bottom: 40px;">
+          <span class="intro-tag">Hoạt Động Trọng Tâm</span>
+          <h2 class="intro-title" style="font-size: 2.2rem; color: var(--primary-red);">HÀNH TRÌNH SỬ THI TÂN DIỆN</h2>
+          <p style="max-width: 800px; margin: 8px auto 0; font-size: 1rem; color: rgba(34, 23, 16, 0.8);">
+            Từ những cuộc đối thoại đến không gian trải nghiệm trực tiếp, mỗi hoạt động của Sử thi Tân Diện là một điểm chạm khác nhau trên hành trình đưa sử thi “Đẻ đất đẻ nước” và văn hóa Mường đến gần hơn với người trẻ.
+          </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 30px;">
+          <!-- Event 1: TALKSHOW NỐI THỜI SỐ -->
+          <div class="journey-card">
+            <div class="journey-card-media">
+              <div class="event-slider-wrap" id="talkshow-event-slider">
+                <div class="event-slider-track">
+                  <div class="event-slide active"><img src="resources/talkshow_images/TALKSHOW/DSC02996.jpeg" alt="Talkshow Nối Thời Số 1"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03002.jpeg" alt="Talkshow Nối Thời Số 2"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03048.jpeg" alt="Talkshow Nối Thời Số 3"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03090.jpeg" alt="Talkshow Nối Thời Số 4"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03195.jpeg" alt="Talkshow Nối Thời Số 5"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03227.jpeg" alt="Talkshow Nối Thời Số 6"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03413.jpeg" alt="Talkshow Nối Thời Số 7"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03432.jpeg" alt="Talkshow Nối Thời Số 8"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03438.jpeg" alt="Talkshow Nối Thời Số 9"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03453.jpeg" alt="Talkshow Nối Thời Số 10"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03547.jpeg" alt="Talkshow Nối Thời Số 11"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03632.jpeg" alt="Talkshow Nối Thời Số 12"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03665.jpeg" alt="Talkshow Nối Thời Số 13"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03741.jpeg" alt="Talkshow Nối Thời Số 14"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03768.jpeg" alt="Talkshow Nối Thời Số 15"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03790.jpeg" alt="Talkshow Nối Thời Số 16"></div>
+                  <div class="event-slide"><img src="resources/talkshow_images/TALKSHOW/DSC03823.jpeg" alt="Talkshow Nối Thời Số 17"></div>
+                </div>
+                <div class="event-slider-overlay"></div>
+                <div class="event-slider-counter"><i class="fa-solid fa-camera"></i> <span class="current-num">1</span> / 17</div>
+                <button class="event-slider-btn prev" aria-label="Ảnh trước"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="event-slider-btn next" aria-label="Ảnh sau"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="event-slider-dots"></div>
+              </div>
+            </div>
+            <div class="journey-card-content">
+              <span style="background: var(--primary-red); color: white; font-family: var(--font-accent); font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase;">Events & Talkshow</span>
+              <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary-red); margin: 8px 0 4px;">TALKSHOW “NỐI THỜI SỐ”</h3>
+              <p style="font-family: var(--font-heading); font-style: italic; color: var(--earth-brown); font-size: 0.95rem; margin-bottom: 14px;">
+                "Khi câu chuyện văn hóa được tiếp nối trong thời đại số"
+              </p>
+              <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-dark); margin-bottom: 12px;">
+                “Nối Thời Số” là không gian đối thoại giữa những góc nhìn từ nghiên cứu và thực hành văn hóa, giáo dục và thế hệ trẻ sáng tạo nội dung. Tọa đàm xoay quanh câu hỏi: <em>Trong thời đại số, ai sẽ tiếp tục kể câu chuyện văn hóa? Và làm thế nào để những giá trị truyền thống có thể được truyền tải bằng ngôn ngữ của hôm nay mà vẫn giữ được tinh thần nguyên bản?</em>
+              </p>
+              <p style="font-size: 0.88rem; line-height: 1.6; color: rgba(34, 23, 16, 0.8); background: rgba(255, 255, 255, 0.6); padding: 12px 16px; border-left: 3px solid var(--primary-red); border-radius: 4px; margin-bottom: 0;">
+                <strong>Mục đích:</strong> Tạo không gian kết nối giữa những người đang gìn giữ, nghiên cứu và truyền tải văn hóa với thế hệ trẻ; từ đó mở ra những góc nhìn đa chiều về vai trò của người trẻ và công nghệ trong hành trình bảo tồn, tiếp nối và lan tỏa di sản.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 2: SẮC MƯỜNG ĐƯƠNG ĐẠI -->
+          <div class="journey-card">
+            <div class="journey-card-media">
+              <div class="event-slider-wrap" id="sacmuong-event-slider">
+                <div class="event-slider-track">
+                  <div class="event-slide active"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00447.jpeg" alt="Triển lãm Sắc Mường Đương Đại 1" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00449.jpeg" alt="Triển lãm Sắc Mường Đương Đại 2" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00451.jpeg" alt="Triển lãm Sắc Mường Đương Đại 3" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00454.jpeg" alt="Triển lãm Sắc Mường Đương Đại 4" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00456.jpeg" alt="Triển lãm Sắc Mường Đương Đại 5" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00458.jpeg" alt="Triển lãm Sắc Mường Đương Đại 6" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00462.jpeg" alt="Triển lãm Sắc Mường Đương Đại 7" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00474.jpeg" alt="Triển lãm Sắc Mường Đương Đại 8" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00533.jpeg" alt="Triển lãm Sắc Mường Đương Đại 9" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00554.jpeg" alt="Triển lãm Sắc Mường Đương Đại 10" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00559.jpeg" alt="Triển lãm Sắc Mường Đương Đại 11" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00569.jpeg" alt="Triển lãm Sắc Mường Đương Đại 12" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00574.jpeg" alt="Triển lãm Sắc Mường Đương Đại 13" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00628.jpeg" alt="Triển lãm Sắc Mường Đương Đại 14" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00631.jpeg" alt="Triển lãm Sắc Mường Đương Đại 15" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00647.jpeg" alt="Triển lãm Sắc Mường Đương Đại 16" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00716.jpeg" alt="Triển lãm Sắc Mường Đương Đại 17" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00721.jpeg" alt="Triển lãm Sắc Mường Đương Đại 18" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00731.jpeg" alt="Triển lãm Sắc Mường Đương Đại 19" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00745.jpeg" alt="Triển lãm Sắc Mường Đương Đại 20" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00778.jpeg" alt="Triển lãm Sắc Mường Đương Đại 21" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00786.jpeg" alt="Triển lãm Sắc Mường Đương Đại 22" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00787.jpeg" alt="Triển lãm Sắc Mường Đương Đại 23" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00851.jpeg" alt="Triển lãm Sắc Mường Đương Đại 24" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC00928.jpeg" alt="Triển lãm Sắc Mường Đương Đại 25" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/DSC01153.jpeg" alt="Triển lãm Sắc Mường Đương Đại 26" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/IMG_1845.JPG" alt="Triển lãm Sắc Mường Đương Đại 27" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/IMG_1846.JPG" alt="Triển lãm Sắc Mường Đương Đại 28" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/IMG_1847.JPG" alt="Triển lãm Sắc Mường Đương Đại 29" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/IMG_1848.JPG" alt="Triển lãm Sắc Mường Đương Đại 30" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/IMG_1849.JPG" alt="Triển lãm Sắc Mường Đương Đại 31" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00014.jpeg" alt="Triển lãm Sắc Mường Đương Đại 32" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00087.jpeg" alt="Triển lãm Sắc Mường Đương Đại 33" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00090.jpeg" alt="Triển lãm Sắc Mường Đương Đại 34" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00142.jpeg" alt="Triển lãm Sắc Mường Đương Đại 35" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00155.jpeg" alt="Triển lãm Sắc Mường Đương Đại 36" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00158.jpeg" alt="Triển lãm Sắc Mường Đương Đại 37" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00187.jpeg" alt="Triển lãm Sắc Mường Đương Đại 38" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00224.jpeg" alt="Triển lãm Sắc Mường Đương Đại 39" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00271.jpeg" alt="Triển lãm Sắc Mường Đương Đại 40" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00296.jpeg" alt="Triển lãm Sắc Mường Đương Đại 41" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00309.jpeg" alt="Triển lãm Sắc Mường Đương Đại 42" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00316.jpeg" alt="Triển lãm Sắc Mường Đương Đại 43" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00324.jpeg" alt="Triển lãm Sắc Mường Đương Đại 44" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00379.jpeg" alt="Triển lãm Sắc Mường Đương Đại 45" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00426.jpeg" alt="Triển lãm Sắc Mường Đương Đại 46" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00460.jpeg" alt="Triển lãm Sắc Mường Đương Đại 47" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00540.jpeg" alt="Triển lãm Sắc Mường Đương Đại 48" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00671.jpeg" alt="Triển lãm Sắc Mường Đương Đại 49" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00674.jpeg" alt="Triển lãm Sắc Mường Đương Đại 50" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00677.jpeg" alt="Triển lãm Sắc Mường Đương Đại 51" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00682.jpeg" alt="Triển lãm Sắc Mường Đương Đại 52" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00690.jpeg" alt="Triển lãm Sắc Mường Đương Đại 53" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00695.jpeg" alt="Triển lãm Sắc Mường Đương Đại 54" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00766.jpeg" alt="Triển lãm Sắc Mường Đương Đại 55" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00787.jpeg" alt="Triển lãm Sắc Mường Đương Đại 56" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00801.jpeg" alt="Triển lãm Sắc Mường Đương Đại 57" loading="lazy"></div>
+                  <div class="event-slide"><img src="resources/trienlam_images/TRIỂN LÃM/KKK00824.jpeg" alt="Triển lãm Sắc Mường Đương Đại 58" loading="lazy"></div>
+                </div>
+                <div class="event-slider-overlay"></div>
+                <div class="event-slider-counter"><i class="fa-solid fa-camera"></i> <span class="current-num">1</span> / 58</div>
+                <button class="event-slider-btn prev" aria-label="Ảnh trước"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="event-slider-btn next" aria-label="Ảnh sau"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="event-slider-dots"></div>
+              </div>
+            </div>
+            <div class="journey-card-content">
+              <span style="background: var(--accent-gold); color: var(--charcoal-black); font-family: var(--font-accent); font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase;">Triển Lãm & Trải Nghiệm AR</span>
+              <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary-red); margin: 8px 0 4px;">SẮC MƯỜNG ĐƯƠNG ĐẠI</h3>
+              <p style="font-family: var(--font-heading); font-style: italic; color: var(--earth-brown); font-size: 0.95rem; margin-bottom: 14px;">
+                "Chạm vào văn hóa – Bước vào dòng chảy sử thi"
+              </p>
+              <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-dark); margin-bottom: 12px;">
+                Không gian văn hóa “Sắc Mường Đương Đại” kết hợp Triển lãm thực tế tăng cường “Dòng chảy sử thi” là hoạt động trọng tâm của Sử thi Tân Diện. Tại đây, người tham dự không chỉ quan sát mà còn trực tiếp bước vào hành trình khám phá văn hóa Mường thông qua hệ thống trưng bày, các chương sử thi được minh họa, công nghệ AR và những hoạt động trải nghiệm văn hóa.
+              </p>
+              <p style="font-size: 0.88rem; line-height: 1.6; color: rgba(34, 23, 16, 0.8); background: rgba(255, 255, 255, 0.6); padding: 12px 16px; border-left: 3px solid var(--accent-gold); border-radius: 4px; margin-bottom: 0;">
+                <strong>Mục đích:</strong> Chuyển những nội dung về “Đẻ đất đẻ nước” và văn hóa Mường thành một không gian trực quan, sinh động và có khả năng tương tác; giúp công chúng trẻ tiếp cận di sản thông qua trải nghiệm thực tế thay vì chỉ tiếp nhận thông tin một chiều.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. NHỮNG NGƯỜI ĐỨNG SAU SỬ THI TÂN DIỆN -->
+      <section class="about-team-section scroll-fade-up" style="margin-bottom: 70px;">
+        <div class="section-intro" style="text-align: center; margin-bottom: 40px;">
+          <span class="intro-tag">Ban Tổ Chức</span>
+          <h2 class="intro-title" style="font-size: 2.2rem; color: var(--primary-red);">NHỮNG NGƯỜI ĐỨNG SAU SỬ THI TÂN DIỆN</h2>
+          <p style="font-size: 0.95rem; color: rgba(34, 23, 16, 0.75);">
+            Đội ngũ các bạn trẻ nhiệt huyết phụ trách xây dựng và vận hành dự án
+          </p>
+        </div>
+
+        <div class="btc-members-grid">
+          <!-- Member 1 -->
+          <div class="btc-member-card scroll-fade-up">
+            <div class="btc-avatar-wrap">
+              <img src="resources/btc_images/ANH THE BTC/Thao.jpg" alt="Pham Thanh Thao" class="btc-avatar">
+              <div class="btc-avatar-ring"></div>
+            </div>
+            <h4 class="btc-name">Ph&#7841;m Thanh Th&#7843;o</h4>
+            <span class="btc-role">Project Manager &amp; Event Manager</span>
+          </div>
+          <!-- Member 2 -->
+          <div class="btc-member-card scroll-fade-up" style="animation-delay:0.1s">
+            <div class="btc-avatar-wrap">
+              <img src="resources/btc_images/ANH THE BTC/Phung Thi Hue.jpg" alt="Phung Thi Hue" class="btc-avatar">
+              <div class="btc-avatar-ring"></div>
+            </div>
+            <h4 class="btc-name">Ph&#249;ng Th&#7883; Hu&#7879;</h4>
+            <span class="btc-role">Research &amp; Event Manager</span>
+          </div>
+          <!-- Member 3 -->
+          <div class="btc-member-card scroll-fade-up" style="animation-delay:0.2s">
+            <div class="btc-avatar-wrap">
+              <img src="resources/btc_images/ANH THE BTC/Khuat Dung.JPG" alt="Khuat Thi Kim Dung" class="btc-avatar">
+              <div class="btc-avatar-ring"></div>
+            </div>
+            <h4 class="btc-name">Khu&#7845;t Th&#7883; Kim Dung</h4>
+            <span class="btc-role">Facebook Communications Manager</span>
+          </div>
+          <!-- Member 4 -->
+          <div class="btc-member-card scroll-fade-up" style="animation-delay:0.3s">
+            <div class="btc-avatar-wrap">
+              <img src="resources/btc_images/ANH THE BTC/Nguyen Linh Hoa.JPG" alt="Nguyen Truong My Hoa" class="btc-avatar">
+              <div class="btc-avatar-ring"></div>
+            </div>
+            <h4 class="btc-name">Nguy&#7877;n Tr&#432;&#417;ng M&#7929; Hoa</h4>
+            <span class="btc-role">TikTok Manager &amp; Video Producer</span>
+          </div>
+          <!-- Member 5 -->
+          <div class="btc-member-card scroll-fade-up" style="animation-delay:0.4s">
+            <div class="btc-avatar-wrap">
+              <img src="resources/btc_images/ANH THE BTC/Thao Nguyen.jpg" alt="Nguyen Thao Nguyen" class="btc-avatar">
+              <div class="btc-avatar-ring"></div>
+            </div>
+            <h4 class="btc-name">Nguy&#7877;n Th&#7843;o Nguy&#234;n</h4>
+            <span class="btc-role">External Relations Manager</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. LỜI CẢM ƠN -->
+      <section class="about-thanks-section scroll-fade-up">
+        <div style="background: linear-gradient(135deg, var(--paper-beige-dark) 0%, rgba(196,154,42,0.1) 100%); border: 2px dashed rgba(124, 31, 26, 0.25); border-radius: 20px; padding: 48px 40px; text-align: center; position: relative;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--primary-red); color: #f0c86a; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin: -73px auto 20px; box-shadow: 0 4px 15px rgba(124,31,26,0.3);">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 2.2rem; color: var(--primary-red); margin-bottom: 18px;">LỜI CẢM ƠN</h3>
+          <div style="max-width: 860px; margin: 0 auto; font-size: 1.02rem; line-height: 1.8; color: var(--text-dark);">
+            <p style="margin-bottom: 14px;">
+              Hành trình của <strong>Sử thi Tân Diện</strong> sẽ không thể trọn vẹn nếu thiếu đi sự đồng hành và đóng góp của rất nhiều cá nhân, đơn vị trong suốt thời gian qua.
+            </p>
+            <p style="margin-bottom: 14px;">
+              Ban tổ chức xin chân thành cảm ơn các chuyên gia, khách mời, đơn vị đồng hành, đối tác và tất cả những người đã dành thời gian, tâm huyết để cùng dự án lan tỏa những giá trị của sử thi “Đẻ đất đẻ nước” và văn hóa Mường.
+            </p>
+            <p style="margin-bottom: 14px;">
+              Và đặc biệt, <strong>cảm ơn bạn</strong> – vì đã dừng lại, lắng nghe, trải nghiệm và dành sự quan tâm cho những câu chuyện văn hóa mà chúng mình muốn kể.
+            </p>
+            <p style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--primary-red); margin-top: 20px;">
+              Cảm ơn vì đã đồng hành cùng Sử thi Tân Diện, để những giá trị xưa tiếp tục được chạm tới, được sẻ chia và được kể tiếp trong hôm nay. ❤️
+            </p>
+          </div>
+        </div>
+      </section>
+
     </div>
   </main>
 
@@ -1400,5 +1665,119 @@
 
   <!-- Main JavaScript File -->
   <script src="resources/app.js"></script>
+  <!-- Event Multi-Image Slider Script -->
+  <script>
+    function initEventSliders() {
+      const sliders = document.querySelectorAll('.event-slider-wrap');
+      sliders.forEach(slider => {
+        const slides = slider.querySelectorAll('.event-slide');
+        const prevBtn = slider.querySelector('.event-slider-btn.prev');
+        const nextBtn = slider.querySelector('.event-slider-btn.next');
+        const dotsContainer = slider.querySelector('.event-slider-dots');
+        const counterCurrent = slider.querySelector('.current-num');
+        
+        if (!slides.length) return;
+        
+        let currentIndex = 0;
+        let autoPlayTimer = null;
+        
+        if (dotsContainer && !dotsContainer.children.length) {
+          slides.forEach((_, idx) => {
+            const dot = document.createElement('span');
+            dot.className = `event-slider-dot ${idx === 0 ? 'active' : ''}`;
+            dot.addEventListener('click', (e) => {
+              e.stopPropagation();
+              goToSlide(idx);
+              resetTimer();
+            });
+            dotsContainer.appendChild(dot);
+          });
+        }
+        
+        const dots = dotsContainer ? dotsContainer.querySelectorAll('.event-slider-dot') : [];
+        
+        function goToSlide(index) {
+          slides[currentIndex].classList.remove('active');
+          if (dots[currentIndex]) dots[currentIndex].classList.remove('active');
+          
+          currentIndex = (index + slides.length) % slides.length;
+          
+          slides[currentIndex].classList.add('active');
+          if (dots[currentIndex]) {
+            dots[currentIndex].classList.add('active');
+            if (dotsContainer && dotsContainer.scrollWidth > dotsContainer.clientWidth) {
+              const targetScroll = dots[currentIndex].offsetLeft - (dotsContainer.clientWidth / 2) + (dots[currentIndex].clientWidth / 2);
+              dotsContainer.scrollTo({ left: targetScroll, behavior: 'smooth' });
+            }
+          }
+          if (counterCurrent) counterCurrent.textContent = currentIndex + 1;
+        }
+        
+        function nextSlide() {
+          goToSlide(currentIndex + 1);
+        }
+        
+        function prevSlide() {
+          goToSlide(currentIndex - 1);
+        }
+        
+        if (nextBtn) {
+          nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            nextSlide();
+            resetTimer();
+          });
+        }
+        if (prevBtn) {
+          prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            prevSlide();
+            resetTimer();
+          });
+        }
+        
+        function startTimer() {
+          stopTimer();
+          autoPlayTimer = setInterval(nextSlide, 3200);
+        }
+        
+        function stopTimer() {
+          if (autoPlayTimer) clearInterval(autoPlayTimer);
+        }
+        
+        function resetTimer() {
+          stopTimer();
+          startTimer();
+        }
+        
+        slider.addEventListener('mouseenter', stopTimer);
+        slider.addEventListener('mouseleave', startTimer);
+        
+        let startX = 0;
+        slider.addEventListener('touchstart', (e) => {
+          startX = e.touches[0].clientX;
+          stopTimer();
+        }, { passive: true });
+        
+        slider.addEventListener('touchend', (e) => {
+          const endX = e.changedTouches[0].clientX;
+          const diffX = startX - endX;
+          if (Math.abs(diffX) > 40) {
+            if (diffX > 0) nextSlide();
+            else prevSlide();
+          }
+          startTimer();
+        }, { passive: true });
+        
+        startTimer();
+      });
+    }
+
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      initEventSliders();
+    } else {
+      document.addEventListener('DOMContentLoaded', initEventSliders);
+    }
+  </script>
 </body>
 </html>

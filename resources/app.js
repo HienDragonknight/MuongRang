@@ -9976,7 +9976,7 @@ function showTaleDetails(taleId) {
             ${tale.kinh}
           </p>
           <p><strong>Ý nghĩa cốt truyện:</strong></p>
-          <p style="line-height:1.6; font-size:0.95rem;">${tale.context}</p>
+          <p style="line-height:1.6; font-size:1.15rem; line-height:1.75; color:rgba(34,23,16,0.88);">${tale.context}</p>
         </div>
         <div id="text-muong" class="bilingual-text">
           <p><strong>Phiên âm Mường cổ:</strong></p>
@@ -10065,15 +10065,17 @@ function initVRInteraction() {
         "type": "equirectangular",
         "panorama": "VR360/photo360.jpg",
         "autoLoad": true,
-        "autoRotate": -2,
+        "autoRotate": -1.5,
+        "autoRotateInactivityDelay": 3000,
         "showControls": false,
         "hfov": 100,
-        "minHfov": 50,
+        "minHfov": 45,
         "maxHfov": 120,
         "pitch": 0,
         "yaw": 0,
         "compass": false,
-        "friction": 0.15
+        "friction": 0.08,
+        "touchPanSpeedCoeff": 1
       });
 
       pannellumViewerInstance.on('load', function() {
