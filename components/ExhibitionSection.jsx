@@ -1,10 +1,21 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { trackEvent } from '@/lib/tracking';
 
 export default function ExhibitionSection() {
   const [trienLamIdx, setTrienLamIdx] = useState(0);
   const [talkshowIdx, setTalkshowIdx] = useState(0);
+
+  const handleNextTrienLam = () => {
+    setTrienLamIdx((prev) => (prev + 1) % trienLamImages.length);
+    trackEvent('track', 'trien-lam-ar', 'Triển Lãm Thực Tế Tăng Cường AR');
+  };
+
+  const handleNextTalkshow = () => {
+    setTalkshowIdx((prev) => (prev + 1) % talkshowImages.length);
+    trackEvent('track', 'talkshow-ky-nguyen-so', 'Talkshow Sử Thi Trong Kỷ Nguyên Số');
+  };
 
   const trienLamImages = [
     '/resources/trienlam_images/TRIỂN LÃM/DSC00465.jpeg',
@@ -60,13 +71,16 @@ export default function ExhibitionSection() {
               {trienLamIdx + 1} / {trienLamImages.length}
             </div>
             <button
-              onClick={() => setTrienLamIdx((prev) => (prev - 1 + trienLamImages.length) % trienLamImages.length)}
+              onClick={() => {
+                setTrienLamIdx((prev) => (prev - 1 + trienLamImages.length) % trienLamImages.length);
+                trackEvent('track', 'trien-lam-ar', 'Triển Lãm Thực Tế Tăng Cường AR');
+              }}
               style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.5)', border: 'none', color: 'white', width: '36px', height: '36px', borderRadius: '50%', cursor: 'pointer' }}
             >
               <i className="fa-solid fa-chevron-left"></i>
             </button>
             <button
-              onClick={() => setTrienLamIdx((prev) => (prev + 1) % trienLamImages.length)}
+              onClick={handleNextTrienLam}
               style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.5)', border: 'none', color: 'white', width: '36px', height: '36px', borderRadius: '50%', cursor: 'pointer' }}
             >
               <i className="fa-solid fa-chevron-right"></i>
@@ -119,13 +133,16 @@ export default function ExhibitionSection() {
               {talkshowIdx + 1} / {talkshowImages.length}
             </div>
             <button
-              onClick={() => setTalkshowIdx((prev) => (prev - 1 + talkshowImages.length) % talkshowImages.length)}
+              onClick={() => {
+                setTalkshowIdx((prev) => (prev - 1 + talkshowImages.length) % talkshowImages.length);
+                trackEvent('track', 'talkshow-ky-nguyen-so', 'Talkshow Sử Thi Trong Kỷ Nguyên Số');
+              }}
               style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.5)', border: 'none', color: 'white', width: '36px', height: '36px', borderRadius: '50%', cursor: 'pointer' }}
             >
               <i className="fa-solid fa-chevron-left"></i>
             </button>
             <button
-              onClick={() => setTalkshowIdx((prev) => (prev + 1) % talkshowImages.length)}
+              onClick={handleNextTalkshow}
               style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,0.5)', border: 'none', color: 'white', width: '36px', height: '36px', borderRadius: '50%', cursor: 'pointer' }}
             >
               <i className="fa-solid fa-chevron-right"></i>

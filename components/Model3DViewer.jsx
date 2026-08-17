@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { trackEvent } from '@/lib/tracking';
 
 export default function Model3DViewer() {
   const [modelLoaded, setModelLoaded] = useState(false);
@@ -35,6 +36,14 @@ export default function Model3DViewer() {
     }
   };
 
+  const handleSelectModel = (modelKey) => {
+    setActiveModel(modelKey);
+    const model = models[modelKey];
+    if (model) {
+      trackEvent('track', `model-3d-${modelKey}`, `Mô hình 3D: ${model.name}`);
+    }
+  };
+
   return (
     <div className="model-3d-viewer-container" style={{ background: 'white', borderRadius: '18px', padding: '28px', boxShadow: '0 12px 36px rgba(0,0,0,0.06)' }}>
       {/* Model Switcher Buttons */}
@@ -42,14 +51,14 @@ export default function Model3DViewer() {
         <button
           className={`btn ${activeModel === 'nhasan' ? 'btn-primary' : 'btn-secondary'}`}
           style={{ fontSize: '0.9rem', padding: '8px 18px' }}
-          onClick={() => setActiveModel('nhasan')}
+          onClick={() => handleSelectModel('nhasan')}
         >
           <i className="fa-solid fa-house"></i> Nhà Sàn Mường 3D
         </button>
         <button
           className={`btn ${activeModel === 'doorknob' ? 'btn-primary' : 'btn-secondary'}`}
           style={{ fontSize: '0.9rem', padding: '8px 18px' }}
-          onClick={() => setActiveModel('doorknob')}
+          onClick={() => handleSelectModel('doorknob')}
         >
           <i className="fa-solid fa-coins"></i> Cổ Vật Đồng 3D
         </button>

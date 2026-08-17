@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { epicData, epochs } from '@/lib/epicData';
+import { trackEvent } from '@/lib/tracking';
 
 export default function EpicTimeline({ initialChapter = 1 }) {
   const [selectedEpoch, setSelectedEpoch] = useState(0); // 0 = all
@@ -11,6 +12,14 @@ export default function EpicTimeline({ initialChapter = 1 }) {
   const [isReading, setIsReading] = useState(false);
 
   const speechUtteranceRef = useRef(null);
+
+  const handleSelectChapter = (chapId) => {
+    setActiveChapterId(chapId);
+    const target = epicData.find((c) => c.id === chapId);
+    if (target) {
+      trackEvent('track', `chuong-${target.id}`, `Sử Thi: ${target.name} (Phần ${target.id})`);
+    }
+  };
 
   useEffect(() => {
     if (initialChapter) {
@@ -52,6 +61,8 @@ export default function EpicTimeline({ initialChapter = 1 }) {
         ? activeChapter.kinh.slice(0, 400).replace(/['"]/g, '')
         : activeChapter.name;
 
+      trackEvent('track', `audio-recite-${activeChapter.id}`, `Nghe ngâm Mo: ${activeChapter.name}`);
+
       const utterance = new SpeechSynthesisUtterance(textToRead);
       utterance.lang = 'vi-VN';
       utterance.rate = 0.88; // Slower cadence for epic recitation
@@ -76,13 +87,13 @@ export default function EpicTimeline({ initialChapter = 1 }) {
 
   const handlePrev = () => {
     if (activeChapterId > 1) {
-      setActiveChapterId(activeChapterId - 1);
+      handleSelectChapter(activeChapterId - 1);
     }
   };
 
   const handleNext = () => {
     if (activeChapterId < epicData.length) {
-      setActiveChapterId(activeChapterId + 1);
+      handleSelectChapter(activeChapterId + 1);
     }
   };
 
@@ -149,7 +160,7 @@ export default function EpicTimeline({ initialChapter = 1 }) {
               return (
                 <button
                   key={chap.id}
-                  onClick={() => setActiveChapterId(chap.id)}
+                  onClick={() => handleSelectChapter(chap.id)}
                   style={{
                     background: isActive ? 'var(--primary-red)' : 'white',
                     color: isActive ? 'white' : 'var(--text-dark)',

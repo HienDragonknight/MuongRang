@@ -3,11 +3,21 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Model3DViewer from './Model3DViewer';
+import { trackEvent } from '@/lib/tracking';
 
 export default function VRSection() {
   const [activeTab, setActiveTab] = useState('vr');
   const [isRotating, setIsRotating] = useState(true);
   const viewerRef = useRef(null);
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    if (tab === 'vr') {
+      trackEvent('track', 'vr-360-viewer', 'Trải nghiệm VR 360 Không gian Mường');
+    } else {
+      trackEvent('track', 'model-3d-nhasan', 'Mô hình 3D Trống Đồng & Nhà Sàn');
+    }
+  };
 
   useEffect(() => {
     if (activeTab === 'vr') {
@@ -73,14 +83,14 @@ export default function VRSection() {
           <button
             className={`btn ${activeTab === 'vr' ? 'btn-primary' : 'btn-secondary'}`}
             style={{ padding: '10px 24px', borderRadius: '30px' }}
-            onClick={() => setActiveTab('vr')}
+            onClick={() => handleTabChange('vr')}
           >
             <i className="fa-solid fa-vr-cardboard"></i> Không Gian VR 360°
           </button>
           <button
             className={`btn ${activeTab === '3d' ? 'btn-primary' : 'btn-secondary'}`}
             style={{ padding: '10px 24px', borderRadius: '30px' }}
-            onClick={() => setActiveTab('3d')}
+            onClick={() => handleTabChange('3d')}
           >
             <i className="fa-solid fa-cube"></i> Trưng Bày 3D Cổ Vật
           </button>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { trackEvent } from '@/lib/tracking';
 
 export default function DiscoverySection({ onNavigateSub, onNavigate }) {
   const [activePlatterFood, setActivePlatterFood] = useState('com-lam');
@@ -34,6 +35,10 @@ export default function DiscoverySection({ onNavigateSub, onNavigate }) {
 
   const handleSelectFood = (foodKey) => {
     setActivePlatterFood(foodKey);
+    const food = foodData[foodKey];
+    if (food) {
+      trackEvent('track', `am-thuc-${foodKey}`, `Ẩm Thực: ${food.title}`);
+    }
   };
 
   return (

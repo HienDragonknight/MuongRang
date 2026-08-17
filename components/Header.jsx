@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { trackEvent } from '@/lib/tracking';
 
 export default function Header({ currentSection, onNavigate }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,6 +35,7 @@ export default function Header({ currentSection, onNavigate }) {
       setIsPlayingAudio(true);
       if (ctx.state === 'suspended') ctx.resume();
       playAmbiance();
+      trackEvent('track', 'audio-ambiance-gong', 'Nghe Âm Thanh Không Gian & Cồng Chiêng Mường');
     }
   };
 
