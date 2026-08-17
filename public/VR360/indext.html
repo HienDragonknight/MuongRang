@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Thử nghiệm Pannellum 360</title>
+    <!-- Nhúng thư viện Pannellum qua CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.js"></script>
+    <style>
+        #panorama {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Khung hiển thị ảnh 360 -->
+    <div id="panorama"></div>
+
+    <script>
+        pannellum.viewer('panorama', {
+            "type": "equirectangular",
+            "panorama": "anh-360-cua-ban.jpg", // Thay tên/đường dẫn ảnh của bạn vào đây
+            "autoLoad": true,
+            "hotSpotDebug": true // Bật dòng này để click vào ảnh là xem được tọa độ pitch/yaw trong F12 Console
+        });
+    </script>
+
+</body>
+</html>
