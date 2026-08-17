@@ -6,14 +6,14 @@ import { fetchLiveStats } from '@/lib/tracking';
 
 const PASSCODE = '123456';
 const BASE_SEED = {
-  baseTotal: 1219,
-  baseToday: 48,
+  baseTotal: 150,
+  baseToday: 12,
   topItems: [
-    { name: 'Trải nghiệm VR 360 Không gian Mường', views: 485 },
-    { name: 'Sử Thi: Khai Thiên Lập Địa (Phần 1)', views: 342 },
-    { name: 'Mô hình 3D Trống Đồng & Cồng Chiêng', views: 218 },
-    { name: 'Khám Phá Nhà Sàn & Ẩm Thực Mường', views: 156 },
-    { name: 'Sử Thi: Sự Tích Cây Si Chu Đồng', views: 98 }
+    { name: 'Trải nghiệm VR 360 Không gian Mường', views: 58 },
+    { name: 'Sử Thi: Khai Thiên Lập Địa (Phần 1)', views: 42 },
+    { name: 'Mô hình 3D Trống Đồng & Cồng Chiêng', views: 26 },
+    { name: 'Khám Phá Nhà Sàn & Ẩm Thực Mường', views: 18 },
+    { name: 'Sử Thi: Sự Tích Cây Si Chu Đồng', views: 12 }
   ]
 };
 
@@ -346,7 +346,7 @@ export default function AdminPage() {
                 {displayTotal.toLocaleString('vi-VN')}
               </div>
               <div style={{ fontSize: '0.75rem', color: '#8be4a6', marginTop: '4px' }}>
-                <i className="fa-solid fa-circle-check"></i> Đạt mục tiêu 1.2k
+                <i className="fa-solid fa-circle-check"></i> Đạt mục tiêu
               </div>
             </div>
           </div>
