@@ -621,7 +621,7 @@
       </div>
     </div>
 
-    <!-- 3 Metrics Top -->
+    <!-- Metrics Top -->
     <div class="metrics-grid">
       <!-- Total Views -->
       <div class="metric-card">
@@ -632,18 +632,6 @@
           <div class="metric-label">Tổng Lượt Truy Cập (All-Time)</div>
           <div class="metric-value" id="dash-total-views">1,219</div>
           <div class="metric-sub"><i class="fa-solid fa-arrow-trend-up"></i> Tăng trưởng ổn định</div>
-        </div>
-      </div>
-
-      <!-- Today Views -->
-      <div class="metric-card">
-        <div class="metric-icon icon-today">
-          <i class="fa-solid fa-calendar-day"></i>
-        </div>
-        <div>
-          <div class="metric-label">Lượt Truy Cập Hôm Nay</div>
-          <div class="metric-value" id="dash-today-views">48</div>
-          <div class="metric-sub" id="dash-today-date">Hôm nay</div>
         </div>
       </div>
 
@@ -799,12 +787,12 @@
         const displayTotal = seed.baseTotal + realTotal;
         const displayToday = seed.baseToday + realToday;
 
-        document.getElementById('dash-total-views').textContent = displayTotal.toLocaleString('vi-VN');
-        document.getElementById('dash-today-views').textContent = displayToday.toLocaleString('vi-VN');
-        document.getElementById('dash-month-views').textContent = displayTotal.toLocaleString('vi-VN');
-
-        const now = new Date();
-        document.getElementById('dash-today-date').textContent = `Ngày ${now.getDate().toString().padStart(2, '0')}/${(now.getMonth()+1).toString().padStart(2, '0')}/${now.getFullYear()}`;
+        if (document.getElementById('dash-total-views')) {
+          document.getElementById('dash-total-views').textContent = displayTotal.toLocaleString('vi-VN');
+        }
+        if (document.getElementById('dash-month-views')) {
+          document.getElementById('dash-month-views').textContent = displayTotal.toLocaleString('vi-VN');
+        }
 
         // Merge live top items with seed top items
         let items = JSON.parse(JSON.stringify(seed.topItems));
@@ -824,9 +812,12 @@
 
       } catch (err) {
         // Fallback to seed data
-        document.getElementById('dash-total-views').textContent = seed.baseTotal.toLocaleString('vi-VN');
-        document.getElementById('dash-today-views').textContent = seed.baseToday.toLocaleString('vi-VN');
-        document.getElementById('dash-month-views').textContent = seed.baseTotal.toLocaleString('vi-VN');
+        if (document.getElementById('dash-total-views')) {
+          document.getElementById('dash-total-views').textContent = seed.baseTotal.toLocaleString('vi-VN');
+        }
+        if (document.getElementById('dash-month-views')) {
+          document.getElementById('dash-month-views').textContent = seed.baseTotal.toLocaleString('vi-VN');
+        }
         renderTopItems(seed.topItems);
       } finally {
         if (refreshIcon) {

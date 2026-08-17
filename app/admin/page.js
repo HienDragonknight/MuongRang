@@ -303,7 +303,7 @@ export default function AdminPage() {
           </div>
         </div>
 
-        {/* 3 Metrics Top */}
+        {/* Metrics Top */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', marginBottom: '32px' }}>
           {/* Total Views */}
           <div style={{ background: 'rgba(26, 15, 12, 0.95)', border: '1px solid rgba(196, 154, 42, 0.3)', borderRadius: '16px', padding: '24px', display: 'flex', alignItems: 'center', gap: '18px', borderLeft: '4px solid var(--accent-gold)' }}>
@@ -318,20 +318,6 @@ export default function AdminPage() {
               <div style={{ fontSize: '0.75rem', color: 'var(--accent-gold)', marginTop: '4px' }}>
                 <i className="fa-solid fa-arrow-trend-up"></i> Tăng trưởng ổn định
               </div>
-            </div>
-          </div>
-
-          {/* Today Views */}
-          <div style={{ background: 'rgba(26, 15, 12, 0.95)', border: '1px solid rgba(196, 154, 42, 0.3)', borderRadius: '16px', padding: '24px', display: 'flex', alignItems: 'center', gap: '18px', borderLeft: '4px solid #ff857d' }}>
-            <div style={{ width: '56px', height: '56px', borderRadius: '14px', background: 'rgba(124, 31, 26, 0.25)', color: '#ff918a', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem' }}>
-              <i className="fa-solid fa-calendar-day"></i>
-            </div>
-            <div>
-              <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', fontWeight: 600, color: '#bdae9c' }}>Lượt Xem Hôm Nay</div>
-              <div style={{ fontFamily: 'Playfair Display, serif', fontSize: '2.2rem', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginTop: '4px' }}>
-                {displayToday.toLocaleString('vi-VN')}
-              </div>
-              <div style={{ fontSize: '0.75rem', color: '#ff857d', marginTop: '4px' }}>{dateStr}</div>
             </div>
           </div>
 
