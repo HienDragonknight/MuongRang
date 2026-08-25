@@ -31,7 +31,7 @@ export default function AboutSection() {
 
   return (
     <div className="about-section-wrapper" id="about" style={{ padding: '80px 0', background: 'var(--paper-beige-dark)' }}>
-      <div className="container">
+      <div className="container" style={{ maxWidth: '1480px', width: '100%', padding: '0 24px' }}>
         {/* Section Intro */}
         <div className="section-intro">
           <span className="intro-tag">Ban Tổ Chức</span>
@@ -43,14 +43,15 @@ export default function AboutSection() {
           </p>
         </div>
 
-        {/* Team Members Grid */}
+        {/* Team Members Grid - 5 cards in 1 row */}
         <div
           className="btc-members-grid"
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gridTemplateColumns: 'repeat(5, 1fr)',
             gap: '24px',
-            marginBottom: '60px'
+            maxWidth: '1440px',
+            margin: '0 auto 70px'
           }}
         >
           {teamMembers.map((member, idx) => (
@@ -59,39 +60,57 @@ export default function AboutSection() {
               className="btc-member-card"
               style={{
                 background: 'white',
-                borderRadius: '16px',
-                padding: '24px 16px',
+                borderRadius: '24px',
+                padding: '32px 20px 28px',
                 textAlign: 'center',
-                boxShadow: '0 8px 24px rgba(0,0,0,0.06)',
-                border: '1px solid rgba(196, 154, 42, 0.25)',
-                transition: 'all 0.3s ease'
+                boxShadow: '0 12px 32px rgba(0,0,0,0.06)',
+                border: '1.5px solid rgba(196, 154, 42, 0.35)',
+                transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
               }}
             >
               <div
                 className="btc-avatar-wrap"
                 style={{
                   position: 'relative',
-                  width: '90px',
-                  height: '90px',
-                  margin: '0 auto 16px',
+                  width: '165px',
+                  height: '165px',
+                  margin: '0 auto 20px',
                   borderRadius: '50%',
                   overflow: 'hidden',
-                  border: '3px solid var(--accent-gold)'
+                  border: '4.5px solid var(--accent-gold)',
+                  boxShadow: '0 10px 28px rgba(124, 31, 26, 0.2)',
+                  background: '#f5f0e8'
                 }}
               >
                 <img
                   src={member.avatar}
                   alt={member.name}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'top center',
+                    transform: 'scale(1.25)',
+                    transformOrigin: 'top center',
+                    transition: 'transform 0.4s ease'
+                  }}
                 />
               </div>
               <h4
                 className="btc-name"
                 style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontSize: '1.05rem',
+                  fontFamily: 'var(--font-subheading)',
+                  fontSize: '1.2rem',
+                  fontWeight: 700,
                   color: 'var(--primary-red)',
-                  marginBottom: '6px'
+                  marginBottom: '10px',
+                  minHeight: '2.5em',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
                 }}
               >
                 {member.name}
@@ -99,19 +118,84 @@ export default function AboutSection() {
               <span
                 className="btc-role"
                 style={{
-                  fontSize: '0.78rem',
+                  fontSize: '0.85rem',
                   fontWeight: 600,
                   color: 'var(--earth-brown)',
                   background: 'rgba(196, 154, 42, 0.15)',
-                  padding: '4px 10px',
+                  padding: '6px 14px',
                   borderRadius: '20px',
-                  display: 'inline-block'
+                  display: 'inline-block',
+                  lineHeight: '1.4'
                 }}
               >
                 {member.role}
               </span>
             </div>
           ))}
+        </div>
+
+        {/* Nhà Tài Trợ Dự Án */}
+        <div className="about-sponsors-section">
+          <div className="section-intro" style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <span className="intro-tag">Đồng Hành Cùng Dự Án</span>
+            <h2 className="intro-title" style={{ fontSize: '2.2rem', color: 'var(--primary-red)' }}>
+              NHÀ TÀI TRỢ DỰ ÁN
+            </h2>
+            <p style={{ fontSize: '0.95rem', color: 'rgba(34, 23, 16, 0.75)', maxWidth: '680px', margin: '8px auto 0' }}>
+              Trân trọng cảm ơn sự đồng hành và trợ lực quý giá từ các Nhà tài trợ cho hành trình lan tỏa di sản văn hóa Mường
+            </p>
+          </div>
+
+          {/* Golden Sponsors */}
+          <div className="sponsors-tier-group" style={{ marginBottom: '40px' }}>
+            <h3 className="sponsors-tier-title golden">
+              <i className="fa-solid fa-crown" style={{ color: 'var(--accent-gold)' }}></i>
+              <span>Nhà Tài Trợ Vàng</span>
+            </h3>
+            <div className="sponsors-grid">
+              {/* Sponsor 1: Eduwing Global */}
+              <div className="sponsor-card">
+                <div className="sponsor-logo-box">
+                  <img
+                    src="/resources/sponsors/golden/eduwing-global.png"
+                    alt="Eduwing Global"
+                    className="sponsor-logo-img"
+                  />
+                </div>
+              </div>
+
+              {/* Sponsor 2: Edu2Review */}
+              <div className="sponsor-card">
+                <div className="sponsor-logo-box">
+                  <img
+                    src="/resources/sponsors/golden/edu2review.png"
+                    alt="Edu2Review"
+                    className="sponsor-logo-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Silver Sponsors */}
+          <div className="sponsors-tier-group">
+            <h3 className="sponsors-tier-title silver">
+              <i className="fa-solid fa-medal" style={{ color: '#94a3b8' }}></i>
+              <span>Nhà Tài Trợ Bạc</span>
+            </h3>
+            <div className="sponsors-grid" style={{ maxWidth: '420px' }}>
+              {/* Sponsor 3: NET CORP */}
+              <div className="sponsor-card silver">
+                <div className="sponsor-logo-box">
+                  <img
+                    src="/resources/sponsors/silver/net-corp.png"
+                    alt="NET CORP"
+                    className="sponsor-logo-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Lời Cảm Ơn */}

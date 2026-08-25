@@ -83,8 +83,20 @@ body {
   padding: 0 24px;
 }
 
-/* Typography Hierarchy */
-h1, h2, h3, h4, h5, h6 {
+/* Typography System & Hierarchy Specification:
+   - Tiêu đề chính: DFVN Brasika
+   - Tiêu đề phụ: Be Vietnam Pro (SemiBold / Bold / ExtraBold)
+   - Nội dung: Be Vietnam Pro (Regular / Medium)
+*/
+h1,
+h2,
+.hero-title,
+.intro-title,
+.main-title,
+.section-title,
+.page-title,
+.modal-title,
+.epic-title {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.25;
@@ -118,6 +130,25 @@ h2::after {
   transform: translateX(-50%);
 }
 
+/* Tiêu đề phụ (Be Vietnam Pro) */
+h3,
+h4,
+h5,
+h6,
+.intro-tag,
+.sub-title,
+.subheading,
+.card-title,
+.start-card h4,
+.btc-name,
+.sponsors-tier-title,
+.segment-title,
+.item-title {
+  font-family: var(--font-subheading);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
 h3 {
   font-size: 1.85rem;
   margin-bottom: 1rem;
@@ -129,17 +160,30 @@ h4 {
 }
 
 h5 {
-  font-family: var(--font-subheading);
   font-size: 1.15rem;
-  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 h6 {
-  font-family: var(--font-subheading);
   font-size: 1.05rem;
-  font-weight: 600;
   margin-bottom: 0.5rem;
+}
+
+/* Nội dung (Be Vietnam Pro) */
+body,
+p,
+span,
+a,
+button,
+li,
+blockquote,
+label,
+input,
+textarea,
+select,
+td,
+th {
+  font-family: var(--font-body);
 }
 
 p {
@@ -4321,11 +4365,11 @@ footer {
    BTC TEAM MEMBER CARDS - Photo + Role Layout
    ═══════════════════════════════════════════════ */
 .btc-members-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 36px;
-  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 12px auto 70px;
 }
 
 .btc-member-card {
@@ -4333,59 +4377,78 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 160px;
+  background: white;
+  border-radius: 20px;
+  padding: 28px 18px 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1.5px solid rgba(196, 154, 42, 0.3);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btc-member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(124, 31, 26, 0.15);
+  border-color: var(--accent-gold);
 }
 
 .btc-avatar-wrap {
   position: relative;
-  width: 130px;
-  height: 130px;
-  margin-bottom: 14px;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--accent-gold);
+  box-shadow: 0 8px 24px rgba(124, 31, 26, 0.18);
+  background: #f5f0e8;
 }
 
 .btc-avatar {
-  width: 130px;
-  height: 130px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
   object-position: top center;
-  border: 3px solid #fff;
-  box-shadow: 0 6px 24px rgba(124, 31, 26, 0.22);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(1.22);
+  transform-origin: top center;
+  transition: transform 0.4s ease;
 }
 
 .btc-member-card:hover .btc-avatar {
-  transform: scale(1.06);
-  box-shadow: 0 10px 32px rgba(124, 31, 26, 0.32);
+  transform: scale(1.28);
 }
 
 .btc-avatar-ring {
   position: absolute;
-  inset: -5px;
+  inset: -4px;
   border-radius: 50%;
-  border: 2px solid rgba(124, 31, 26, 0.25);
+  border: 2px solid rgba(196, 154, 42, 0.4);
   transition: border-color 0.3s ease;
   pointer-events: none;
 }
 
 .btc-member-card:hover .btc-avatar-ring {
-  border-color: var(--primary-red);
+  border-color: var(--accent-gold);
 }
 
 .btc-name {
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: 1.15rem;
+  font-weight: 700;
   color: var(--primary-red);
-  margin-bottom: 7px;
-  line-height: 1.3;
+  margin-bottom: 8px;
+  min-height: 2.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btc-role {
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--earth-brown);
   background: rgba(196, 154, 42, 0.15);
-  padding: 4px 10px;
+  padding: 6px 14px;
   border-radius: 20px;
   line-height: 1.4;
   display: inline-block;
@@ -4704,3 +4767,150 @@ footer {
 .text-gold {
   color: var(--accent-gold);
 }
+
+/* ═══════════════════════════════════════════════
+   SPONSORS SECTION (NHÀ TÀI TRỢ DỰ ÁN)
+   ═══════════════════════════════════════════════ */
+.about-sponsors-section {
+  margin-bottom: 70px;
+}
+
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.sponsor-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 22px 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1.5px solid rgba(196, 154, 42, 0.35);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #c49a2a, #ffd768, #c49a2a);
+}
+
+.sponsor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(196, 154, 42, 0.2);
+  border-color: var(--accent-gold);
+}
+
+.sponsor-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.sponsor-badge.golden {
+  background: linear-gradient(135deg, #fff5d6 0%, #f7e199 100%);
+  color: #8c680d;
+  border: 1px solid rgba(196, 154, 42, 0.4);
+}
+
+.sponsor-badge.silver {
+  background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%);
+  color: #334155;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+}
+
+.sponsor-card.silver {
+  border-color: rgba(148, 163, 184, 0.45);
+}
+
+.sponsor-card.silver::before {
+  background: linear-gradient(90deg, #94a3b8, #e2e8f0, #94a3b8);
+}
+
+.sponsor-card.silver:hover {
+  border-color: #94a3b8;
+  box-shadow: 0 16px 36px rgba(100, 116, 139, 0.2);
+}
+
+.sponsors-tier-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sponsors-tier-title.golden {
+  color: #b38515;
+}
+
+.sponsors-tier-title.silver {
+  color: #475569;
+}
+
+.sponsor-logo-box {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  padding: 10px 16px;
+  background: rgba(250, 248, 245, 0.6);
+  border-radius: 12px;
+}
+
+.sponsor-logo-img {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.04));
+  transition: transform 0.35s ease;
+}
+
+.sponsor-card:hover .sponsor-logo-img {
+  transform: scale(1.04);
+}
+
+.sponsor-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-red);
+  margin-bottom: 6px;
+}
+
+.sponsor-desc {
+  font-size: 0.88rem;
+  color: rgba(34, 23, 16, 0.75);
+  line-height: 1.5;
+  margin: 0;
+}
+
+

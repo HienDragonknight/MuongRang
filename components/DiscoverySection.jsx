@@ -4,32 +4,36 @@ import { useState } from 'react';
 import { trackEvent } from '@/lib/tracking';
 
 export default function DiscoverySection({ onNavigateSub, onNavigate }) {
-  const [activePlatterFood, setActivePlatterFood] = useState('com-lam');
+  const [activePlatterFood, setActivePlatterFood] = useState('mam-co');
 
   const foodData = {
+    'mam-co': {
+      title: 'Mâm Cỗ Lá Chuối Rừng',
+      image: '/resources/muong_mam_co_real.jpg',
+      tag: 'Đặc sản linh hồn xứ Mường',
+      desc: 'Toàn bộ món ăn được bày biện công phu đẹp mắt trên tàu lá chuối rừng xanh non mướt mát, tượng trưng cho đất trời mây núi giao hòa trọn vẹn. Mâm cỗ hội tụ đầy đủ thịt lợn mán thui rơm, gà đồi nướng hạt dổi, cơm lam nếp nương và rau rừng tươi ngọt.',
+      meaning: 'Biểu tượng cho nếp sống cộng đồng đầm ấm sum vầy, sự tôn kính thiên nhiên và lòng hiếu khách chân thành nồng hậu của đồng bào Mường.'
+    },
     'com-lam': {
       title: 'Cơm Lam Nếp Nương',
-      rotation: 0,
-      desc: 'Hạt nếp nương thơm dẻo nướng chín trong ống nứa bánh tẻ non trên than hồng rực lửa, hòa quyện hương vị ngai ngái mộc mạc thơm lừng của núi rừng Tây Bắc.',
-      meaning: 'Biểu tượng cho sự no ấm, thanh khiết và lòng hiếu khách chân thành nồng hậu của đồng bào Mường.'
+      image: '/resources/muong_com_lam_real.jpg',
+      tag: 'Món ăn biểu tượng núi rừng',
+      desc: 'Hạt gạo nếp nương dẻo thơm nướng chín trong ống nứa bánh tẻ non trên than hồng rực lửa. Khi bóc vỏ nứa, lớp màng lụa mỏng ôm lấy gióng cơm dẻo quánh, hòa quyện hương thơm ngai ngái mộc mạc của núi rừng chấm cùng muối vừng rang vàng.',
+      meaning: 'Biểu trưng cho sự no ấm, thuần khiết và sức sống bền bỉ của người Mường qua bao thế hệ khai sơn phá thạch.'
     },
     'lon-ban': {
       title: 'Lợn Mán Thui Rơm Mắc Khén',
-      rotation: -90,
-      desc: 'Thịt lợn thả rông đồi săn chắc, thui rơm vàng rộm giòn bì, ướp hạt dổi rừng cay nồng, lá móc mật thơm ngát nướng xiên tre thơm nức mũi.',
-      meaning: 'Lễ vật tôn nghiêm dâng cúng thần linh tổ tiên trong các dịp lễ tết và tiếp đãi khách quý bản mường.'
+      image: '/resources/muong_lon_ban_real.jpg',
+      tag: 'Món nướng thượng hạng',
+      desc: 'Thịt lợn mán thả đồi săn chắc, thui rơm vàng rộm giòn tan phần bì, tẩm ướp hạt dổi rừng cay nồng, mắc khén thơm dịu và lá móc mật tươi nướng trên than hoa thơm nức mũi.',
+      meaning: 'Lễ vật tôn nghiêm dâng cúng thần linh tổ tiên trong các dịp hội làng xuống đồng và thết đãi khách quý phương xa.'
     },
     'rau-rung': {
       title: 'Rau Rừng Đồ Chấm Lòng Cá',
-      rotation: -180,
-      desc: 'Hái từ đọt hoa chuối rừng, ngọn rau dớn ven khe suối, lá tầm bóp non xanh mướt đồ chín tới giữ nguyên vị ngọt chát thanh tao chấm nước sốt lòng cá thơm ngậy.',
-      meaning: 'Vị thuốc quý bồi bổ sức khỏe của thiên nhiên đại ngàn ban tặng cho cuộc sống người Mường.'
-    },
-    'mam-co': {
-      title: 'Mâm Cỗ Lá Chuối Rừng',
-      rotation: -270,
-      desc: 'Toàn bộ món ăn được bày biện công phu đẹp mắt trên tàu lá chuối rừng xanh non mướt mát, tượng trưng cho đất trời mây núi giao hòa trọn vẹn.',
-      meaning: 'Nếp sống cộng đồng đầm ấm sum vầy, sự gắn bó keo sơn giữa con người với cội nguồn cỏ cây bản địa.'
+      image: '/resources/muong_rau_rung_real.jpg',
+      tag: 'Hương vị đại ngàn thanh khiết',
+      desc: 'Hái từ đọt hoa chuối rừng, ngọn rau dớn ven khe suối, lá tầm bóp non xanh mướt đồ chín tới giữ trọn vị ngọt chát thanh tao, kết hợp nước sốt lòng cá chưng thơm ngậy béo bùi.',
+      meaning: 'Phương thuốc quý bồi bổ sức khỏe của thiên nhiên đại ngàn ban tặng cho cuộc sống người Mường, cân bằng âm dương trong ẩm thực.'
     }
   };
 
@@ -45,7 +49,7 @@ export default function DiscoverySection({ onNavigateSub, onNavigate }) {
     <div className="discovery-section-wrapper">
       {/* 1. DISCOVERY OVERVIEW */}
       <section className="explore-overview-section" style={{ padding: '80px 0' }}>
-        <div className="container">
+        <div className="container" style={{ maxWidth: '1440px' }}>
           <div className="section-intro">
             <span className="intro-tag">Không Gian Văn Hóa Mường</span>
             <h2 className="intro-title">Bốn Trụ Cột Đời Sống Truyền Thống</h2>
@@ -98,10 +102,10 @@ export default function DiscoverySection({ onNavigateSub, onNavigate }) {
 
       {/* 2. COSTUMES MALE & FEMALE */}
       <section style={{ background: 'var(--paper-beige-dark)', padding: '80px 0' }}>
-        <div className="container">
+        <div className="container" style={{ maxWidth: '1440px' }}>
           <div className="section-intro">
             <span className="intro-tag">Di Sản Phục Trang</span>
-            <h2 className="intro-title">Trang Phục Nam & Nữ Người Mường</h2>
+            <h2 className="intro-title">Trang Phục Nam &amp; Nữ Người Mường</h2>
           </div>
           <div className="culture-row" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', alignItems: 'start' }}>
             {/* Women's Costume Card */}
@@ -143,58 +147,176 @@ export default function DiscoverySection({ onNavigateSub, onNavigate }) {
         </div>
       </section>
 
-      {/* 3. INTERACTIVE CULINARY PLATTER */}
+      {/* 3. REAL AUTHENTIC CULINARY SHOWCASE */}
       <section style={{ padding: '80px 0', background: 'white' }}>
-        <div className="container">
+        <div className="container" style={{ maxWidth: '1440px' }}>
           <div className="section-intro">
             <span className="intro-tag">Hương Vị Bản Mường</span>
-            <h2 className="intro-title">Mẹt Ẩm Thực Tương Tác Xoay 360°</h2>
-            <p>Nhấp vào từng món ăn để xoay đĩa ẩm thực và tìm hiểu ý nghĩa văn hóa ẩm thực truyền thống Mường.</p>
+            <h2 className="intro-title">Ẩm Thực Truyền Thống Xứ Mường</h2>
+            <p>Khám phá tinh hoa ẩm thực Tây Bắc với những món ăn đậm đà bản sắc được chuẩn bị trên mâm cỗ lá chuối rừng.</p>
           </div>
 
-          <div className="culinary-interactive-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', alignItems: 'center' }}>
-            {/* Rotating Platter Visual */}
-            <div className="platter-visual-wrap" style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <div style={{ width: '340px', height: '340px', borderRadius: '50%', overflow: 'hidden', boxShadow: '0 15px 45px rgba(0,0,0,0.15)', border: '6px solid var(--paper-beige-dark)' }}>
-                <img
-                  src="/resources/muong_mam_co.png"
-                  alt="Mẹt ẩm thực Mường"
-                  id="interactive-platter-img"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    transform: `rotate(${foodData[activePlatterFood].rotation}deg)`,
-                    transition: 'transform 1s cubic-bezier(0.16, 1, 0.3, 1)'
-                  }}
-                />
+          <div
+            className="culinary-interactive-grid"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+              gap: '48px',
+              alignItems: 'center',
+              background: 'var(--paper-beige)',
+              padding: '40px',
+              borderRadius: '24px',
+              boxShadow: '0 12px 36px rgba(0,0,0,0.06)'
+            }}
+          >
+            {/* Real Food Photography Visual with Crossfade */}
+            <div
+              className="platter-visual-wrap"
+              style={{
+                position: 'relative',
+                width: '100%',
+                maxWidth: '480px',
+                height: '440px',
+                margin: '0 auto',
+                borderRadius: '24px',
+                overflow: 'hidden',
+                boxShadow: '0 16px 40px rgba(0,0,0,0.18)',
+                border: '4px solid var(--accent-gold)',
+                background: '#1a100a'
+              }}
+            >
+              {Object.keys(foodData).map((key) => {
+                const item = foodData[key];
+                const isActive = activePlatterFood === key;
+                return (
+                  <img
+                    key={key}
+                    src={item.image}
+                    alt={item.title}
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      opacity: isActive ? 1 : 0,
+                      visibility: isActive ? 'visible' : 'hidden',
+                      transform: isActive ? 'scale(1)' : 'scale(1.05)',
+                      transition: 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+                      zIndex: isActive ? 2 : 1
+                    }}
+                  />
+                );
+              })}
+
+              {/* Dish Tag Badge */}
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '16px',
+                  left: '16px',
+                  background: 'rgba(20, 10, 8, 0.8)',
+                  backdropFilter: 'blur(8px)',
+                  color: 'var(--accent-gold-light)',
+                  padding: '6px 14px',
+                  borderRadius: '20px',
+                  fontSize: '0.8rem',
+                  fontWeight: 700,
+                  zIndex: 10,
+                  border: '1px solid rgba(196, 154, 42, 0.4)'
+                }}
+              >
+                <i className="fa-solid fa-utensils" style={{ marginRight: '6px' }}></i>
+                {foodData[activePlatterFood].tag}
               </div>
             </div>
 
             {/* Food Details & Selectors */}
             <div className="platter-details-wrap">
-              <div className="food-buttons-group" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '24px' }}>
-                {Object.keys(foodData).map((key) => (
-                  <button
-                    key={key}
-                    className={`btn ${activePlatterFood === key ? 'btn-primary' : 'btn-secondary'}`}
-                    style={{ fontSize: '0.9rem', padding: '8px 18px' }}
-                    onClick={() => handleSelectFood(key)}
-                  >
-                    {foodData[key].title}
-                  </button>
-                ))}
+              <div
+                className="food-buttons-group"
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                  gap: '12px',
+                  marginBottom: '28px'
+                }}
+              >
+                {Object.keys(foodData).map((key) => {
+                  const item = foodData[key];
+                  const isActive = activePlatterFood === key;
+                  return (
+                    <button
+                      key={key}
+                      onClick={() => handleSelectFood(key)}
+                      style={{
+                        padding: '12px 16px',
+                        borderRadius: '14px',
+                        border: isActive ? '2px solid var(--primary-red)' : '1px solid rgba(196, 154, 42, 0.3)',
+                        background: isActive ? 'var(--primary-red)' : 'white',
+                        color: isActive ? 'white' : 'var(--text-dark)',
+                        fontWeight: 700,
+                        fontSize: '0.92rem',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        boxShadow: isActive ? '0 6px 18px rgba(124, 31, 26, 0.25)' : '0 2px 8px rgba(0,0,0,0.04)',
+                        transition: 'all 0.3s ease'
+                      }}
+                    >
+                      <i
+                        className={
+                          key === 'mam-co'
+                            ? 'fa-solid fa-plate-wheat'
+                            : key === 'com-lam'
+                            ? 'fa-solid fa-bowl-rice'
+                            : key === 'lon-ban'
+                            ? 'fa-solid fa-drumstick-bite'
+                            : 'fa-solid fa-leaf'
+                        }
+                        style={{ color: isActive ? 'var(--accent-gold-light)' : 'var(--primary-red)' }}
+                      ></i>
+                      <span>{item.title}</span>
+                    </button>
+                  );
+                })}
               </div>
 
-              <div className="food-active-card" style={{ background: 'var(--paper-beige)', padding: '24px', borderRadius: '14px', borderLeft: '4px solid var(--accent-gold)' }}>
-                <h3 style={{ color: 'var(--primary-red)', marginBottom: '10px', fontSize: '1.4rem' }}>
+              <div
+                className="food-active-card"
+                style={{
+                  background: 'white',
+                  padding: '28px',
+                  borderRadius: '18px',
+                  borderLeft: '5px solid var(--accent-gold)',
+                  boxShadow: '0 8px 24px rgba(0,0,0,0.05)'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
+                  <span style={{ background: 'rgba(196, 154, 42, 0.15)', color: 'var(--earth-brown)', fontSize: '0.78rem', fontWeight: 700, padding: '4px 10px', borderRadius: '12px' }}>
+                    {foodData[activePlatterFood].tag}
+                  </span>
+                </div>
+                <h3 style={{ color: 'var(--primary-red)', marginBottom: '12px', fontSize: '1.6rem', fontFamily: 'var(--font-heading)' }}>
                   {foodData[activePlatterFood].title}
                 </h3>
-                <p style={{ fontSize: '1rem', lineHeight: '1.7', color: 'var(--text-dark)', marginBottom: '14px' }}>
+                <p style={{ fontSize: '1rem', lineHeight: '1.75', color: 'var(--text-dark)', marginBottom: '18px' }}>
                   {foodData[activePlatterFood].desc}
                 </p>
-                <div style={{ fontSize: '0.9rem', color: 'var(--earth-brown)', background: 'rgba(255,255,255,0.7)', padding: '10px 14px', borderRadius: '8px' }}>
-                  <strong>Ý nghĩa di sản:</strong> {foodData[activePlatterFood].meaning}
+                <div
+                  style={{
+                    fontSize: '0.92rem',
+                    color: 'var(--earth-brown)',
+                    background: 'var(--paper-beige)',
+                    padding: '14px 18px',
+                    borderRadius: '12px',
+                    lineHeight: '1.6',
+                    border: '1px solid rgba(196, 154, 42, 0.2)'
+                  }}
+                >
+                  <strong style={{ color: 'var(--primary-red)' }}>Ý nghĩa di sản:</strong> {foodData[activePlatterFood].meaning}
                 </div>
               </div>
             </div>

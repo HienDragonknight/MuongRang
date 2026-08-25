@@ -200,18 +200,8 @@ export default function EpicTimeline({ initialChapter = 1 }) {
                 </h3>
               </div>
 
-              {/* Recitation Speech & Language Switches */}
+              {/* Language Switches */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
-                <button
-                  className="btn btn-primary"
-                  style={{ fontSize: '0.85rem', padding: '8px 16px' }}
-                  onClick={toggleSpeech}
-                  title="Nghe AI diễn xướng Mo sử thi"
-                >
-                  <i className={`fa-solid ${isReading ? 'fa-circle-stop' : 'fa-play'}`}></i>{' '}
-                  {isReading ? 'Dừng đọc' : 'Nghe ngâm Mo'}
-                </button>
-
                 <div style={{ display: 'inline-flex', background: 'var(--paper-beige)', borderRadius: '8px', padding: '3px', border: '1px solid rgba(196, 154, 42, 0.3)' }}>
                   <button
                     onClick={() => setLangMode('both')}
