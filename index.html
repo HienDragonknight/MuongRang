@@ -1121,24 +1121,30 @@
   </main>
 
   <!-- ==========================================
-       VIEW: VR TƯƠNG TÁC & 3D MODEL EXHIBITION
+  <!-- ==========================================
+       VIEW: VR TƯƠNG TÁC & BẢO TÀNG ẢO
        ========================================== -->
   <main id="vr-tuong-tac" class="view-section">
     <div class="container">
       <div class="section-intro">
         <span class="intro-tag">Trải Nghiệm Đa Chiều</span>
-        <h2 class="intro-title">Mô Phỏng Trực Quan 3D & VR</h2>
-        <p>Chọn giữa việc khám phá nhà sàn cổ qua các điểm chạm tương tác hotspots hoặc xoay ngắm mô hình 3D cổ vật.</p>
+        <h2 class="intro-title">Không Gian VR 360° & Bảo Tàng Ảo</h2>
+        <p>Khám phá không gian nhà sàn Mường cổ qua góc nhìn thực tế ảo 360 độ và tham quan bảo tàng trực tuyến sống động.</p>
       </div>
 
-      <!-- Tab Switcher VR/3D -->
-      <div class="subnav-explore" style="margin-bottom:30px; max-width:500px;">
-        <button class="subnav-btn active" id="btn-tab-vr">Nhà Sàn VR Tương Tác</button>
-        <button class="subnav-btn" id="btn-tab-3d">Trưng Bày Mô Hình 3D</button>
+      <!-- Action Button Bar -->
+      <div style="display:flex; justify-content:center; align-items:center; gap:16px; margin-bottom:30px; flex-wrap:wrap;">
+        <div class="subnav-btn active" style="padding:10px 24px; border-radius:30px; cursor:default; pointer-events:none;">
+          <i class="fa-solid fa-vr-cardboard"></i> Không Gian VR 360° Nhà Sàn
+        </div>
+        <a href="https://metasteps.com/curate/2bac9e13-ef6d-4c3e-aca0-7dfc028f17b4" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:10px 26px; border-radius:30px; text-decoration:none; display:inline-flex; align-items:center; gap:10px; box-shadow:0 4px 20px rgba(184, 51, 42, 0.4);">
+          <i class="fa-solid fa-landmark"></i>
+          <span>Tham Quan Bảo Tàng Ảo (MetaSteps)</span>
+          <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.85rem;"></i>
+        </a>
       </div>
 
-      <!-- TAB 1: VR HOUSE Hotspots -->
-            <!-- TAB 1: VR HOUSE VR360 PANNELLUM -->
+      <!-- VR HOUSE VR360 PANNELLUM -->
       <div id="pane-tab-vr" class="explore-pane active">
         <div class="vr360-full-container">
           <div class="vr360-stage-wrapper" id="vr360-stage-wrapper">
@@ -1228,43 +1234,25 @@
         </div>
       </div>
 
-      <!-- TAB 2: 3D MODEL EXHIBITION Inspector -->
-      <div id="pane-tab-3d" class="explore-pane">
-        <div class="vr-interaction-container">
-          <!-- 3D Viewer rotatable container -->
-          <div class="vr-stage-wrapper" style="cursor: grab; overflow:hidden;" id="model-3d-stage">
-            <div class="model-3d-visualizer" id="model-3d-visualizer" style="width: 100%; height: 100%; min-height: 550px; position:relative; transform-style: preserve-3d; transition: transform 0.1s ease; display:flex; align-items:center; justify-content:center;">
-              <!-- Rendered dynamically via JS or simulated 3D elements -->
-              <div id="visualizer-object-container" style="width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
-                <!-- Simulated 3D stilt house / gong / pattern wireframe -->
-              </div>
-            </div>
-            <div style="position:absolute; bottom: 18px; left: 50%; transform: translateX(-50%); font-family:var(--font-accent); font-size:0.82rem; color:var(--accent-gold); pointer-events:none; z-index: 10; background: rgba(0, 0, 0, 0.65); padding: 8px 18px; border-radius: 20px; backdrop-filter: blur(6px); border: 1px solid rgba(212, 175, 55, 0.3); white-space: nowrap; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
-              <i class="fa-solid fa-rotate" style="margin-right: 6px;"></i> Nhấn giữ & Kéo chuột sang hai bên để xoay mô hình 3D
-            </div>
+      <!-- Museum MetaSteps Promotion Card -->
+      <div style="margin-top: 36px; background: linear-gradient(135deg, rgba(107, 31, 26, 0.95), rgba(45, 13, 11, 0.95)); border-radius: 16px; padding: 28px 36px; color: white; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1px solid rgba(212, 175, 55, 0.3);">
+        <div style="max-width: 650px;">
+          <div style="display: inline-flex; align-items: center; gap: 8px; color: var(--accent-gold, #D4AF37); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 8px;">
+            <i class="fa-solid fa-sparkles"></i> Không Gian Triển Lãm Trực Tuyến
           </div>
-
-          <!-- Model select menu & info sidebar -->
-          <div class="vr-info-sidebar">
-            <div style="margin-bottom:20px;">
-              <h5 style="font-family:var(--font-accent); color:var(--accent-gold); margin-bottom:10px;">CHỌN CỔ VẬT</h5>
-              <div class="timeline-filters" style="display:flex; flex-direction:column; gap:8px;">
-                <button class="filter-btn active" style="width:100%; text-align:left;" id="btn-model-house" data-model="house">🏠 Nhà sàn Mường</button>
-                <button class="filter-btn" style="width:100%; text-align:left;" id="btn-model-gong" data-model="gong">🔔 Cồng chiêng Cổ</button>
-                
-              </div>
-            </div>
-            <div>
-              <h3 style="color:var(--primary-red);" id="model-3d-title">Nhà Sàn Mường</h3>
-              <p style="font-size:0.9rem; line-height:1.6;" id="model-3d-desc">
-                Mô hình kiến trúc nhà sàn gỗ truyền thống 3 gian 2 chái, thiết kế hai dốc đứng chống đọng nước mưa. Điểm đặc sắc là mặt bằng sinh hoạt được cấu trúc chặt chẽ từ bậc cầu thang gỗ bên hông đến khu bếp đắp đất đặt trung tâm.
-              </p>
-            </div>
-            <div class="vr-controls-tips" style="margin-top:15px; background: rgba(107,31,26,0.05); border-color: rgba(107,31,26,0.15);">
-              <h6>💡 Xoay Tự Do</h6>
-              <p>Mô hình số hóa được tối ưu hóa cho phép xoay 360 độ góc nhìn để quan sát toàn diện cấu tạo khớp mộng liên kết của thợ mộc xưa.</p>
-            </div>
-          </div>
+          <h3 style="font-size: 1.4rem; font-family: var(--font-heading); margin: 0 0 8px 0; color: #fff;">
+            Tham Quan Không Gian Bảo Tàng Ảo Mường Răng
+          </h3>
+          <p style="font-size: 0.95rem; color: rgba(255,255,255,0.85); margin: 0; line-height: 1.6;">
+            Bước vào không gian triển lãm bảo tàng số 3D trên MetaSteps để chiêm ngưỡng toàn cảnh không gian trưng bày hiện vật, hình ảnh và tư liệu sử thi sống động.
+          </p>
+        </div>
+        <div>
+          <a href="https://metasteps.com/curate/2bac9e13-ef6d-4c3e-aca0-7dfc028f17b4" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: var(--accent-gold, #D4AF37); color: #1a1a1a; font-weight: 700; padding: 14px 28px; border-radius: 30px; border: none; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.3); white-space: nowrap;">
+            <i class="fa-solid fa-door-open"></i>
+            <span>Vào Tham Quan Ngay</span>
+            <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.85rem;"></i>
+          </a>
         </div>
       </div>
     </div>
