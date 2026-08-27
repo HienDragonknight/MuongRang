@@ -47,9 +47,6 @@ export default function AboutSection() {
         <div
           className="btc-members-grid"
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(5, 1fr)',
-            gap: '24px',
             maxWidth: '1440px',
             margin: '0 auto 70px'
           }}
@@ -88,12 +85,13 @@ export default function AboutSection() {
                 <img
                   src={member.avatar}
                   alt={member.name}
+                  decoding="async"
                   style={{
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
                     objectPosition: 'top center',
-                    transform: 'scale(1.25)',
+                    transform: 'scale(1.25) translateZ(0)',
                     transformOrigin: 'top center',
                     transition: 'transform 0.4s ease'
                   }}

@@ -121,6 +121,7 @@ export default function ExhibitionSection() {
                 src={src}
                 alt={`Triển lãm AR Sử Thi Tân Diện - ${i + 1}`}
                 loading={i === 0 ? 'eager' : 'lazy'}
+                decoding="async"
                 style={{
                   position: 'absolute',
                   top: 0,
@@ -130,8 +131,9 @@ export default function ExhibitionSection() {
                   objectFit: 'cover',
                   opacity: i === trienLamIdx ? 1 : 0,
                   visibility: i === trienLamIdx ? 'visible' : 'hidden',
-                  transform: i === trienLamIdx ? 'scale(1)' : 'scale(1.04)',
-                  transition: 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+                  transform: i === trienLamIdx ? 'scale(1) translateZ(0)' : 'scale(1.03) translateZ(0)',
+                  transition: 'opacity 0.5s ease, transform 0.6s ease',
+                  willChange: i === trienLamIdx ? 'opacity, transform' : 'auto',
                   zIndex: i === trienLamIdx ? 2 : 1
                 }}
               />
@@ -312,6 +314,7 @@ export default function ExhibitionSection() {
                 src={src}
                 alt={`Talkshow Sử Thi Tân Diện - ${i + 1}`}
                 loading={i === 0 ? 'eager' : 'lazy'}
+                decoding="async"
                 style={{
                   position: 'absolute',
                   top: 0,
@@ -321,8 +324,9 @@ export default function ExhibitionSection() {
                   objectFit: 'cover',
                   opacity: i === talkshowIdx ? 1 : 0,
                   visibility: i === talkshowIdx ? 'visible' : 'hidden',
-                  transform: i === talkshowIdx ? 'scale(1)' : 'scale(1.04)',
-                  transition: 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+                  transform: i === talkshowIdx ? 'scale(1) translateZ(0)' : 'scale(1.03) translateZ(0)',
+                  transition: 'opacity 0.5s ease, transform 0.6s ease',
+                  willChange: i === talkshowIdx ? 'opacity, transform' : 'auto',
                   zIndex: i === talkshowIdx ? 2 : 1
                 }}
               />

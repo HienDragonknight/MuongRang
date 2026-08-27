@@ -4913,4 +4913,163 @@ footer {
   margin: 0;
 }
 
+/* ==========================================================
+   GLOBAL RESPONSIVE SUITE ACROSS ALL BREAKPOINTS
+   ========================================================== */
+
+/* 1. Global Container & Typography */
+.container {
+  width: 100%;
+  padding-left: clamp(14px, 3vw, 32px) !important;
+  padding-right: clamp(14px, 3vw, 32px) !important;
+  box-sizing: border-box;
+}
+
+.intro-title {
+  font-size: clamp(1.5rem, 3.2vw, 2.4rem) !important;
+  line-height: 1.25 !important;
+}
+
+.section-intro p {
+  font-size: clamp(0.88rem, 1.6vw, 1.05rem) !important;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 2. Hero Section Mobile Optimization */
+@media (max-width: 991px) {
+  .hero-inner {
+    flex-direction: column-reverse !important;
+    text-align: center !important;
+    gap: 32px !important;
+  }
+  .hero-content {
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .hero-btns {
+    justify-content: center !important;
+  }
+  .hero-visual {
+    max-width: 360px !important;
+    margin: 0 auto !important;
+  }
+  .idea-box {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 28px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.2rem !important;
+  }
+  .hero-btns {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+  .hero-btns .btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* 3. Epic Timeline & Tale Viewer */
+@media (max-width: 768px) {
+  .epic-search-filter-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .epic-search-wrap {
+    min-width: 100% !important;
+  }
+  .tale-viewer-card {
+    padding: 20px 16px !important;
+  }
+  .viewer-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .tale-body-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+
+/* 4. Discovery Section (Platter & Costumes) */
+@media (max-width: 860px) {
+  .culinary-interactive-grid {
+    grid-template-columns: 1fr !important;
+    padding: 24px 16px !important;
+    gap: 24px !important;
+  }
+  .culture-row {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+}
+
+/* 5. Exhibition & Journey Cards */
+@media (max-width: 860px) {
+  .journey-card {
+    grid-template-columns: 1fr !important;
+    padding: 24px 18px !important;
+    gap: 24px !important;
+  }
+  .journey-card-img-wrapper {
+    height: clamp(260px, 42vw, 380px) !important;
+  }
+}
+
+/* 6. BTC Members & Sponsors Grid */
+.btc-members-grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 20px !important;
+}
+
+@media (max-width: 1200px) {
+  .btc-members-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .btc-members-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+  .btc-member-card {
+    padding: 20px 14px 18px !important;
+  }
+  .btc-avatar-wrap {
+    width: 120px !important;
+    height: 120px !important;
+    margin-bottom: 12px !important;
+  }
+  .btc-name {
+    font-size: 1.05rem !important;
+  }
+  .sponsors-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+    gap: 14px !important;
+  }
+  .about-thanks-card {
+    padding: 32px 18px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .btc-members-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
 

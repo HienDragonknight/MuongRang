@@ -5,7 +5,7 @@ export default function HeroSection({ onNavigateChapter, onNavigate }) {
     <div className="home-view-container">
       {/* HERO BANNER */}
       <section className="hero-section">
-        <div className="container" style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 48px' }}>
+        <div className="container" style={{ maxWidth: '1400px', margin: '0 auto' }}>
           <div className="hero-inner">
             <div className="hero-content">
               <span className="hero-label">Dự Án Di Sản Số Hóa Văn Hóa Mường</span>
